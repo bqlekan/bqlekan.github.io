@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busari Quadri Oyeleykan | Data Annotation & AI Training Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #3b82f6;
+            --accent-light: #60a5fa;
+            --accent-glow: rgba(59, 130, 246, 0.15);
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --border: rgba(148, 163, 184, 0.1);
+            --card-bg: rgba(30, 41, 59, 0.6);
+            --glass: rgba(15, 23, 42, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(245, 158, 11, 0.03) 0%, transparent 50%);
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent-glow);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent-light);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .hero-badge .pulse {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.6s ease 0.1s both;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light), #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease 0.2s both;
+        }
+
+        .hero-description {
+            color: var(--text-dim);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            animation: fadeInUp 0.6s ease 0.3s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.6s ease 0.4s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 0.6s ease 0.5s both;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--card-bg);
+            border-color: var(--accent);
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            animation: fadeIn 1s ease 0.3s both;
+        }
+
+        .hero-visual-inner {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .orbit-ring {
+            position: absolute;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit-ring:nth-child(1) { width: 100%; height: 100%; animation: rotate 30s linear infinite; }
+        .orbit-ring:nth-child(2) { width: 75%; height: 75%; animation: rotate 20s linear infinite reverse; }
+        .orbit-ring:nth-child(3) { width: 50%; height: 50%; animation: rotate 15s linear infinite; }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .orbit-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px var(--accent);
+        }
+
+        .center-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .center-card .accuracy-ring {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid var(--border);
+            border-top-color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            animation: spin-slow 8s linear infinite;
+        }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .center-card .accuracy-ring span {
+            animation: spin-slow 8s linear infinite reverse;
+        }
+
+        .center-card p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Floating Cards */
+        .float-card {
+            position: absolute;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .float-card:nth-child(4) { top: 10%; right: 0; animation-delay: 0s; }
+        .float-card:nth-child(5) { bottom: 20%; left: 0; animation-delay: 2s; }
+        .float-card:nth-child(6) { top: 50%; right: -20px; animation-delay: 4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .float-card .icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .float-card h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .float-card p {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: var(--accent-glow);
+            color: var(--accent-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .highlight-item i {
+            color: var(--success);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .highlight-item h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight-item p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin: 0;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .experience-timeline {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-top: 0.3rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .timeline-content h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .skill-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-card-header i {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .skill-card-header h3 {
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .skill-list li i {
+            font-size: 0.6rem;
+            color: var(--accent);
+        }
+
+        /* Portfolio / Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-header {
+            padding: 1.5rem 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-glow);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .project-badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .project-body {
+            padding: 1rem 1.5rem 1.5rem;
+        }
+
+        .project-body h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-body p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .project-stats {
+            display: flex;
+            gap: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .project-stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-stat span:first-child {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .project-stat span:last-child {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-light);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        /* Domain Expertise */
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .domain-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .domain-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .domain-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-glow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .domain-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .domain-card p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.05));
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+        }
+
+        .achievement-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        .achievement-content h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .achievement-content p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* Certifications */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            border-color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .cert-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--accent-glow);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .cert-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .cert-info p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(16, 185, 129, 0.02));
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.03) 0%, transparent 70%);
+            animation: pulse-bg 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse-bg {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-content p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .contact-link i {
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .domains-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-layer-group"></i>
+                <span>BQ</span>Oyelekan
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#domains">Domains</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <div class="pulse"></div>
+                    Available for Projects
+                </div>
+                <h1>
+                    Data Annotation<br>
+                    <span class="gradient-text">& AI Training</span><br>
+                    Specialist
+                </h1>
+                <p class="hero-subtitle">6+ Years of Precision Data Labeling Excellence</p>
+                <p class="hero-description">
+                    Transforming raw technical data into structured, machine-learning-ready golden datasets. 
+                    Specialized in computer vision, NLP, audio processing, and scientific data annotation 
+                    with 99.4% accuracy across 200,000+ annotations.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">200K+</div>
+                        <div class="stat-label">Annotations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.4%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years Exp.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Hrs/Week</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i>
+                        View Portfolio
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-inner">
+                    <div class="orbit-ring"><div class="orbit-dot"></div></div>
+                    <div class="orbit-ring"><div class="orbit-dot"></div></div>
+                    <div class="orbit-ring"><div class="orbit-dot"></div></div>
+                    <div class="center-card">
+                        <div class="accuracy-ring"><span>99.4%</span></div>
+                        <p>Accuracy Rate</p>
+                    </div>
+                    <div class="float-card">
+                        <div class="icon"><i class="fas fa-image"></i></div>
+                        <h4>80K+ Images</h4>
+                        <p>Computer Vision</p>
+                    </div>
+                    <div class="float-card">
+                        <div class="icon"><i class="fas fa-language"></i></div>
+                        <h4>120K+ Sentences</h4>
+                        <p>NER & Text</p>
+                    </div>
+                    <div class="float-card">
+                        <div class="icon"><i class="fas fa-microphone"></i></div>
+                        <h4>500+ Hours</h4>
+                        <p>Audio Transcription</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header reveal">
+            <div class="section-tag">About Me</div>
+            <h2>Professional Summary</h2>
+            <p>Expert Data Labeling Specialist with deep domain expertise across multiple scientific and technical fields.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p>
+                    With over 6 years of hands-on experience in precise scientific data annotation, I specialize in 
+                    transforming complex raw data into structured, machine-learning-ready datasets. My work spans 
+                    chemistry, physics, business intelligence, and industrial manufacturing domains.
+                </p>
+                <p>
+                    I maintain a 99.4% accuracy rate across 200,000+ annotations, with expertise in bounding boxes, 
+                    polygon segmentation, entity recognition, and multi-class classification. I have developed 
+                    custom labeling taxonomies for 12+ specialized projects and trained 12 junior annotators, 
+                    reducing team error rates by 34%.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Pixel-Perfect Precision</h4>
+                            <p>Sub-pixel boundary accuracy</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Multi-Domain Expert</h4>
+                            <p>Science, business & industry</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Multilingual Audio</h4>
+                            <p>English, Yoruba & Pidgin</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Team Leadership</h4>
+                            <p>Trained 12+ annotators</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual reveal">
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Freelance Data Annotation Specialist</h4>
+                            <p>AI Training & Data Labeling Platforms | 2022 – Present</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Data Analyst (Astronomy Focus)</h4>
+                            <p>Busquad Global Concepts | 2022</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Senior Industrial Chemist & Operations Manager</h4>
+                            <p>Busquad Global Consults | 2018 – 2022</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Business Strategy Consultant</h4>
+                            <p>Moh-Youngs Concepts | 2014 – 2018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header reveal">
+            <div class="section-tag">Capabilities</div>
+            <h2>Core Competencies</h2>
+            <p>Comprehensive expertise across all major data annotation modalities and quality assurance frameworks.</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-card-header">
+                    <i class="fas fa-image"></i>
+                    <h3>Image Annotation</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-caret-right"></i> Bounding Boxes & Polygons</li>
+                    <li><i class="fas fa-caret-right"></i> Semantic Segmentation</li>
+                    <li><i class="fas fa-caret-right"></i> Keypoint Annotation</li>
+                    <li><i class="fas fa-caret-right"></i> Instance Segmentation</li>
+                    <li><i class="fas fa-caret-right"></i> 3D Point Cloud Labeling (LiDAR)</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-card-header">
+                    <i class="fas fa-font"></i>
+                    <h3>Text Annotation</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-caret-right"></i> Named Entity Recognition (NER)</li>
+                    <li><i class="fas fa-caret-right"></i> Sentiment Tagging</li>
+                    <li><i class="fas fa-caret-right"></i> PII Redaction</li>
+                    <li><i class="fas fa-caret-right"></i> Intent Classification</li>
+                    <li><i class="fas fa-caret-right"></i> Document Entity Extraction</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-card-header">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Audio Annotation</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-caret-right"></i> Transcription (EN, Yoruba, Pidgin)</li>
+                    <li><i class="fas fa-caret-right"></i> Speaker Diarization</li>
+                    <li><i class="fas fa-caret-right"></i> Emotion Labeling</li>
+                    <li><i class="fas fa-caret-right"></i> Timestamp Precision</li>
+                    <li><i class="fas fa-caret-right"></i> Multilingual ASR Support</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-card-header">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Annotation</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-caret-right"></i> Object Tracking</li>
+                    <li><i class="fas fa-caret-right"></i> Action Recognition</li>
+                    <li><i class="fas fa-caret-right"></i> Temporal Segmentation</li>
+                    <li><i class="fas fa-caret-right"></i> Frame-by-Frame Labeling</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-card-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Quality Assurance</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-caret-right"></i> Ground Truth Verification</li>
+                    <li><i class="fas fa-caret-right"></i> Inter-Annotator Agreement</li>
+                    <li><i class="fas fa-caret-right"></i> QC Auditing (>99% precision)</li>
+                    <li><i class="fas fa-caret-right"></i> Taxonomy Development</li>
+                    <li><i class="fas fa-caret-right"></i> Edge Case Documentation</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-card-header">
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools & Platforms</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-caret-right"></i> CVAT, Labelbox, V7 Darwin</li>
+                    <li><i class="fas fa-caret-right"></i> SuperAnnotate, Label Studio</li>
+                    <li><i class="fas fa-caret-right"></i> Python (Pandas, NumPy, OpenCV)</li>
+                    <li><i class="fas fa-caret-right"></i> SQL, JSON/XML, COCO, YOLO</li>
+                    <li><i class="fas fa-caret-right"></i> Jira, Slack, Confluence</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="section-header reveal">
+            <div class="section-tag">Work Samples</div>
+            <h2>Project Portfolio</h2>
+            <p>Selected highlights from 6+ years of data annotation and AI training projects.</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-industry"></i></div>
+                    <span class="project-badge">Completed</span>
+                </div>
+                <div class="project-body">
+                    <h3>Industrial Equipment & Chemical Apparatus</h3>
+                    <p>High-volume image annotation for computer vision models specializing in industrial equipment, chemical apparatus, and scientific instruments using bounding boxes, polygons, and semantic segmentation.</p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span>80,000+</span>
+                            <span>Images Labeled</span>
+                        </div>
+                        <div class="project-stat">
+                            <span>99.4%</span>
+                            <span>Accuracy</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Bounding Boxes</span>
+                        <span class="project-tag">Segmentation</span>
+                        <span class="project-tag">Computer Vision</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-flask"></i></div>
+                    <span class="project-badge">Completed</span>
+                </div>
+                <div class="project-body">
+                    <h3>Chemical Hazard Classification</h3>
+                    <p>Developed a custom 23-category taxonomy for chemical hazard classification, including molecular structure annotation, GHS hazard symbols, and spectroscopic data labeling for safety AI models.</p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span>23</span>
+                            <span>Categories</span>
+                        </div>
+                        <div class="project-stat">
+                            <span>12</span>
+                            <span>Projects</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Taxonomy</span>
+                        <span class="project-tag">Chemistry</span>
+                        <span class="project-tag">GHS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-star"></i></div>
+                    <span class="project-badge">Completed</span>
+                </div>
+                <div class="project-body">
+                    <h3>Astronomical Spectral Analysis</h3>
+                    <p>Classified 50,000+ stellar spectra into 27 categories based on composition, temperature, and luminosity. Labeled celestial objects in 10,000+ astronomical images with sub-pixel precision.</p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span>50,000+</span>
+                            <span>Spectra</span>
+                        </div>
+                        <div class="project-stat">
+                            <span>10,000+</span>
+                            <span>Images</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Spectroscopy</span>
+                        <span class="project-tag">Astronomy</span>
+                        <span class="project-tag">Classification</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-file-contract"></i></div>
+                    <span class="project-badge">Completed</span>
+                </div>
+                <div class="project-body">
+                    <h3>Business Document Intelligence</h3>
+                    <p>Built 31-class taxonomy for business document types. Extracted and categorized key entities, dates, monetary values, and legal clauses from 800+ contracts, financial statements, and compliance reports.</p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span>31</span>
+                            <span>Classes</span>
+                        </div>
+                        <div class="project-stat">
+                            <span>12,000+</span>
+                            <span>Data Points</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">NER</span>
+                        <span class="project-tag">Documents</span>
+                        <span class="project-tag">Finance</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-headphones"></i></div>
+                    <span class="project-badge">Completed</span>
+                </div>
+                <div class="project-body">
+                    <h3>Multilingual ASR Audio Dataset</h3>
+                    <p>Transcribed 500+ hours of Nigerian English, Yoruba, and Pidgin audio with timestamp precision and speaker identification for multilingual automatic speech recognition model training.</p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span>500+</span>
+                            <span>Hours</span>
+                        </div>
+                        <div class="project-stat">
+                            <span>3</span>
+                            <span>Languages</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">ASR</span>
+                        <span class="project-tag">Transcription</span>
+                        <span class="project-tag">Multilingual</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-search"></i></div>
+                    <span class="project-badge">Completed</span>
+                </div>
+                <div class="project-body">
+                    <h3>Quality Control & Team Training</h3>
+                    <p>Reviewed and corrected 25,000+ annotations from other labelers. Created best-practice guides that reduced team error rates by 34%. Trained 12 junior annotators to platform standards.</p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span>25,000+</span>
+                            <span>Reviewed</span>
+                        </div>
+                        <div class="project-stat">
+                            <span>34%</span>
+                            <span>Error Reduction</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">QA</span>
+                        <span class="project-tag">Training</span>
+                        <span class="project-tag">Leadership</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domain Expertise -->
+    <section id="domains">
+        <div class="section-header reveal">
+            <div class="section-tag">Specializations</div>
+            <h2>Domain Expertise</h2>
+            <p>Deep subject-matter knowledge enabling accurate annotation in highly technical fields.</p>
+        </div>
+        <div class="domains-grid">
+            <div class="domain-card reveal">
+                <div class="domain-icon"><i class="fas fa-flask"></i></div>
+                <h3>Chemistry</h3>
+                <p>IUPAC nomenclature, molecular structures, GHS hazard symbols, spectroscopic data, lab equipment</p>
+            </div>
+            <div class="domain-card reveal">
+                <div class="domain-icon"><i class="fas fa-atom"></i></div>
+                <h3>Physics</h3>
+                <p>Celestial coordinates, spectral line identification, orbital mechanics, astronomical imaging</p>
+            </div>
+            <div class="domain-card reveal">
+                <div class="domain-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Business</h3>
+                <p>Financial entities, contract clauses, compliance taxonomy, invoice extraction, market analysis</p>
+            </div>
+            <div class="domain-card reveal">
+                <div class="domain-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Manufacturing</h3>
+                <p>Process flow diagrams, defect classification, quality control, material failure analysis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+        <div class="section-header reveal">
+            <div class="section-tag">Recognition</div>
+            <h2>Key Achievements</h2>
+            <p>Measurable impact and consistent excellence across all annotation platforms and projects.</p>
+        </div>
+        <div class="achievements-grid">
+            <div class="achievement-card reveal">
+                <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                <div class="achievement-content">
+                    <h4>99.4% Accuracy Rate</h4>
+                    <p>Maintained across 200,000+ annotations over 2 years on multiple platforms</p>
+                </div>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                <div class="achievement-content">
+                    <h4>Top 5% Performer</h4>
+                    <p>Ranked in top 5% on 8 different data labeling platforms from 2022–2024</p>
+                </div>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="achievement-icon"><i class="fas fa-check-double"></i></div>
+                <div class="achievement-content">
+                    <h4>Zero Quality Disputes</h4>
+                    <p>No rejected batches or quality disputes in the last 18 months of work</p>
+                </div>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="achievement-icon"><i class="fas fa-sitemap"></i></div>
+                <div class="achievement-content">
+                    <h4>4 Platform Standards</h4>
+                    <p>Created 4 annotation taxonomies now adopted as platform-wide standards</p>
+                </div>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="achievement-icon"><i class="fas fa-users"></i></div>
+                <div class="achievement-content">
+                    <h4>Team Error Reduction</h4>
+                    <p>Trained 12 junior annotators, reducing overall team error rate by 34%</p>
+                </div>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="achievement-icon"><i class="fas fa-clock"></i></div>
+                <div class="achievement-content">
+                    <h4>Sustained Focus</h4>
+                    <p>6–8 hour annotation sessions maintained with under 2% error rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+        <div class="section-header reveal">
+            <div class="section-tag">Credentials</div>
+            <h2>Certifications & Training</h2>
+            <p>Continuous professional development in data annotation and machine learning fundamentals.</p>
+        </div>
+        <div class="certs-grid">
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div class="cert-info">
+                    <h4>Data Annotation Best Practices</h4>
+                    <p>Coursera | 2023</p>
+                </div>
+            </div>
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-eye"></i></div>
+                <div class="cert-info">
+                    <h4>Computer Vision Fundamentals</h4>
+                    <p>Udacity | 2022</p>
+                </div>
+            </div>
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-award"></i></div>
+                <div class="cert-info">
+                    <h4>Quality Control in ML Data Labeling</h4>
+                    <p>DataCamp | 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <div class="section-header reveal">
+            <div class="section-tag">Academic</div>
+            <h2>Education</h2>
+        </div>
+        <div class="certs-grid">
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="cert-info">
+                    <h4>B.Sc. Industrial Chemistry</h4>
+                    <p>University of Ilorin, Kwara State</p>
+                </div>
+            </div>
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-university"></i></div>
+                <div class="cert-info">
+                    <h4>Diploma in Business Administration</h4>
+                    <p>Ire Polytechnic, Osun State — Focus: Data-Driven Strategic Management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-section reveal">
+            <div class="contact-content">
+                <div class="section-tag">Let's Connect</div>
+                <h2>Ready to Label Your Next Dataset?</h2>
+                <p>
+                    Available 40+ hours per week with flexible scheduling. 
+                    Let's discuss how I can help build your next golden dataset with precision and speed.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:bqlekan@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        bqlekan@gmail.com
+                    </a>
+                    <a href="tel:+2347030220713" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        +234 703 022 0713
+                    </a>
+                    <a href="#" class="contact-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Victoria Island, Lagos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Busari Quadri Oyelekan. Built for precision data annotation.</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.background = 'var(--glass)';
+            navLinks.style.padding = '1rem 2rem';
+            navLinks.style.backdropFilter = 'blur(20px)';
+            navLinks.style.borderBottom = '1px solid var(--border)';
+        }
+
+        // Counter animation for hero stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = counter.innerText;
+                const numericPart = target.replace(/[^0-9.]/g, '');
+                const suffix = target.replace(/[0-9.]/g, '');
+                const duration = 2000;
+                const start = 0;
+                const end = parseFloat(numericPart);
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeOut = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(easeOut * end);
+                    
+                    if (target.includes('.')) {
+                        counter.innerText = (easeOut * end).toFixed(1) + suffix;
+                    } else {
+                        counter.innerText = current + suffix;
+                    }
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        // Trigger counter animation when hero is visible
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    heroObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        heroObserver.observe(document.querySelector('.hero'));
+    </script>
+</body>
+</html>'''
