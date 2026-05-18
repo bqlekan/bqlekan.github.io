@@ -6,10 +6,68 @@
     <title>Busari Quadri Oyelekan | AI Training Data Specialist & RLHF Expert</title>
     <meta name="description" content="AI Training Data Specialist with 6+ years delivering 99.4% accuracy across 200,000+ annotations. Domain expert in RLHF, NLP, Computer Vision, and Technical Sciences.">
     
+    <!-- Open Graph / Social Meta Tags -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Busari Quadri Oyelekan | AI Training Data Specialist & RLHF Expert">
+    <meta property="og:description" content="RLHF · Model Evaluation · Precision Annotation · Multilingual Audio. Delivering machine-learning-ready datasets for frontier AI labs.">
+    <meta property="og:url" content="https://bqlekan.github.io">
+    <meta property="og:image" content="https://bqlekan.github.io/og-image.jpg">
+    <meta property="profile:first_name" content="Busari Quadri">
+    <meta property="profile:last_name" content="Oyelekan">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Busari Quadri Oyelekan | AI Training Data Specialist">
+    <meta name="twitter:description" content="6+ years · 200K+ annotations · 99.4% accuracy · RLHF & Model Evaluation Expert">
+    <link rel="canonical" href="https://bqlekan.github.io">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Busari Quadri Oyelekan",
+        "givenName": "Busari Quadri",
+        "familyName": "Oyelekan",
+        "jobTitle": "AI Training Data Specialist & RLHF Expert",
+        "description": "Precision-driven AI Training Data Specialist with 6+ years delivering machine-learning-ready datasets for computer vision, NLP, audio, and scientific domains.",
+        "url": "https://bqlekan.github.io",
+        "email": "bqlekan@gmail.com",
+        "telephone": "+234-703-022-0713",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Victoria Island",
+            "addressRegion": "Lagos",
+            "addressCountry": "NG"
+        },
+        "alumniOf": [
+            {
+                "@type": "EducationalOrganization",
+                "name": "University of Ilorin"
+            },
+            {
+                "@type": "EducationalOrganization",
+                "name": "Ire Polytechnic"
+            }
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/in/bqlekan",
+            "https://bqlekan.github.io"
+        ],
+        "knowsAbout": [
+            "RLHF",
+            "Model Evaluation",
+            "Data Annotation",
+            "Computer Vision",
+            "NLP",
+            "Audio ASR",
+            "Industrial Chemistry"
+        ]
+    }
+    </script>
     
     <style>
         :root {
@@ -270,7 +328,7 @@
             background: var(--glow); border: 1px solid rgba(99, 179, 237, 0.2); padding: 0.25rem 0.75rem; border-radius: 100px;
         }
         .star-container { display: flex; flex-direction: column; gap: 0.85rem; }
-        .star-row { display: grid; grid-template-columns: 100px 1fr; gap: 1rem; }
+        .star-row { display: grid; grid-template-columns: minmax(80px, auto) 1fr; gap: 1rem; }
         .star-lbl { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: #4fd1c5; font-weight: 500; letter-spacing: 0.05em; margin-top: 0.2rem; }
         .star-desc { font-size: 0.925rem; color: var(--text-muted); }
         .star-desc strong { color: var(--text); }
@@ -325,6 +383,26 @@
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.5s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .pulse-dot {
+                animation: none;
+                box-shadow: none;
+            }
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
         /* Responsive Architecture */
         @media (max-width: 1024px) {
             .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -351,7 +429,8 @@
 
 <div class="grid-bg"></div>
 
-<nav id="navbar">
+<!-- NAVIGATION -->
+<<nav id="navbar">
     <div class="container nav-inner">
         <a href="#" class="nav-logo"><span>BQ</span>Oyelekan</a>
         <div class="nav-menu" id="navMenu">
@@ -363,13 +442,14 @@
             </ul>
             <a href="#contact" class="nav-hire">Hire Me</a>
         </div>
-        <button class="mobile-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu" onclick="toggleMobileMenu()">
             <i class="fas fa-bars"></i>
         </button>
     </div>
 </nav>
 
-<main class="container">
+<<main class="container">
+    <!-- HERO SECTION -->
     <section class="hero-section" id="home">
         <div class="hero-grid">
             <div class="hero-left">
@@ -377,7 +457,7 @@
                     <div class="pulse-dot"></div>
                     Open to Remote AI Training Projects Worldwide
                 </div>
-                <h1>AI Training Data<br><em>Specialist</em> &<br>Annotation Expert</h1>
+                <h1>AI Training Data<br><em>Specialist</em> &<<br>Annotation Expert</h1>
                 <p class="hero-sub">
                     RLHF · Model Evaluation · Precision Annotation · Multilingual Audio<br>
                     Delivering machine-learning-ready datasets for frontier AI labs.
@@ -412,7 +492,7 @@
                 </div>
                 <div class="hero-cta">
                     <a href="#portfolio" class="btn btn-primary"><i class="fas fa-briefcase"></i> View Portfolio</a>
-                    <a href="https://www.linkedin.com/in/bqlekan" target="_blank" class="btn btn-ghost"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/bqlekan" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
             
@@ -431,6 +511,7 @@
         </div>
     </section>
 
+    <!-- SUMMARY SECTION -->
     <section class="section reveal" id="about">
         <div class="section-header">
             <span class="section-label">About Me</span>
@@ -444,6 +525,7 @@
         </div>
     </section>
 
+    <!-- CORE FUNCTIONAL MATRIX (RLHF) -->
     <section class="section reveal" id="rlhf">
         <div class="section-header">
             <span class="section-label">For Mercor & Micro1</span>
@@ -474,7 +556,7 @@
             <div class="matrix-card">
                 <i class="fas fa-flask"></i>
                 <h4>Scientific Domain Expertise</h4>
-                <p>Evaluate AI outputs in chemistry, astronomy, and industrial science — domains where most annotators lack subject-matter depth.</p>
+                <p>Evaluate AI outputs in chemistry, physics, and industrial science — domains where most annotators lack subject-matter depth.</p>
             </div>
             <div class="matrix-card">
                 <i class="fas fa-language"></i>
@@ -484,6 +566,7 @@
         </div>
     </section>
 
+    <!-- CAPABILITIES -->
     <section class="section" id="capabilities">
         <div class="section-header reveal">
             <span class="section-label">Capabilities</span>
@@ -560,6 +643,7 @@
         </div>
     </section>
     
+    <!-- DOMAINS -->
     <section class="section">
         <div class="section-header reveal">
             <span class="section-label">Specializations</span>
@@ -590,6 +674,7 @@
         </div>
     </section>
 
+    <!-- PRODUCTION PORTFOLIO (ALL 6 PROJECTS) -->
     <section class="section" id="portfolio">
         <div class="section-header reveal">
             <span class="section-label">Work Samples</span>
@@ -597,6 +682,7 @@
             <p class="section-sub">Selected highlights from 6+ years of AI training data and annotation projects.</p>
         </div>
         <div class="dynamic-grid">
+            <!-- Project 1 -->
             <div class="card project-card reveal">
                 <div class="project-meta">
                     <span class="card-icon"><i class="fas fa-robot"></i></span>
@@ -614,6 +700,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Project 2 -->
             <div class="card project-card reveal">
                 <div class="project-meta">
                     <span class="card-icon"><i class="fas fa-industry"></i></span>
@@ -631,6 +718,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Project 3 -->
             <div class="card project-card reveal">
                 <div class="project-meta">
                     <span class="card-icon"><i class="fas fa-flask"></i></span>
@@ -648,6 +736,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Project 4 -->
             <div class="card project-card reveal">
                 <div class="project-meta">
                     <span class="card-icon"><i class="fas fa-star"></i></span>
@@ -665,6 +754,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Project 5 -->
             <div class="card project-card reveal">
                 <div class="project-meta">
                     <span class="card-icon"><i class="fas fa-headphones"></i></span>
@@ -682,6 +772,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Project 6 -->
             <div class="card project-card reveal">
                 <div class="project-meta">
                     <span class="card-icon"><i class="fas fa-file-contract"></i></span>
@@ -702,6 +793,7 @@
         </div>
     </section>
 
+    <!-- PROFESSIONAL RECONSTRUCTION (ALL 3 STAR ROLES) -->
     <section class="section" id="experience">
         <div class="section-header reveal">
             <span class="section-label">Background</span>
@@ -709,13 +801,14 @@
             <p class="section-sub">Structured using the STAR method — Situation, Task, Action, Result.</p>
         </div>
         <div class="timeline">
+            <!-- Role 1 -->
             <div class="timeline-card reveal">
                 <div class="timeline-header">
                     <div>
                         <h3 class="role-title">Freelance AI Training Data Specialist</h3>
                         <div class="company-name">AI Training & Data Labeling Platforms (Confidential) · Remote</div>
                     </div>
-                    <span class="date-badge">2022 – Present</span>
+                    <span class="date-badge">2024 – Present</span>
                 </div>
                 <div class="star-container">
                     <div class="star-row">
@@ -737,6 +830,7 @@
                 </div>
             </div>
 
+            <!-- Role 2 -->
             <div class="timeline-card reveal">
                 <div class="timeline-header">
                     <div>
@@ -752,7 +846,7 @@
                     </div>
                     <div class="star-row">
                         <span class="star-lbl">TASK</span>
-                        <p class="star-desc">Build a reliable, categorized experimental database and systematic image dataset of chemical processes and equipment.</p>
+                        <p class="star-desc">Build a reliable, categorized experimental database and systematic image dataset of chemical processes and equipment to support quality control digitization.</p>
                     </div>
                     <div class="star-row">
                         <span class="star-lbl">ACTION</span>
@@ -765,6 +859,7 @@
                 </div>
             </div>
 
+            <!-- Role 3 -->
             <div class="timeline-card reveal">
                 <div class="timeline-header">
                     <div>
@@ -776,11 +871,15 @@
                 <div class="star-container">
                     <div class="star-row">
                         <span class="star-lbl">SITUATION</span>
-                        <p class="star-desc">Unstructured PDF reports across 15 industry sectors required structured data extraction and reliable classification systems.</p>
+                        <p class="star-desc">Unstructured PDF reports across 15 industry sectors required structured data extraction and reliable classification systems for strategic analysis.</p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-lbl">TASK</span>
+                        <p class="star-desc">Design and implement a structured data extraction workflow to convert unstructured business reports into categorized, queryable datasets for client deliverables.</p>
                     </div>
                     <div class="star-row">
                         <span class="star-lbl">ACTION</span>
-                        <p class="star-desc">Manually extracted and verified <strong>12,000+ data points</strong> from unstructured reports; built classification systems with <strong>40+ subcategories</strong> across 15 sectors; processed <strong>800+ business documents</strong> for key entity extraction.</p>
+                        <p class="star-desc">Manually extracted and verified <strong>12,000+ data points</strong> from unstructured reports; built classification systems with <strong>40+ subcategories</strong> across 15 sectors; processed <strong>800+ business documents</strong> for key entity extraction including dates, monetary values, and legal clauses.</p>
                     </div>
                     <div class="star-row">
                         <span class="star-lbl">RESULT</span>
@@ -791,6 +890,7 @@
         </div>
     </section>
 
+    <!-- ACHIEVEMENTS -->
     <section class="section">
         <div class="section-header reveal">
             <span class="section-label">Recognition</span>
@@ -842,6 +942,7 @@
         </div>
     </section>
 
+    <!-- CERTIFICATIONS & EDUCATION -->
     <section class="section">
         <div class="section-header reveal">
             <span class="section-label">Credentials</span>
@@ -893,6 +994,7 @@
         </div>
     </section>
 
+    <!-- ENGAGEMENT GATEWAY -->
     <section class="section" id="contact" style="margin-bottom: 4rem;">
         <div class="timeline-card reveal" style="text-align: center; border-color: rgba(99, 179, 237, 0.3);">
             <span class="section-label">Let's Connect</span>
@@ -904,16 +1006,16 @@
             </div>
             <div class="flex-row-center">
                 <span style="font-size:0.875rem; color:var(--text-dim); align-self:center; display:block; width:100%;">Find me on:</span>
-                <a href="https://mercor.com" target="_blank" class="platform-card"><i class="fas fa-brain"></i> Mercor</a>
-                <a href="https://micro1.ai" target="_blank" class="platform-card"><i class="fas fa-microchip"></i> Micro1</a>
-                <a href="https://www.linkedin.com/in/bqlekan" target="_blank" class="platform-card"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://bqlekan.github.io" target="_blank" class="platform-card"><i class="fas fa-globe"></i> GitHub Portfolio</a>
+                <a href="https://mercor.com" target="_blank" rel="noopener noreferrer" class="platform-card"><i class="fas fa-brain"></i> Mercor</a>
+                <a href="https://micro1.ai" target="_blank" rel="noopener noreferrer" class="platform-card"><i class="fas fa-microchip"></i> Micro1</a>
+                <a href="https://www.linkedin.com/in/bqlekan" target="_blank" rel="noopener noreferrer" class="platform-card"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://bqlekan.github.io" target="_blank" rel="noopener noreferrer" class="platform-card"><i class="fas fa-globe"></i> GitHub Portfolio</a>
             </div>
         </div>
     </section>
 </main>
 
-<footer>
+<<footer>
     <div class="container">
         <p>&copy; 2026 Busari Quadri Oyelekan. AI Training Data Specialist · Victoria Island, Lagos</p>
     </div>
@@ -923,15 +1025,19 @@
     // Responsive Mobile Menu Handler
     function toggleMobileMenu() {
         const menu = document.getElementById('navMenu');
-        menu.classList.toggle('active');
+        const toggle = document.querySelector('.mobile-toggle');
+        const isOpen = menu.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     }
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a, .nav-hire').forEach(link => {
         link.addEventListener('click', () => {
             const menu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-toggle');
             if (menu.classList.contains('active')) {
                 menu.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
             }
         });
     });
@@ -942,17 +1048,22 @@
         nav.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // Content Entry Optimization Hook
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+    // Content Entry Optimization Hook (with fallback for older browsers)
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    } else {
+        // Fallback: show all elements immediately
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+    }
 
     // Fast Interpolated Statistics Engine
     function triggerCounters() {
@@ -977,16 +1088,20 @@
         });
     }
 
-    const heroObserver = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                triggerCounters();
-                heroObserver.unobserve(e.target);
-            }
-        });
-    }, { threshold: 0.2 });
-    
-    heroObserver.observe(document.querySelector('.hero-section'));
+    if ('IntersectionObserver' in window) {
+        const heroObserver = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    triggerCounters();
+                    heroObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        
+        heroObserver.observe(document.querySelector('.hero-section'));
+    } else {
+        triggerCounters();
+    }
 </script>
 </body>
 </html>
