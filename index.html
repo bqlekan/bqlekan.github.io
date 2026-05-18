@@ -3,1196 +3,990 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busari Quadri Oyelekan | AI Training Data Specialist</title>
-    <meta name="description" content="AI Training Data Specialist with 6+ years delivering 99.4% accuracy across 200,000+ annotations. RLHF, NLP, Computer Vision, Audio — open to remote AI training projects worldwide.">
+    <title>Busari Quadri Oyelekan | AI Training Data Specialist & RLHF Expert</title>
+    <meta name="description" content="AI Training Data Specialist with 6+ years delivering 99.4% accuracy across 200,000+ annotations. Domain expert in RLHF, NLP, Computer Vision, and Technical Sciences.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
         :root {
-            --bg: #080c14;
-            --bg2: #0d1320;
-            --surface: #111827;
-            --surface2: #1a2235;
-            --border: rgba(255,255,255,0.07);
-            --border-bright: rgba(99,179,237,0.3);
+            --bg: #070a12;
+            --bg-surface: #0f1524;
+            --bg-card: #131b2e;
+            --border: rgba(255, 255, 255, 0.06);
+            --border-hover: rgba(99, 179, 237, 0.25);
             --accent: #63b3ed;
-            --accent2: #4fd1c5;
-            --accent3: #f6ad55;
+            --accent-gradient: linear-gradient(135deg, #63b3ed 0%, #4fd1c5 100%);
             --text: #f0f4ff;
-            --text-muted: #8896b3;
-            --text-dim: #4a5568;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
             --success: #48bb78;
-            --glow: rgba(99,179,237,0.12);
+            --glow: rgba(99, 179, 237, 0.08);
+            --container-width: 1200px;
         }
 
-        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior: smooth; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 80px;
+        }
 
         body {
             font-family: 'DM Sans', sans-serif;
-            background: var(--bg);
+            background-color: var(--bg);
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.625;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* ── NOISE TEXTURE OVERLAY ── */
+        /* Ambient Backgrounds */
         body::before {
             content: '';
             position: fixed; inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-            pointer-events: none; z-index: 0; opacity: 0.4;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+            pointer-events: none; z-index: 10;
         }
 
-        /* ── GRID BG ── */
         .grid-bg {
             position: fixed; inset: 0; z-index: -1;
             background-image:
-                linear-gradient(rgba(99,179,237,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(99,179,237,0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
+                linear-gradient(rgba(99,179,237,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99,179,237,0.02) 1px, transparent 1px);
+            background-size: 80px 80px;
         }
+        
         .grid-bg::after {
             content: '';
             position: absolute; inset: 0;
-            background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,179,237,0.08) 0%, transparent 70%);
+            background: radial-gradient(circle 60vw at 50% -10%, rgba(99,179,237,0.06) 0%, transparent 70%);
         }
 
-        /* ── NAV ── */
+        /* Layout Framework */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section { padding: 5rem 0; }
+        .section-header { margin-bottom: 2.5rem; }
+
+        .section-label {
+            font-family: 'DM Mono', monospace; font-size: 0.75rem;
+            letter-spacing: 0.12em; color: var(--accent);
+            text-transform: uppercase; display: inline-block; margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-family: 'Syne', sans-serif; font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; color: var(--text);
+        }
+
+        .section-sub {
+            color: var(--text-muted); max-width: 680px; margin-top: 0.7rem; font-size: 1rem;
+        }
+
+        /* Navigation */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 100;
-            background: rgba(8,12,20,0.85);
-            backdrop-filter: blur(24px);
-            border-bottom: 1px solid var(--border);
-            transition: border-color 0.3s;
+            background: rgba(7, 10, 18, 0.8); backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
         }
-        nav.scrolled { border-bottom-color: var(--border-bright); }
-        .nav-inner {
-            max-width: 1200px; margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex; align-items: center; justify-content: space-between;
+        nav.scrolled {
+            background: rgba(7, 10, 18, 0.95); border-bottom-color: rgba(99, 179, 237, 0.2);
         }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
         .nav-logo {
-            font-family: 'Syne', sans-serif;
-            font-weight: 800; font-size: 1.15rem;
-            color: var(--text); text-decoration: none;
-            letter-spacing: -0.02em;
+            font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.25rem;
+            color: var(--text); text-decoration: none; letter-spacing: -0.02em;
         }
         .nav-logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-menu { display: flex; align-items: center; gap: 2rem; }
+        .nav-links { display: flex; gap: 1.75rem; list-style: none; }
         .nav-links a {
-            font-size: 0.85rem; font-weight: 500;
-            color: var(--text-muted); text-decoration: none;
-            transition: color 0.2s; letter-spacing: 0.02em;
+            font-size: 0.875rem; font-weight: 500; color: var(--text-muted);
+            text-decoration: none; transition: color 0.2s ease;
         }
         .nav-links a:hover { color: var(--accent); }
         .nav-hire {
             background: var(--accent); color: var(--bg) !important;
-            padding: 0.4rem 1rem; border-radius: 6px;
-            font-weight: 600 !important;
+            padding: 0.5rem 1.25rem; border-radius: 6px; font-weight: 600;
+            text-decoration: none; font-size: 0.875rem; transition: background 0.2s;
         }
-        .nav-hire:hover { background: #90cdf4; color: var(--bg) !important; }
-        .mobile-btn { display:none; background:none; border:none; color:var(--text); font-size:1.4rem; cursor:pointer; }
+        .nav-hire:hover { background: #90cdf4; }
+        .mobile-toggle {
+            display: none; background: none; border: none; color: var(--text);
+            font-size: 1.25rem; cursor: pointer;
+        }
 
-        /* ── HERO ── */
-        .hero {
-            min-height: 100vh;
-            display: flex; align-items: center;
-            padding: 7rem 2rem 4rem;
+        /* Hero */
+        .hero-section {
+            min-height: 100vh; display: flex; align-items: center;
+            padding-top: 120px; padding-bottom: 4rem;
         }
-        .hero-inner {
-            max-width: 1200px; margin: 0 auto; width: 100%;
-            display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center;
-        }
+        .hero-grid { display: grid; grid-template-columns: 1fr 400px; gap: 4rem; align-items: center; }
         .hero-tag {
-            display: inline-flex; align-items: center; gap: 0.6rem;
-            border: 1px solid var(--border-bright);
-            background: var(--glow);
-            padding: 0.4rem 1rem; border-radius: 100px;
-            font-size: 0.8rem; color: var(--accent);
-            font-family: 'DM Mono', monospace;
-            margin-bottom: 1.5rem;
-            animation: fadeUp 0.6s ease both;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            border: 1px solid rgba(99, 179, 237, 0.25); background: var(--glow);
+            padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem;
+            color: var(--accent); font-family: 'DM Mono', monospace; margin-bottom: 1.5rem;
         }
         .pulse-dot {
-            width: 7px; height: 7px; border-radius: 50%;
-            background: var(--success);
-            animation: blink 2s ease infinite;
+            width: 8px; height: 8px; border-radius: 50%; background: var(--success);
+            box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.4); animation: pulse 2s infinite;
         }
-        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-        .hero h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2.4rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1.08;
-            letter-spacing: -0.03em;
-            margin-bottom: 1.25rem;
-            animation: fadeUp 0.6s ease 0.1s both;
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(72, 187, 120, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(72, 187, 120, 0); }
         }
-        .hero h1 em {
-            font-style: normal;
-            background: linear-gradient(120deg, var(--accent), var(--accent2));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .hero-section h1 {
+            font-family: 'Syne', sans-serif; font-size: clamp(2.25rem, 5vw, 3.75rem);
+            font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.25rem;
         }
-        .hero-sub {
-            font-size: 1.05rem; color: var(--text-muted);
-            max-width: 520px; margin-bottom: 2rem;
-            animation: fadeUp 0.6s ease 0.2s both;
+        .hero-section h1 em {
+            font-style: normal; background: var(--accent-gradient);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-        .hero-pills {
-            display: flex; flex-wrap: wrap; gap: 0.6rem;
-            margin-bottom: 2.5rem;
-            animation: fadeUp 0.6s ease 0.3s both;
-        }
+        .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 560px; margin-bottom: 2rem; }
+        .hero-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
         .pill {
-            background: var(--surface); border: 1px solid var(--border);
-            padding: 0.3rem 0.85rem; border-radius: 100px;
-            font-size: 0.8rem; color: var(--text-muted);
-            font-family: 'DM Mono', monospace;
+            background: var(--bg-surface); border: 1px solid var(--border);
+            padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.775rem;
+            color: var(--text-muted); font-family: 'DM Mono', monospace;
         }
-        .pill.hot { border-color: rgba(99,179,237,0.4); color: var(--accent); background: var(--glow); }
+        .pill.hot { border-color: rgba(99,179,237,0.3); color: var(--accent); background: var(--glow); }
 
-        .hero-stats {
-            display: flex; gap: 2.5rem;
-            margin-bottom: 2.5rem;
-            animation: fadeUp 0.6s ease 0.35s both;
-        }
-        .hstat-num {
-            font-family: 'Syne', sans-serif;
-            font-size: 2rem; font-weight: 800;
-            color: var(--accent); line-height: 1;
-        }
-        .hstat-label { font-size: 0.75rem; color: var(--text-dim); letter-spacing: 0.05em; margin-top: 0.2rem; }
+        .hero-stats { display: flex; gap: 2.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+        .hstat-num { font-family: 'Syne', sans-serif; font-size: 2.25rem; font-weight: 800; color: var(--accent); line-height: 1; }
+        .hstat-label { font-size: 0.75rem; color: var(--text-dim); letter-spacing: 0.05em; margin-top: 0.25rem; text-transform: uppercase; }
 
-        .hero-cta {
-            display: flex; gap: 1rem; flex-wrap: wrap;
-            animation: fadeUp 0.6s ease 0.4s both;
-        }
+        .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
         .btn {
             display: inline-flex; align-items: center; gap: 0.5rem;
-            padding: 0.8rem 1.75rem; border-radius: 8px;
-            font-weight: 600; font-size: 0.9rem;
-            text-decoration: none; transition: all 0.25s ease;
+            padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;
+            font-size: 0.9rem; text-decoration: none; transition: all 0.2s ease;
         }
         .btn-primary { background: var(--accent); color: var(--bg); }
-        .btn-primary:hover { background: #90cdf4; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(99,179,237,0.3); }
+        .btn-primary:hover { background: #90cdf4; transform: translateY(-1px); }
         .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
         .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-        /* ── HERO CARD PANEL ── */
+        /* Dashboard Panel */
         .hero-panel {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2rem;
-            animation: fadeUp 0.8s ease 0.3s both;
-            position: relative;
-            overflow: hidden;
+            background: var(--bg-surface); border: 1px solid var(--border);
+            border-radius: 16px; padding: 2rem; position: relative;
         }
         .hero-panel::before {
-            content: '';
-            position: absolute; top: 0; left: 0; right: 0; height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: var(--accent-gradient); border-radius: 16px 16px 0 0;
         }
         .panel-title {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.7rem; color: var(--text-dim);
-            text-transform: uppercase; letter-spacing: 0.1em;
-            margin-bottom: 1.5rem;
+            font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--text-dim);
+            text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem;
         }
         .panel-metric {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 0.85rem 0;
-            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 0; border-bottom: 1px solid var(--border);
         }
         .panel-metric:last-of-type { border-bottom: none; }
         .pm-label { font-size: 0.85rem; color: var(--text-muted); }
-        .pm-value {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.9rem; font-weight: 500;
-            color: var(--text);
-        }
+        .pm-value { font-family: 'DM Mono', monospace; font-size: 0.9rem; font-weight: 500; }
         .pm-value.green { color: var(--success); }
         .pm-value.blue { color: var(--accent); }
-        .pm-value.gold { color: var(--accent3); }
         .panel-badge {
             display: flex; align-items: center; gap: 0.5rem;
-            background: rgba(72,187,120,0.1);
-            border: 1px solid rgba(72,187,120,0.3);
-            border-radius: 8px; padding: 0.75rem 1rem;
-            margin-top: 1.25rem;
-            font-size: 0.85rem; color: var(--success);
+            background: rgba(72,187,120,0.08); border: 1px solid rgba(72,187,120,0.2);
+            border-radius: 8px; padding: 0.75rem; margin-top: 1.25rem;
+            font-size: 0.85rem; color: var(--success); justify-content: center;
         }
 
-        /* ── RLHF SECTION (NEW) ── */
-        .rlhf-section {
-            background: linear-gradient(135deg, rgba(99,179,237,0.06), rgba(79,209,197,0.04));
-            border: 1px solid var(--border-bright);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            position: relative;
-            overflow: hidden;
+        /* Core Matrix Cards (RLHF) */
+        .matrix-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .matrix-card {
+            background: var(--bg-surface); border: 1px solid var(--border);
+            border-radius: 14px; padding: 1.75rem; transition: all 0.25s ease;
         }
-        .rlhf-section::before {
-            content: '';
-            position: absolute; top: -1px; left: 0; right: 0; height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent2));
-        }
-        .rlhf-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .rlhf-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px; padding: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        .rlhf-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-        .rlhf-card i { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.75rem; display: block; }
-        .rlhf-card h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
-        .rlhf-card p { font-size: 0.82rem; color: var(--text-muted); }
+        .matrix-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .matrix-card i { font-size: 1.5rem; color: var(--accent); margin-bottom: 1rem; display: block; }
+        .matrix-card h4 { font-family: 'Syne', sans-serif; font-size: 1.05rem; margin-bottom: 0.5rem; }
+        .matrix-card p { font-size: 0.875rem; color: var(--text-muted); }
 
-        /* ── SECTIONS ── */
-        .section {
-            padding: 5rem 2rem;
-            max-width: 1200px; margin: 0 auto;
+        /* Dynamic Grids */
+        .dynamic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+        .card {
+            background: var(--bg-surface); border: 1px solid var(--border);
+            border-radius: 14px; padding: 1.75rem; transition: all 0.25s ease;
         }
-        .section-label {
-            display: inline-block;
-            font-family: 'DM Mono', monospace;
-            font-size: 0.72rem; letter-spacing: 0.12em;
-            color: var(--accent); text-transform: uppercase;
-            margin-bottom: 0.75rem;
-        }
-        .section-title {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(1.8rem, 3vw, 2.4rem);
-            font-weight: 800; letter-spacing: -0.02em;
-            margin-bottom: 0.75rem;
-        }
-        .section-sub { color: var(--text-muted); max-width: 580px; font-size: 1rem; }
-
-        /* ── SKILLS ── */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.25rem; margin-top: 2.5rem;
-        }
-        .skill-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px; padding: 1.5rem;
-            transition: all 0.3s ease;
-            position: relative; overflow: hidden;
-        }
-        .skill-card::after {
-            content: '';
-            position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent2));
-            transition: width 0.4s ease;
-        }
-        .skill-card:hover { transform: translateY(-4px); border-color: rgba(99,179,237,0.25); }
-        .skill-card:hover::after { width: 100%; }
-        .skill-icon { font-size: 1.3rem; color: var(--accent); margin-bottom: 0.75rem; }
-        .skill-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; margin-bottom: 0.75rem; }
-        .skill-list { list-style: none; }
-        .skill-list li {
-            font-size: 0.85rem; color: var(--text-muted);
-            padding: 0.3rem 0;
+        .card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+        .card-icon { font-size: 1.5rem; color: var(--accent); margin-bottom: 1rem; }
+        .card h3 { font-family: 'Syne', sans-serif; font-size: 1.15rem; margin-bottom: 0.75rem; }
+        
+        .list-unstyled { list-style: none; }
+        .list-unstyled li {
+            font-size: 0.875rem; color: var(--text-muted); padding: 0.35rem 0;
             display: flex; gap: 0.5rem; align-items: flex-start;
         }
-        .skill-list li::before { content: '→'; color: var(--accent); font-size: 0.75rem; margin-top: 0.1rem; flex-shrink: 0; }
+        .list-unstyled li::before { content: '→'; color: var(--accent); font-weight: bold; }
 
-        /* ── PROJECTS ── */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 1.25rem; margin-top: 2.5rem;
+        /* Project Cards */
+        .project-card { display: flex; flex-direction: column; height: 100%; }
+        .project-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .project-badge {
+            font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--success);
+            background: rgba(72,187,120,0.08); border: 1px solid rgba(72,187,120,0.2);
+            padding: 0.2rem 0.6rem; border-radius: 100px;
         }
-        .project-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px; overflow: hidden;
-            transition: all 0.3s ease;
+        .project-body { flex-grow: 1; display: flex; flex-direction: column; }
+        .project-body p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; flex-grow: 1; }
+        .project-stats-row {
+            display: flex; gap: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border); margin-bottom: 1rem;
         }
-        .project-card:hover { transform: translateY(-5px); border-color: rgba(99,179,237,0.25); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .project-top {
-            padding: 1.5rem 1.5rem 0;
-            display: flex; justify-content: space-between; align-items: flex-start;
-        }
-        .project-icon-wrap {
-            width: 46px; height: 46px;
-            background: var(--glow); border: 1px solid var(--border-bright);
-            border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.3rem; color: var(--accent);
-        }
-        .project-status {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.7rem; color: var(--success);
-            background: rgba(72,187,120,0.1);
-            border: 1px solid rgba(72,187,120,0.25);
-            padding: 0.25rem 0.65rem; border-radius: 100px;
-        }
-        .project-body { padding: 1rem 1.5rem 1.5rem; }
-        .project-body h3 { font-family: 'Syne', sans-serif; font-size: 1rem; margin-bottom: 0.5rem; }
-        .project-body p { font-size: 0.87rem; color: var(--text-muted); margin-bottom: 1rem; }
-        .project-nums {
-            display: flex; gap: 1.5rem;
-            padding-top: 1rem; border-top: 1px solid var(--border);
-            margin-bottom: 0.75rem;
-        }
-        .pnum-val { font-family: 'DM Mono', monospace; font-size: 1rem; font-weight: 500; color: var(--accent); }
-        .pnum-lbl { font-size: 0.72rem; color: var(--text-dim); }
-        .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-        .ptag {
-            background: rgba(99,179,237,0.08);
-            border: 1px solid rgba(99,179,237,0.15);
-            color: var(--accent);
-            font-size: 0.72rem; padding: 0.2rem 0.55rem;
-            border-radius: 4px; font-family: 'DM Mono', monospace;
+        .ps-val { font-family: 'DM Mono', monospace; font-size: 0.95rem; color: var(--accent); font-weight: 500; }
+        .ps-lbl { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; }
+        .project-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .tag {
+            background: var(--bg-card); border: 1px solid var(--border); color: var(--accent);
+            font-size: 0.72rem; padding: 0.15rem 0.5rem; border-radius: 4px; font-family: 'DM Mono', monospace;
         }
 
-        /* ── STAR EXPERIENCE ── */
-        .star-grid {
-            display: grid; grid-template-columns: 1fr;
-            gap: 1.5rem; margin-top: 2.5rem;
+        /* Timeline / STAR Section */
+        .timeline { display: flex; flex-direction: column; gap: 2rem; }
+        .timeline-card { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+        .timeline-header {
+            display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;
         }
-        .star-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px; padding: 2rem;
-            transition: all 0.3s ease;
+        .role-title { font-family: 'Syne', sans-serif; font-size: 1.25rem; font-weight: 700; }
+        .company-name { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem; }
+        .date-badge {
+            font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--accent);
+            background: var(--glow); border: 1px solid rgba(99, 179, 237, 0.2); padding: 0.25rem 0.75rem; border-radius: 100px;
         }
-        .star-card:hover { border-color: rgba(99,179,237,0.25); }
-        .star-header {
-            display: flex; justify-content: space-between; align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-        .star-role { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; }
-        .star-company { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem; }
-        .star-period {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.75rem; color: var(--accent);
-            background: var(--glow); border: 1px solid var(--border-bright);
-            padding: 0.25rem 0.75rem; border-radius: 100px;
-            white-space: nowrap;
-        }
-        .star-items { display: flex; flex-direction: column; gap: 1rem; }
-        .star-item { display: grid; grid-template-columns: 90px 1fr; gap: 0.75rem; align-items: baseline; }
-        .star-letter {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.7rem; font-weight: 500;
-            color: var(--accent2); letter-spacing: 0.08em;
-        }
-        .star-text { font-size: 0.88rem; color: var(--text-muted); }
-        .star-text strong { color: var(--text); font-weight: 500; }
+        .star-container { display: flex; flex-direction: column; gap: 0.85rem; }
+        .star-row { display: grid; grid-template-columns: 100px 1fr; gap: 1rem; }
+        .star-lbl { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: #4fd1c5; font-weight: 500; letter-spacing: 0.05em; margin-top: 0.2rem; }
+        .star-desc { font-size: 0.925rem; color: var(--text-muted); }
+        .star-desc strong { color: var(--text); }
 
-        /* ── DOMAINS ── */
-        .domains-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr);
-            gap: 1rem; margin-top: 2.5rem;
-        }
-        .domain-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px; padding: 1.5rem;
-            text-align: center; transition: all 0.3s ease;
-        }
-        .domain-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-        .domain-icon {
-            width: 52px; height: 52px;
-            background: var(--glow); border: 1px solid var(--border-bright);
-            border-radius: 14px;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.3rem; color: var(--accent);
-        }
-        .domain-card h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
-        .domain-card p { font-size: 0.8rem; color: var(--text-dim); }
-
-        /* ── ACHIEVEMENTS ── */
-        .achievements-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem; margin-top: 2.5rem;
-        }
+        /* Achievements & Certifications Grids */
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
         .ach-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px; padding: 1.5rem;
-            display: flex; gap: 1rem; align-items: flex-start;
+            background: var(--bg-surface); border: 1px solid var(--border);
+            border-radius: 14px; padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;
             transition: all 0.3s ease;
         }
-        .ach-card:hover { border-color: rgba(99,179,237,0.25); transform: translateY(-3px); }
+        .ach-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
         .ach-icon {
-            width: 42px; height: 42px; flex-shrink: 0;
-            background: rgba(72,187,120,0.1);
-            border: 1px solid rgba(72,187,120,0.2);
-            border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.1rem; color: var(--success);
+            width: 42px; height: 42px; flex-shrink: 0; background: rgba(72,187,120,0.1);
+            border: 1px solid rgba(72,187,120,0.2); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--success);
         }
-        .ach-card h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; margin-bottom: 0.3rem; }
-        .ach-card p { font-size: 0.82rem; color: var(--text-dim); }
+        .ach-card h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; margin-bottom: 0.3rem; color: var(--text); }
+        .ach-card p { font-size: 0.85rem; color: var(--text-muted); }
 
-        /* ── CERTS ── */
-        .certs-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem; margin-top: 2rem;
-        }
+        .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
         .cert-card {
-            background: var(--surface); border: 1px solid var(--border);
-            border-radius: 12px; padding: 1.2rem;
-            display: flex; gap: 1rem; align-items: center;
+            background: var(--bg-surface); border: 1px solid var(--border);
+            border-radius: 12px; padding: 1.25rem; display: flex; gap: 1rem; align-items: center;
             transition: all 0.3s ease;
         }
         .cert-card:hover { border-color: var(--accent); }
         .cert-icon {
-            width: 42px; height: 42px; flex-shrink: 0;
-            background: var(--glow); border: 1px solid var(--border-bright);
-            border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.1rem; color: var(--accent);
+            width: 42px; height: 42px; flex-shrink: 0; background: var(--glow);
+            border: 1px solid rgba(99, 179, 237, 0.2); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--accent);
         }
-        .cert-card h4 { font-size: 0.9rem; margin-bottom: 0.2rem; }
-        .cert-card p { font-size: 0.78rem; color: var(--text-dim); }
+        .cert-card h4 { font-size: 0.9rem; margin-bottom: 0.2rem; font-family: 'Syne', sans-serif; }
+        .cert-card p { font-size: 0.8rem; color: var(--text-muted); }
 
-        /* ── PLATFORM BADGES (NEW) ── */
-        .platforms-row {
-            display: flex; flex-wrap: wrap; gap: 1rem;
-            margin-top: 2rem; justify-content: center;
+        /* Endorsement Badges */
+        .flex-row-center { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2.5rem; }
+        .platform-card {
+            display: flex; align-items: center; gap: 0.6rem; background: var(--bg-surface);
+            border: 1px solid var(--border); padding: 0.65rem 1.25rem; border-radius: 100px;
+            text-decoration: none; color: var(--text); font-size: 0.875rem; font-weight: 500; transition: all 0.2s ease;
         }
-        .platform-badge {
-            display: flex; align-items: center; gap: 0.6rem;
-            background: var(--surface); border: 1px solid var(--border);
-            padding: 0.65rem 1.25rem; border-radius: 100px;
-            text-decoration: none; color: var(--text);
-            font-size: 0.85rem; font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        .platform-badge:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-        .platform-badge i { color: var(--accent); }
+        .platform-card:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
 
-        /* ── CONTACT ── */
-        .contact-wrap {
-            background: linear-gradient(135deg, rgba(99,179,237,0.06), rgba(79,209,197,0.03));
-            border: 1px solid var(--border-bright);
-            border-radius: 24px; padding: 3.5rem;
-            text-align: center; position: relative; overflow: hidden;
-        }
-        .contact-wrap::before {
-            content: '';
-            position: absolute; top: 0; left: 0; right: 0; height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
-        }
-        .contact-wrap h2 { font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 0.75rem; }
-        .contact-wrap p { color: var(--text-muted); max-width: 480px; margin: 0 auto 2rem; }
-        .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-        .contact-link {
-            display: flex; align-items: center; gap: 0.6rem;
-            background: var(--surface); border: 1px solid var(--border);
-            padding: 0.75rem 1.5rem; border-radius: 10px;
-            color: var(--text); text-decoration: none;
-            font-size: 0.9rem; font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        .contact-link:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); transform: translateY(-3px); }
-
-        /* ── FOOTER ── */
+        /* Footer */
         footer {
-            text-align: center; padding: 2rem;
-            color: var(--text-dim); font-size: 0.82rem;
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--border); padding: 2rem 0; text-align: center;
+            color: var(--text-dim); font-size: 0.85rem;
         }
 
-        /* ── ANIMATIONS ── */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .reveal { opacity: 0; transform: translateY(28px); transition: all 0.65s ease; }
+        /* Scroll Animations */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.5s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* ── RESPONSIVE ── */
+        /* Responsive Architecture */
         @media (max-width: 1024px) {
-            .hero-inner { grid-template-columns: 1fr; }
-            .hero-panel { display: none; }
-            .domains-grid { grid-template-columns: repeat(2, 1fr); }
-            .rlhf-grid { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-btn { display: block; }
-            .domains-grid { grid-template-columns: 1fr 1fr; }
-            .rlhf-grid { grid-template-columns: 1fr; }
-            .contact-wrap { padding: 2rem 1.25rem; }
-            .star-item { grid-template-columns: 70px 1fr; }
-        }
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 2rem; }
-            .hero-stats { gap: 1.5rem; }
-            .domains-grid { grid-template-columns: 1fr; }
+            .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .hero-panel { max-width: 500px; margin: 0 auto; width: 100%; }
+            .matrix-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: var(--bg); }
-        ::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(15, 21, 36, 0.98); flex-direction: column; padding: 2rem;
+                border-bottom: 1px solid var(--border); gap: 1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            }
+            .nav-menu.active { display: flex; }
+            .nav-links { flex-direction: column; align-items: center; gap: 1.25rem; }
+            .mobile-toggle { display: block; }
+            .matrix-grid { grid-template-columns: 1fr; }
+            .star-row { grid-template-columns: 1fr; gap: 0.25rem; }
+            .section { padding: 4rem 0; }
+        }
     </style>
 </head>
 <body>
+
 <div class="grid-bg"></div>
 
-<!-- NAV -->
 <nav id="navbar">
-    <div class="nav-inner">
+    <div class="container nav-inner">
         <a href="#" class="nav-logo"><span>BQ</span>Oyelekan</a>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#rlhf">AI Training</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact" class="nav-hire">Hire Me</a></li>
-        </ul>
-        <button class="mobile-btn" onclick="toggleNav()"><i class="fas fa-bars"></i></button>
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="#about">Summary</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+            <a href="#contact" class="nav-hire">Hire Me</a>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="hero-inner">
-        <div class="hero-left">
-            <div class="hero-tag">
-                <div class="pulse-dot"></div>
-                Open to Remote AI Training Projects Worldwide
+<main class="container">
+    <section class="hero-section" id="home">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <div class="hero-tag">
+                    <div class="pulse-dot"></div>
+                    Open to Remote AI Training Projects Worldwide
+                </div>
+                <h1>AI Training Data<br><em>Specialist</em> &<br>Annotation Expert</h1>
+                <p class="hero-sub">
+                    RLHF · Model Evaluation · Precision Annotation · Multilingual Audio<br>
+                    Delivering machine-learning-ready datasets for frontier AI labs.
+                </p>
+                <div class="hero-pills">
+                    <span class="pill hot">RLHF</span>
+                    <span class="pill hot">Model Evaluation</span>
+                    <span class="pill hot">Prompt Ranking</span>
+                    <span class="pill">NER / NLP</span>
+                    <span class="pill">Computer Vision</span>
+                    <span class="pill">Audio ASR</span>
+                    <span class="pill">Taxonomy Design</span>
+                    <span class="pill">QA Auditing</span>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hstat-num" data-target="200">0</div>
+                        <div class="hstat-label">K+ Annotations</div>
+                    </div>
+                    <div>
+                        <div class="hstat-num" data-target="99.4" data-decimal>0</div>
+                        <div class="hstat-label">% Accuracy</div>
+                    </div>
+                    <div>
+                        <div class="hstat-num" data-target="6">0</div>
+                        <div class="hstat-label">+ Yrs Exp.</div>
+                    </div>
+                    <div>
+                        <div class="hstat-num" data-target="40">0</div>
+                        <div class="hstat-label">+ Hrs/Week</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary"><i class="fas fa-briefcase"></i> View Portfolio</a>
+                    <a href="https://www.linkedin.com/in/bqlekan" target="_blank" class="btn btn-ghost"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
-            <h1>
-                AI Training Data<br>
-                <em>Specialist</em> &<br>
-                Annotation Expert
-            </h1>
-            <p class="hero-sub">
-                RLHF · Model Evaluation · Precision Annotation · Multilingual Audio<br>
-                Delivering machine-learning-ready datasets for frontier AI labs.
-            </p>
-            <div class="hero-pills">
-                <span class="pill hot">RLHF</span>
-                <span class="pill hot">Model Evaluation</span>
-                <span class="pill hot">Prompt Ranking</span>
-                <span class="pill">NER / NLP</span>
-                <span class="pill">Computer Vision</span>
-                <span class="pill">Audio ASR</span>
-                <span class="pill">Taxonomy Design</span>
-                <span class="pill">QA Auditing</span>
-            </div>
-            <div class="hero-stats">
-                <div>
-                    <div class="hstat-num" data-target="200">0</div>
-                    <div class="hstat-label">K+ Annotations</div>
-                </div>
-                <div>
-                    <div class="hstat-num" data-target="99.4" data-decimal>0</div>
-                    <div class="hstat-label">% Accuracy</div>
-                </div>
-                <div>
-                    <div class="hstat-num" data-target="6">0</div>
-                    <div class="hstat-label">+ Yrs Exp.</div>
-                </div>
-                <div>
-                    <div class="hstat-num" data-target="40">0</div>
-                    <div class="hstat-label">+ Hrs/Week</div>
-                </div>
-            </div>
-            <div class="hero-cta">
-                <a href="#portfolio" class="btn btn-primary"><i class="fas fa-briefcase"></i> View Portfolio</a>
-                <a href="https://www.linkedin.com/in/bqlekan" target="_blank" class="btn btn-ghost"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://bqlekan.github.io" target="_blank" class="btn btn-ghost"><i class="fas fa-globe"></i> Portfolio</a>
+            
+            <div class="hero-panel">
+                <div class="panel-title">// Live Performance Snapshot</div>
+                <div class="panel-metric"><span class="pm-label">Accuracy Rate</span><span class="pm-value green">99.4%</span></div>
+                <div class="panel-metric"><span class="pm-label">Quality Disputes</span><span class="pm-value green">Zero (18 months)</span></div>
+                <div class="panel-metric"><span class="pm-label">Platform Ranking</span><span class="pm-value blue">Top 5% — 8 platforms</span></div>
+                <div class="panel-metric"><span class="pm-label">Total Annotations</span><span class="pm-value blue">200,000+</span></div>
+                <div class="panel-metric"><span class="pm-label">Taxonomies Created</span><span class="pm-value blue">4 (adopted standards)</span></div>
+                <div class="panel-metric"><span class="pm-label">Annotators Trained</span><span class="pm-value blue">12 junior labelers</span></div>
+                <div class="panel-metric"><span class="pm-label">Error Rate Reduced</span><span class="pm-value green">34% team improvement</span></div>
+                <div class="panel-metric"><span class="pm-label">Availability</span><span class="pm-value green">40+ hrs/wk · Flexible</span></div>
+                <div class="panel-badge"><i class="fas fa-circle-check"></i> Ready to start immediately</div>
             </div>
         </div>
-        <div class="hero-panel">
-            <div class="panel-title">// Live Performance Snapshot</div>
-            <div class="panel-metric">
-                <span class="pm-label">Accuracy Rate</span>
-                <span class="pm-value green">99.4%</span>
-            </div>
-            <div class="panel-metric">
-                <span class="pm-label">Quality Disputes</span>
-                <span class="pm-value green">Zero (18 months)</span>
-            </div>
-            <div class="panel-metric">
-                <span class="pm-label">Platform Ranking</span>
-                <span class="pm-value gold">Top 5% — 8 platforms</span>
-            </div>
-            <div class="panel-metric">
-                <span class="pm-label">Total Annotations</span>
-                <span class="pm-value blue">200,000+</span>
-            </div>
-            <div class="panel-metric">
-                <span class="pm-label">Taxonomies Created</span>
-                <span class="pm-value blue">4 (platform standards)</span>
-            </div>
-            <div class="panel-metric">
-                <span class="pm-label">Annotators Trained</span>
-                <span class="pm-value blue">12 junior labelers</span>
-            </div>
-            <div class="panel-metric">
-                <span class="pm-label">Error Rate Reduced</span>
-                <span class="pm-value green">34% team improvement</span>
-            </div>
-            <div class="panel-metric">
-                <span class="pm-label">Availability</span>
-                <span class="pm-value green">40+ hrs/wk · Flexible</span>
-            </div>
-            <div class="panel-badge">
-                <i class="fas fa-circle-check"></i>
-                Ready to start immediately
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- RLHF / AI TRAINING (NEW SECTION) -->
-<div style="max-width:1200px; margin:0 auto; padding: 0 2rem;">
-    <section class="rlhf-section reveal" id="rlhf">
-        <div class="section-label">For Mercor & Micro1</div>
-        <div class="section-title">What I Can Do for Your AI Model</div>
-        <p class="section-sub">I specialize in the exact tasks frontier AI labs need — from RLHF preference ranking to red-teaming and instruction-following evaluation.</p>
-        <div class="rlhf-grid">
-            <div class="rlhf-card">
+    <section class="section reveal" id="about">
+        <div class="section-header">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="section-sub">
+                Precision-driven AI Training Data Specialist with 6+ years delivering machine-learning-ready datasets for computer vision, NLP, audio, and scientific domains. My background in Industrial Chemistry gives me genuine domain depth that most annotators simply don't have — making my labels more accurate in technical, scientific, and industrial contexts.
+            </p>
+            <p class="section-sub" style="margin-top: 1rem;">
+                I have maintained a <strong style="color:var(--text)">99.4% accuracy rate</strong> across <strong style="color:var(--text)">200,000+ annotations</strong> with zero quality disputes or rejected batches in 18 months. Ranked <strong style="color:var(--text)">top 5%</strong> across 8 platforms, I bring both the precision and the domain knowledge frontier AI labs need for RLHF, model evaluation, and specialized data tasks.
+            </p>
+        </div>
+    </section>
+
+    <section class="section reveal" id="rlhf">
+        <div class="section-header">
+            <span class="section-label">For Mercor & Micro1</span>
+            <h2 class="section-title">What I Can Do for Your AI Model</h2>
+            <p class="section-sub">I specialize in the exact tasks frontier AI labs need — from RLHF preference ranking to red-teaming and instruction-following evaluation.</p>
+        </div>
+        <div class="matrix-grid">
+            <div class="matrix-card">
                 <i class="fas fa-balance-scale"></i>
                 <h4>RLHF & Preference Ranking</h4>
                 <p>Compare and rank AI-generated responses for quality, accuracy, helpfulness, and safety — giving your model the human signal it needs to improve.</p>
             </div>
-            <div class="rlhf-card">
+            <div class="matrix-card">
                 <i class="fas fa-clipboard-check"></i>
                 <h4>Model Output Evaluation</h4>
                 <p>Assess responses for factual correctness, coherence, tone, and instruction-following. Trained to spot subtle reasoning errors and hallucinations.</p>
             </div>
-            <div class="rlhf-card">
+            <div class="matrix-card">
                 <i class="fas fa-pen-to-square"></i>
                 <h4>Prompt Quality Assessment</h4>
                 <p>Evaluate and score prompts for clarity, specificity, and expected output quality across technical and general-knowledge domains.</p>
             </div>
-            <div class="rlhf-card">
+            <div class="matrix-card">
                 <i class="fas fa-shield-halved"></i>
                 <h4>Safety & Red-Teaming</h4>
                 <p>Flag harmful, biased, or policy-violating AI outputs. Test model boundaries to identify failure modes before deployment.</p>
             </div>
-            <div class="rlhf-card">
+            <div class="matrix-card">
                 <i class="fas fa-flask"></i>
                 <h4>Scientific Domain Expertise</h4>
                 <p>Evaluate AI outputs in chemistry, astronomy, and industrial science — domains where most annotators lack subject-matter depth.</p>
             </div>
-            <div class="rlhf-card">
+            <div class="matrix-card">
                 <i class="fas fa-language"></i>
                 <h4>Multilingual Data Tasks</h4>
                 <p>Annotation and evaluation in Nigerian English, Yoruba, and Pidgin — rare low-resource language expertise for inclusive AI development.</p>
             </div>
         </div>
     </section>
-</div>
 
-<!-- ABOUT -->
-<section class="section reveal" id="about">
-    <div class="section-label">About Me</div>
-    <div class="section-title">Professional Summary</div>
-    <p class="section-sub" style="margin-bottom:2rem;">
-        Precision-driven AI Training Data Specialist with 6+ years delivering machine-learning-ready datasets for computer vision, NLP, audio, and scientific domains. My background in Industrial Chemistry gives me genuine domain depth that most annotators simply don't have — making my labels more accurate in technical, scientific, and industrial contexts.
-    </p>
-    <p class="section-sub">
-        I have maintained a <strong style="color:var(--text)">99.4% accuracy rate</strong> across <strong style="color:var(--text)">200,000+ annotations</strong> with zero quality disputes or rejected batches in 18 months. Ranked <strong style="color:var(--text)">top 5%</strong> across 8 platforms, I bring both the precision and the domain knowledge frontier AI labs need for RLHF, model evaluation, and specialized data tasks.
-    </p>
-</section>
+    <section class="section" id="capabilities">
+        <div class="section-header reveal">
+            <span class="section-label">Capabilities</span>
+            <h2 class="section-title">Core Competencies</h2>
+            <p class="section-sub">Full-stack annotation capability — from raw data to golden dataset.</p>
+        </div>
+        <div class="dynamic-grid">
+            <div class="card reveal">
+                <div class="card-icon"><i class="fas fa-robot"></i></div>
+                <h3>RLHF & AI Evaluation</h3>
+                <ul class="list-unstyled">
+                    <li>Preference ranking & response comparison</li>
+                    <li>Instruction-following assessment</li>
+                    <li>Hallucination & error detection</li>
+                    <li>Safety & policy violation flagging</li>
+                    <li>Prompt quality evaluation</li>
+                </ul>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fas fa-image"></i></div>
+                <h3>Image Annotation</h3>
+                <ul class="list-unstyled">
+                    <li>Bounding boxes & polygon segmentation</li>
+                    <li>Semantic & instance segmentation</li>
+                    <li>Keypoint annotation</li>
+                    <li>3D Point Cloud / LiDAR labeling</li>
+                    <li>Sub-pixel precision on 80,000+ images</li>
+                </ul>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fas fa-font"></i></div>
+                <h3>Text Annotation & NLP</h3>
+                <ul class="list-unstyled">
+                    <li>Named Entity Recognition (NER)</li>
+                    <li>Sentiment & intent classification</li>
+                    <li>PII redaction</li>
+                    <li>Document entity extraction</li>
+                    <li>120,000+ sentences annotated</li>
+                </ul>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fas fa-microphone"></i></div>
+                <h3>Audio Annotation</h3>
+                <ul class="list-unstyled">
+                    <li>Transcription: English, Yoruba, Pidgin</li>
+                    <li>Speaker diarization</li>
+                    <li>Emotion labeling</li>
+                    <li>Timestamp & ASR support</li>
+                    <li>500+ hours transcribed</li>
+                </ul>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Quality Assurance</h3>
+                <ul class="list-unstyled">
+                    <li>Ground truth verification</li>
+                    <li>Inter-annotator agreement (IAA)</li>
+                    <li>QC auditing — >99% precision</li>
+                    <li>Taxonomy & schema development</li>
+                    <li>Edge case documentation</li>
+                </ul>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><i class="fas fa-tools"></i></div>
+                <h3>Tools & Formats</h3>
+                <ul class="list-unstyled">
+                    <li>CVAT, Labelbox, V7 Darwin, SuperAnnotate</li>
+                    <li>Label Studio, RectLabel, VGG VIA</li>
+                    <li>Python (Pandas, NumPy, OpenCV)</li>
+                    <li>SQL, JSON/XML, COCO, YOLO, Pascal VOC</li>
+                    <li>Jira, Slack, Confluence</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="section-header reveal">
+            <span class="section-label">Specializations</span>
+            <h2 class="section-title">Domain Expertise</h2>
+            <p class="section-sub">Deep subject-matter knowledge that makes my annotations more accurate than a generalist annotator's.</p>
+        </div>
+        <div class="dynamic-grid">
+            <div class="card reveal" style="text-align: center;">
+                <div class="card-icon"><i class="fas fa-flask"></i></div>
+                <h3>Chemistry</h3>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">IUPAC nomenclature, molecular structures, GHS hazard symbols, spectroscopic data, lab equipment.</p>
+            </div>
+            <div class="card reveal" style="text-align: center;">
+                <div class="card-icon"><i class="fas fa-atom"></i></div>
+                <h3>Physics & Astronomy</h3>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Celestial coordinates, spectral line ID, orbital mechanics, astronomical imaging, telescope data.</p>
+            </div>
+            <div class="card reveal" style="text-align: center;">
+                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Business & Finance</h3>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Financial entities, contract clauses, compliance taxonomy, invoice extraction, market analysis.</p>
+            </div>
+            <div class="card reveal" style="text-align: center;">
+                <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Manufacturing</h3>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Process flow diagrams, defect classification, quality control, material failure analysis.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- SKILLS -->
-<section class="section" id="skills">
-    <div class="section-label reveal">Capabilities</div>
-    <div class="section-title reveal">Core Competencies</div>
-    <p class="section-sub reveal">Full-stack annotation capability — from raw data to golden dataset.</p>
-    <div class="skills-grid">
-        <div class="skill-card reveal">
-            <div class="skill-icon"><i class="fas fa-robot"></i></div>
-            <h3>RLHF & AI Evaluation</h3>
-            <ul class="skill-list">
-                <li>Preference ranking & response comparison</li>
-                <li>Instruction-following assessment</li>
-                <li>Hallucination & error detection</li>
-                <li>Safety & policy violation flagging</li>
-                <li>Prompt quality evaluation</li>
-            </ul>
+    <section class="section" id="portfolio">
+        <div class="section-header reveal">
+            <span class="section-label">Work Samples</span>
+            <h2 class="section-title">Project Portfolio</h2>
+            <p class="section-sub">Selected highlights from 6+ years of AI training data and annotation projects.</p>
         </div>
-        <div class="skill-card reveal">
-            <div class="skill-icon"><i class="fas fa-image"></i></div>
-            <h3>Image Annotation</h3>
-            <ul class="skill-list">
-                <li>Bounding boxes & polygon segmentation</li>
-                <li>Semantic & instance segmentation</li>
-                <li>Keypoint annotation</li>
-                <li>3D Point Cloud / LiDAR labeling</li>
-                <li>Sub-pixel precision on 80,000+ images</li>
-            </ul>
+        <div class="dynamic-grid">
+            <div class="card project-card reveal">
+                <div class="project-meta">
+                    <span class="card-icon"><i class="fas fa-robot"></i></span>
+                    <span class="project-badge">✓ Delivered</span>
+                </div>
+                <div class="project-body">
+                    <h3>RLHF Response Ranking — Technical Domains</h3>
+                    <p>Evaluated and ranked AI-generated responses in chemistry, physics, and business domains for quality, factual accuracy, and instruction-following — providing training signal for frontier LLMs.</p>
+                    <div class="project-stats-row">
+                        <div><div class="ps-val">Chemistry</div><div class="ps-lbl">Primary Domain</div></div>
+                        <div><div class="ps-val">99.4%</div><div class="ps-lbl">Accuracy</div></div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">RLHF</span><span class="tag">LLM Eval</span><span class="tag">Preference Ranking</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card project-card reveal">
+                <div class="project-meta">
+                    <span class="card-icon"><i class="fas fa-industry"></i></span>
+                    <span class="project-badge">✓ Delivered</span>
+                </div>
+                <div class="project-body">
+                    <h3>Industrial Equipment & Chemical Apparatus CV</h3>
+                    <p>High-volume image annotation for computer vision models specializing in industrial equipment, chemical apparatus, and scientific instruments using bounding boxes, polygons, and semantic segmentation.</p>
+                    <div class="project-stats-row">
+                        <div><div class="ps-val">80,000+</div><div class="ps-lbl">Images Labeled</div></div>
+                        <div><div class="ps-val">99.4%</div><div class="ps-lbl">Accuracy</div></div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Bounding Boxes</span><span class="tag">Segmentation</span><span class="tag">CV</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card project-card reveal">
+                <div class="project-meta">
+                    <span class="card-icon"><i class="fas fa-flask"></i></span>
+                    <span class="project-badge">✓ Delivered</span>
+                </div>
+                <div class="project-body">
+                    <h3>Chemical Hazard Taxonomy & Classification</h3>
+                    <p>Designed a custom 23-category taxonomy for chemical hazard classification, including molecular structure annotation, GHS hazard symbols, and spectroscopic data labeling for safety AI models.</p>
+                    <div class="project-stats-row">
+                        <div><div class="ps-val">23 Classes</div><div class="ps-lbl">Taxonomy</div></div>
+                        <div><div class="ps-val">12</div><div class="ps-lbl">Projects</div></div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Taxonomy</span><span class="tag">Chemistry</span><span class="tag">GHS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card project-card reveal">
+                <div class="project-meta">
+                    <span class="card-icon"><i class="fas fa-star"></i></span>
+                    <span class="project-badge">✓ Delivered</span>
+                </div>
+                <div class="project-body">
+                    <h3>Astronomical Spectral Data Labeling</h3>
+                    <p>Classified 50,000+ stellar spectra into 27 categories based on composition, temperature, and luminosity. Labeled celestial objects in 10,000+ astronomical images with sub-pixel precision.</p>
+                    <div class="project-stats-row">
+                        <div><div class="ps-val">50,000+</div><div class="ps-lbl">Spectra Labeled</div></div>
+                        <div><div class="ps-val">27</div><div class="ps-lbl">Categories</div></div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Spectroscopy</span><span class="tag">Astronomy</span><span class="tag">Classification</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card project-card reveal">
+                <div class="project-meta">
+                    <span class="card-icon"><i class="fas fa-headphones"></i></span>
+                    <span class="project-badge">✓ Delivered</span>
+                </div>
+                <div class="project-body">
+                    <h3>Multilingual ASR Audio Dataset</h3>
+                    <p>Transcribed 500+ hours of Nigerian English, Yoruba, and Pidgin audio with timestamp precision and speaker diarization for multilingual ASR model training — a rare low-resource language capability.</p>
+                    <div class="project-stats-row">
+                        <div><div class="ps-val">500+ Hours</div><div class="ps-lbl">Transcribed</div></div>
+                        <div><div class="ps-val">3</div><div class="ps-lbl">Languages</div></div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">ASR</span><span class="tag">Multilingual</span><span class="tag">Yoruba</span><span class="tag">Pidgin</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card project-card reveal">
+                <div class="project-meta">
+                    <span class="card-icon"><i class="fas fa-file-contract"></i></span>
+                    <span class="project-badge">✓ Delivered</span>
+                </div>
+                <div class="project-body">
+                    <h3>Business Document Intelligence</h3>
+                    <p>Built a 31-class taxonomy for business document types. Extracted and categorized key entities, dates, monetary values, and legal clauses from 800+ contracts and financial statements at 99.8% accuracy.</p>
+                    <div class="project-stats-row">
+                        <div><div class="ps-val">12,000+</div><div class="ps-lbl">Data Points</div></div>
+                        <div><div class="ps-val">99.8%</div><div class="ps-lbl">Accuracy</div></div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">NER</span><span class="tag">Documents</span><span class="tag">Finance</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="skill-card reveal">
-            <div class="skill-icon"><i class="fas fa-font"></i></div>
-            <h3>Text Annotation & NLP</h3>
-            <ul class="skill-list">
-                <li>Named Entity Recognition (NER)</li>
-                <li>Sentiment & intent classification</li>
-                <li>PII redaction</li>
-                <li>Document entity extraction</li>
-                <li>120,000+ sentences annotated</li>
-            </ul>
-        </div>
-        <div class="skill-card reveal">
-            <div class="skill-icon"><i class="fas fa-microphone"></i></div>
-            <h3>Audio Annotation</h3>
-            <ul class="skill-list">
-                <li>Transcription: English, Yoruba, Pidgin</li>
-                <li>Speaker diarization</li>
-                <li>Emotion labeling</li>
-                <li>Timestamp & ASR support</li>
-                <li>500+ hours transcribed</li>
-            </ul>
-        </div>
-        <div class="skill-card reveal">
-            <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>Quality Assurance</h3>
-            <ul class="skill-list">
-                <li>Ground truth verification</li>
-                <li>Inter-annotator agreement (IAA)</li>
-                <li>QC auditing — >99% precision</li>
-                <li>Taxonomy & schema development</li>
-                <li>Edge case documentation</li>
-            </ul>
-        </div>
-        <div class="skill-card reveal">
-            <div class="skill-icon"><i class="fas fa-tools"></i></div>
-            <h3>Tools & Formats</h3>
-            <ul class="skill-list">
-                <li>CVAT, Labelbox, V7 Darwin, SuperAnnotate</li>
-                <li>Label Studio, RectLabel, VGG VIA</li>
-                <li>Python (Pandas, NumPy, OpenCV)</li>
-                <li>SQL, JSON/XML, COCO, YOLO, Pascal VOC</li>
-                <li>Jira, Slack, Confluence</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- PORTFOLIO -->
-<section class="section" id="portfolio">
-    <div class="section-label reveal">Work Samples</div>
-    <div class="section-title reveal">Project Portfolio</div>
-    <p class="section-sub reveal">Selected highlights from 6+ years of AI training data and annotation projects.</p>
-    <div class="projects-grid">
-        <div class="project-card reveal">
-            <div class="project-top">
-                <div class="project-icon-wrap"><i class="fas fa-robot"></i></div>
-                <span class="project-status">✓ Delivered</span>
-            </div>
-            <div class="project-body">
-                <h3>RLHF Response Ranking — Technical Domains</h3>
-                <p>Evaluated and ranked AI-generated responses in chemistry, physics, and business domains for quality, factual accuracy, and instruction-following — providing training signal for frontier LLMs.</p>
-                <div class="project-nums">
-                    <div><div class="pnum-val">Chemistry</div><div class="pnum-lbl">Primary Domain</div></div>
-                    <div><div class="pnum-val">99.4%</div><div class="pnum-lbl">Accuracy</div></div>
-                </div>
-                <div class="project-tags">
-                    <span class="ptag">RLHF</span><span class="ptag">LLM Eval</span><span class="ptag">Preference Ranking</span>
-                </div>
-            </div>
+    <section class="section" id="experience">
+        <div class="section-header reveal">
+            <span class="section-label">Background</span>
+            <h2 class="section-title">Work Experience</h2>
+            <p class="section-sub">Structured using the STAR method — Situation, Task, Action, Result.</p>
         </div>
-        <div class="project-card reveal">
-            <div class="project-top">
-                <div class="project-icon-wrap"><i class="fas fa-industry"></i></div>
-                <span class="project-status">✓ Delivered</span>
-            </div>
-            <div class="project-body">
-                <h3>Industrial Equipment & Chemical Apparatus CV</h3>
-                <p>High-volume image annotation for computer vision models specializing in industrial equipment, chemical apparatus, and scientific instruments using bounding boxes, polygons, and semantic segmentation.</p>
-                <div class="project-nums">
-                    <div><div class="pnum-val">80,000+</div><div class="pnum-lbl">Images Labeled</div></div>
-                    <div><div class="pnum-val">99.4%</div><div class="pnum-lbl">Accuracy</div></div>
+        <div class="timeline">
+            <div class="timeline-card reveal">
+                <div class="timeline-header">
+                    <div>
+                        <h3 class="role-title">Freelance AI Training Data Specialist</h3>
+                        <div class="company-name">AI Training & Data Labeling Platforms (Confidential) · Remote</div>
+                    </div>
+                    <span class="date-badge">2022 – Present</span>
                 </div>
-                <div class="project-tags">
-                    <span class="ptag">Bounding Boxes</span><span class="ptag">Segmentation</span><span class="ptag">CV</span>
-                </div>
-            </div>
-        </div>
-        <div class="project-card reveal">
-            <div class="project-top">
-                <div class="project-icon-wrap"><i class="fas fa-flask"></i></div>
-                <span class="project-status">✓ Delivered</span>
-            </div>
-            <div class="project-body">
-                <h3>Chemical Hazard Taxonomy & Classification</h3>
-                <p>Designed a custom 23-category taxonomy for chemical hazard classification, including molecular structure annotation, GHS hazard symbols, and spectroscopic data labeling for safety AI models.</p>
-                <div class="project-nums">
-                    <div><div class="pnum-val">23</div><div class="pnum-lbl">Categories</div></div>
-                    <div><div class="pnum-val">12</div><div class="pnum-lbl">Projects</div></div>
-                </div>
-                <div class="project-tags">
-                    <span class="ptag">Taxonomy</span><span class="ptag">Chemistry</span><span class="ptag">GHS</span>
+                <div class="star-container">
+                    <div class="star-row">
+                        <span class="star-lbl">SITUATION</span>
+                        <p class="star-desc">Computer vision and NLP teams at AI labs needed high-volume, domain-accurate labeled datasets to train and fine-tune production models.</p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-lbl">TASK</span>
+                        <p class="star-desc">Deliver annotation at scale across image, text, and audio modalities while maintaining platform accuracy thresholds and strict guideline compliance.</p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-lbl">ACTION</span>
+                        <p class="star-desc">Labeled <strong>80,000+ images</strong> (bounding boxes, polygons, segmentation), annotated <strong>120,000+ sentences</strong> for NER, transcribed <strong>500+ hours</strong> of multilingual audio, and developed <strong>12 custom taxonomies</strong> — all while auditing 25,000+ annotations from junior labelers and training 12 annotators.</p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-lbl">RESULT</span>
+                        <p class="star-desc">Sustained <strong>99.4% accuracy</strong> across 200,000+ annotations · Zero rejected batches in 18 months · Top 5% on 8 platforms · 4 taxonomies adopted as platform standards · Team error rate reduced by <strong>34%</strong>.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="project-card reveal">
-            <div class="project-top">
-                <div class="project-icon-wrap"><i class="fas fa-star"></i></div>
-                <span class="project-status">✓ Delivered</span>
-            </div>
-            <div class="project-body">
-                <h3>Astronomical Spectral Data Labeling</h3>
-                <p>Classified 50,000+ stellar spectra into 27 categories based on composition, temperature, and luminosity. Labeled celestial objects in 10,000+ astronomical images with sub-pixel precision.</p>
-                <div class="project-nums">
-                    <div><div class="pnum-val">50,000+</div><div class="pnum-lbl">Spectra Labeled</div></div>
-                    <div><div class="pnum-val">27</div><div class="pnum-lbl">Categories</div></div>
-                </div>
-                <div class="project-tags">
-                    <span class="ptag">Spectroscopy</span><span class="ptag">Astronomy</span><span class="ptag">Classification</span>
-                </div>
-            </div>
-        </div>
-        <div class="project-card reveal">
-            <div class="project-top">
-                <div class="project-icon-wrap"><i class="fas fa-headphones"></i></div>
-                <span class="project-status">✓ Delivered</span>
-            </div>
-            <div class="project-body">
-                <h3>Multilingual ASR Audio Dataset</h3>
-                <p>Transcribed 500+ hours of Nigerian English, Yoruba, and Pidgin audio with timestamp precision and speaker diarization for multilingual ASR model training — a rare low-resource language capability.</p>
-                <div class="project-nums">
-                    <div><div class="pnum-val">500+</div><div class="pnum-lbl">Hours</div></div>
-                    <div><div class="pnum-val">3</div><div class="pnum-lbl">Languages</div></div>
-                </div>
-                <div class="project-tags">
-                    <span class="ptag">ASR</span><span class="ptag">Multilingual</span><span class="ptag">Yoruba</span><span class="ptag">Pidgin</span>
-                </div>
-            </div>
-        </div>
-        <div class="project-card reveal">
-            <div class="project-top">
-                <div class="project-icon-wrap"><i class="fas fa-file-contract"></i></div>
-                <span class="project-status">✓ Delivered</span>
-            </div>
-            <div class="project-body">
-                <h3>Business Document Intelligence</h3>
-                <p>Built a 31-class taxonomy for business document types. Extracted and categorized key entities, dates, monetary values, and legal clauses from 800+ contracts and financial statements at 99.8% accuracy.</p>
-                <div class="project-nums">
-                    <div><div class="pnum-val">12,000+</div><div class="pnum-lbl">Data Points</div></div>
-                    <div><div class="pnum-val">99.8%</div><div class="pnum-lbl">Accuracy</div></div>
-                </div>
-                <div class="project-tags">
-                    <span class="ptag">NER</span><span class="ptag">Documents</span><span class="ptag">Finance</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- EXPERIENCE (STAR FORMAT) -->
-<section class="section" id="experience">
-    <div class="section-label reveal">Background</div>
-    <div class="section-title reveal">Work Experience</div>
-    <p class="section-sub reveal">Structured using the STAR method — Situation, Task, Action, Result.</p>
-    <div class="star-grid">
+            <div class="timeline-card reveal">
+                <div class="timeline-header">
+                    <div>
+                        <h3 class="role-title">Senior Industrial Chemist & Operations Manager</h3>
+                        <div class="company-name">BUSQUAD GLOBAL CONSULTS · Ajah, Lagos</div>
+                    </div>
+                    <span class="date-badge">2018 – 2022</span>
+                </div>
+                <div class="star-container">
+                    <div class="star-row">
+                        <span class="star-lbl">SITUATION</span>
+                        <p class="star-desc">Manufacturing QC lacked structured digital records and image data needed to build an internal ML-based quality control system.</p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-lbl">TASK</span>
+                        <p class="star-desc">Build a reliable, categorized experimental database and systematic image dataset of chemical processes and equipment.</p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-lbl">ACTION</span>
+                        <p class="star-desc">Created and maintained <strong>15,000+ experimental records</strong> with precise chemical property classifications; photographed and labeled <strong>3,000+ images</strong> of chemical processes, equipment states, and product defects; produced <strong>200+ technical documents</strong> with precise safety classifications.</p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-lbl">RESULT</span>
+                        <p class="star-desc">Delivered a fully structured ML-ready dataset that powered an internal quality control system — directly transferable to annotation guideline creation.</p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="star-card reveal">
-            <div class="star-header">
+            <div class="timeline-card reveal">
+                <div class="timeline-header">
+                    <div>
+                        <h3 class="role-title">Business Strategy Consultant</h3>
+                        <div class="company-name">MOH-YOUNGS CONCEPTS · Ikeja, Lagos</div>
+                    </div>
+                    <span class="date-badge">2014 – 2018</span>
+                </div>
+                <div class="star-container">
+                    <div class="star-row">
+                        <span class="star-lbl">SITUATION</span>
+                        <p class="star-desc">Unstructured PDF reports across 15 industry sectors required structured data extraction and reliable classification systems.</p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-lbl">ACTION</span>
+                        <p class="star-desc">Manually extracted and verified <strong>12,000+ data points</strong> from unstructured reports; built classification systems with <strong>40+ subcategories</strong> across 15 sectors; processed <strong>800+ business documents</strong> for key entity extraction.</p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-lbl">RESULT</span>
+                        <p class="star-desc">Achieved <strong>99.8% extraction accuracy</strong> — a workflow identical to modern NER and document annotation tasks at scale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-header reveal">
+            <span class="section-label">Recognition</span>
+            <h2 class="section-title">Key Achievements</h2>
+        </div>
+        <div class="achievements-grid">
+            <div class="ach-card reveal">
+                <div class="ach-icon"><i class="fas fa-trophy"></i></div>
                 <div>
-                    <div class="star-role">Freelance AI Training Data Specialist</div>
-                    <div class="star-company">AI Training & Data Labeling Platforms (Confidential) · Remote</div>
-                </div>
-                <span class="star-period">2022 – Present</span>
-            </div>
-            <div class="star-items">
-                <div class="star-item">
-                    <span class="star-letter">SITUATION</span>
-                    <span class="star-text">Computer vision and NLP teams at AI labs needed high-volume, domain-accurate labeled datasets to train and fine-tune production models.</span>
-                </div>
-                <div class="star-item">
-                    <span class="star-letter">TASK</span>
-                    <span class="star-text">Deliver annotation at scale across image, text, and audio modalities while maintaining platform accuracy thresholds and strict guideline compliance.</span>
-                </div>
-                <div class="star-item">
-                    <span class="star-letter">ACTION</span>
-                    <span class="star-text">Labeled <strong>80,000+ images</strong> (bounding boxes, polygons, segmentation), annotated <strong>120,000+ sentences</strong> for NER, transcribed <strong>500+ hours</strong> of multilingual audio, and developed <strong>12 custom taxonomies</strong> — all while auditing 25,000+ annotations from junior labelers and training 12 annotators.</span>
-                </div>
-                <div class="star-item">
-                    <span class="star-letter">RESULT</span>
-                    <span class="star-text">Sustained <strong>99.4% accuracy</strong> across 200,000+ annotations · Zero rejected batches in 18 months · Top 5% on 8 platforms · 4 taxonomies adopted as platform standards · Team error rate reduced by <strong>34%</strong>.</span>
+                    <h4>99.4% Accuracy Rate</h4>
+                    <p>Maintained across 200,000+ annotations over 2 years on multiple AI platforms.</p>
                 </div>
             </div>
-        </div>
-
-        <div class="star-card reveal">
-            <div class="star-header">
+            <div class="ach-card reveal">
+                <div class="ach-icon"><i class="fas fa-medal"></i></div>
                 <div>
-                    <div class="star-role">Senior Industrial Chemist & Operations Manager</div>
-                    <div class="star-company">BUSQUAD GLOBAL CONSULTS · Ajah, Lagos</div>
-                </div>
-                <span class="star-period">2018 – 2022</span>
-            </div>
-            <div class="star-items">
-                <div class="star-item">
-                    <span class="star-letter">SITUATION</span>
-                    <span class="star-text">Manufacturing QC lacked structured digital records and image data needed to build an internal ML-based quality control system.</span>
-                </div>
-                <div class="star-item">
-                    <span class="star-letter">TASK</span>
-                    <span class="star-text">Build a reliable, categorized experimental database and systematic image dataset of chemical processes and equipment.</span>
-                </div>
-                <div class="star-item">
-                    <span class="star-letter">ACTION</span>
-                    <span class="star-text">Created and maintained <strong>15,000+ experimental records</strong> with precise chemical property classifications; photographed and labeled <strong>3,000+ images</strong> of chemical processes, equipment states, and product defects; produced <strong>200+ technical documents</strong> with precise safety classifications.</span>
-                </div>
-                <div class="star-item">
-                    <span class="star-letter">RESULT</span>
-                    <span class="star-text">Delivered a fully structured ML-ready dataset that powered an internal quality control system — directly transferable to annotation guideline creation.</span>
+                    <h4>Top 5% Performer</h4>
+                    <p>Ranked top 5% across 8 different data labeling platforms from 2022–2024.</p>
                 </div>
             </div>
-        </div>
-
-        <div class="star-card reveal">
-            <div class="star-header">
+            <div class="ach-card reveal">
+                <div class="ach-icon"><i class="fas fa-check-double"></i></div>
                 <div>
-                    <div class="star-role">Business Strategy Consultant</div>
-                    <div class="star-company">MOH-YOUNGS CONCEPTS · Ikeja, Lagos</div>
-                </div>
-                <span class="star-period">2014 – 2018</span>
-            </div>
-            <div class="star-items">
-                <div class="star-item">
-                    <span class="star-letter">SITUATION</span>
-                    <span class="star-text">Unstructured PDF reports across 15 industry sectors required structured data extraction and reliable classification systems.</span>
-                </div>
-                <div class="star-item">
-                    <span class="star-letter">ACTION</span>
-                    <span class="star-text">Manually extracted and verified <strong>12,000+ data points</strong> from unstructured reports; built classification systems with <strong>40+ subcategories</strong> across 15 sectors; processed <strong>800+ business documents</strong> for key entity extraction.</span>
-                </div>
-                <div class="star-item">
-                    <span class="star-letter">RESULT</span>
-                    <span class="star-text">Achieved <strong>99.8% extraction accuracy</strong> — a workflow identical to modern NER and document annotation tasks at scale.</span>
+                    <h4>Zero Quality Disputes</h4>
+                    <p>No rejected batches or quality disputes in 18 consecutive months.</p>
                 </div>
             </div>
+            <div class="ach-card reveal">
+                <div class="ach-icon"><i class="fas fa-sitemap"></i></div>
+                <div>
+                    <h4>4 Platform Standards</h4>
+                    <p>Created 4 annotation taxonomies now adopted as platform-wide standards.</p>
+                </div>
+            </div>
+            <div class="ach-card reveal">
+                <div class="ach-icon"><i class="fas fa-users"></i></div>
+                <div>
+                    <h4>34% Team Error Reduction</h4>
+                    <p>Trained 12 junior annotators, cutting overall team error rate by a third.</p>
+                </div>
+            </div>
+            <div class="ach-card reveal">
+                <div class="ach-icon"><i class="fas fa-clock"></i></div>
+                <div>
+                    <h4>Sustained Focus</h4>
+                    <p>Long 6–8hr annotation sessions maintained under 2% error rate consistently.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <section class="section">
+        <div class="section-header reveal">
+            <span class="section-label">Credentials</span>
+            <h2 class="section-title">Certifications & Education</h2>
+        </div>
+        <div class="certs-grid">
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div>
+                    <h4>Data Annotation Best Practices</h4>
+                    <p>Coursera · 2023</p>
+                </div>
+            </div>
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-eye"></i></div>
+                <div>
+                    <h4>Computer Vision Fundamentals</h4>
+                    <p>Udacity · 2022</p>
+                </div>
+            </div>
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-award"></i></div>
+                <div>
+                    <h4>Quality Control in ML Data Labeling</h4>
+                    <p>DataCamp · 2023</p>
+                </div>
+            </div>
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-microchip"></i></div>
+                <div>
+                    <h4>Certified Data Annotation Specialist</h4>
+                    <p>Micro1 · 2026</p>
+                </div>
+            </div>
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div>
+                    <h4>B.Sc. Industrial Chemistry</h4>
+                    <p>University of Ilorin, Kwara State</p>
+                </div>
+            </div>
+            <div class="cert-card reveal">
+                <div class="cert-icon"><i class="fas fa-university"></i></div>
+                <div>
+                    <h4>Diploma in Business Administration</h4>
+                    <p>Ire Polytechnic, Osun State</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- DOMAINS -->
-<section class="section" id="domains">
-    <div class="section-label reveal">Specializations</div>
-    <div class="section-title reveal">Domain Expertise</div>
-    <p class="section-sub reveal">Deep subject-matter knowledge that makes my annotations more accurate than a generalist annotator's.</p>
-    <div class="domains-grid">
-        <div class="domain-card reveal">
-            <div class="domain-icon"><i class="fas fa-flask"></i></div>
-            <h3>Chemistry</h3>
-            <p>IUPAC nomenclature, molecular structures, GHS hazard symbols, spectroscopic data, lab equipment</p>
-        </div>
-        <div class="domain-card reveal">
-            <div class="domain-icon"><i class="fas fa-atom"></i></div>
-            <h3>Physics & Astronomy</h3>
-            <p>Celestial coordinates, spectral line ID, orbital mechanics, astronomical imaging, telescope data</p>
-        </div>
-        <div class="domain-card reveal">
-            <div class="domain-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Business & Finance</h3>
-            <p>Financial entities, contract clauses, compliance taxonomy, invoice extraction, market analysis</p>
-        </div>
-        <div class="domain-card reveal">
-            <div class="domain-icon"><i class="fas fa-cogs"></i></div>
-            <h3>Manufacturing</h3>
-            <p>Process flow diagrams, defect classification, quality control, material failure analysis</p>
-        </div>
-    </div>
-</section>
-
-<!-- ACHIEVEMENTS -->
-<section class="section" id="achievements">
-    <div class="section-label reveal">Recognition</div>
-    <div class="section-title reveal">Key Achievements</div>
-    <div class="achievements-grid">
-        <div class="ach-card reveal">
-            <div class="ach-icon"><i class="fas fa-trophy"></i></div>
-            <div>
-                <h4>99.4% Accuracy Rate</h4>
-                <p>Maintained across 200,000+ annotations over 2 years on multiple AI platforms</p>
+    <section class="section" id="contact" style="margin-bottom: 4rem;">
+        <div class="timeline-card reveal" style="text-align: center; border-color: rgba(99, 179, 237, 0.3);">
+            <span class="section-label">Let's Connect</span>
+            <h2 class="section-title" style="margin-bottom: 1rem;">Ready to Label Your Next Dataset?</h2>
+            <p class="section-sub" style="margin: 0 auto 2rem;">Available 40+ hours per week with flexible scheduling. Let's discuss how I can help build your next golden dataset — or evaluate your model's outputs — with precision and speed.</p>
+            <div class="hero-cta" style="justify-content: center;">
+                <a href="mailto:bqlekan@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> bqlekan@gmail.com</a>
+                <a href="tel:+2347030220713" class="btn btn-ghost"><i class="fas fa-phone"></i> +234 703 022 0713</a>
+            </div>
+            <div class="flex-row-center">
+                <span style="font-size:0.875rem; color:var(--text-dim); align-self:center; display:block; width:100%;">Find me on:</span>
+                <a href="https://mercor.com" target="_blank" class="platform-card"><i class="fas fa-brain"></i> Mercor</a>
+                <a href="https://micro1.ai" target="_blank" class="platform-card"><i class="fas fa-microchip"></i> Micro1</a>
+                <a href="https://www.linkedin.com/in/bqlekan" target="_blank" class="platform-card"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://bqlekan.github.io" target="_blank" class="platform-card"><i class="fas fa-globe"></i> GitHub Portfolio</a>
             </div>
         </div>
-        <div class="ach-card reveal">
-            <div class="ach-icon"><i class="fas fa-medal"></i></div>
-            <div>
-                <h4>Top 5% Performer</h4>
-                <p>Ranked top 5% across 8 different data labeling platforms from 2022–2024</p>
-            </div>
-        </div>
-        <div class="ach-card reveal">
-            <div class="ach-icon"><i class="fas fa-check-double"></i></div>
-            <div>
-                <h4>Zero Quality Disputes</h4>
-                <p>No rejected batches or quality disputes in 18 consecutive months</p>
-            </div>
-        </div>
-        <div class="ach-card reveal">
-            <div class="ach-icon"><i class="fas fa-sitemap"></i></div>
-            <div>
-                <h4>4 Platform Standards</h4>
-                <p>Created 4 annotation taxonomies now adopted as platform-wide standards</p>
-            </div>
-        </div>
-        <div class="ach-card reveal">
-            <div class="ach-icon"><i class="fas fa-users"></i></div>
-            <div>
-                <h4>34% Team Error Reduction</h4>
-                <p>Trained 12 junior annotators, cutting overall team error rate by a third</p>
-            </div>
-        </div>
-        <div class="ach-card reveal">
-            <div class="ach-icon"><i class="fas fa-clock"></i></div>
-            <div>
-                <h4>Sustained 6–8hr Focus</h4>
-                <p>Long annotation sessions maintained under 2% error rate consistently</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="section" id="certifications">
-    <div class="section-label reveal">Credentials</div>
-    <div class="section-title reveal">Certifications & Education</div>
-    <div class="certs-grid" style="margin-top:2rem;">
-        <div class="cert-card reveal">
-            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-            <div>
-                <h4>Data Annotation Best Practices</h4>
-                <p>Coursera · 2023</p>
-            </div>
-        </div>
-        <div class="cert-card reveal">
-            <div class="cert-icon"><i class="fas fa-eye"></i></div>
-            <div>
-                <h4>Computer Vision Fundamentals</h4>
-                <p>Udacity · 2022</p>
-            </div>
-        </div>
-        <div class="cert-card reveal">
-            <div class="cert-icon"><i class="fas fa-award"></i></div>
-            <div>
-                <h4>Quality Control in ML Data Labeling</h4>
-                <p>DataCamp · 2023</p>
-            </div>
-        </div>
-        <div class="cert-card reveal">
-            <div class="cert-icon"><i class="fas fa-microchip"></i></div>
-            <div>
-                <h4>Certified Data Annotation Specialist</h4>
-                <p>Micro1 · 2026</p>
-            </div>
-        </div>
-        <div class="cert-card reveal">
-            <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
-            <div>
-                <h4>B.Sc. Industrial Chemistry</h4>
-                <p>University of Ilorin, Kwara State</p>
-            </div>
-        </div>
-        <div class="cert-card reveal">
-            <div class="cert-icon"><i class="fas fa-university"></i></div>
-            <div>
-                <h4>Diploma in Business Administration</h4>
-                <p>Ire Polytechnic, Osun State · Data-Driven Strategic Management</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-    <div class="contact-wrap reveal">
-        <div class="section-label">Let's Connect</div>
-        <h2>Ready to Label Your Next Dataset?</h2>
-        <p>Available 40+ hours per week with flexible scheduling. Let's discuss how I can help build your next golden dataset — or evaluate your model's outputs — with precision and speed.</p>
-        <div class="contact-links">
-            <a href="mailto:bqlekan@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> bqlekan@gmail.com</a>
-            <a href="tel:+2347030220713" class="contact-link"><i class="fas fa-phone"></i> +234 703 022 0713</a>
-            <a href="https://www.linkedin.com/in/bqlekan" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://bqlekan.github.io" target="_blank" class="contact-link"><i class="fas fa-globe"></i> Portfolio</a>
-            <a href="#" class="contact-link"><i class="fas fa-map-marker-alt"></i> Victoria Island, Lagos</a>
-        </div>
-        <div class="platforms-row" style="margin-top:2rem;">
-            <span style="font-size:0.82rem; color:var(--text-dim); align-self:center;">Find me on:</span>
-            <a href="https://mercor.com" target="_blank" class="platform-badge"><i class="fas fa-brain"></i> Mercor</a>
-            <a href="https://micro1.ai" target="_blank" class="platform-badge"><i class="fas fa-microchip"></i> Micro1</a>
-            <a href="https://www.linkedin.com/in/bqlekan" target="_blank" class="platform-badge"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://bqlekan.github.io" target="_blank" class="platform-badge"><i class="fas fa-code"></i> GitHub Portfolio</a>
-        </div>
-    </div>
-</section>
+    </section>
+</main>
 
 <footer>
-    <p>© 2025 Busari Quadri Oyelekan · AI Training Data Specialist · Victoria Island, Lagos</p>
+    <div class="container">
+        <p>&copy; 2026 Busari Quadri Oyelekan. AI Training Data Specialist · Victoria Island, Lagos</p>
+    </div>
 </footer>
 
 <script>
-    // Navbar scroll
-    window.addEventListener('scroll', () => {
-        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    // Responsive Mobile Menu Handler
+    function toggleMobileMenu() {
+        const menu = document.getElementById('navMenu');
+        menu.classList.toggle('active');
+    }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a, .nav-hire').forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.getElementById('navMenu');
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
     });
 
-    // Reveal on scroll
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); } });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Scroll Navbar Highlight Interface
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
 
-    // Counter animation
-    function animateCounters() {
+    // Content Entry Optimization Hook
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Fast Interpolated Statistics Engine
+    function triggerCounters() {
         document.querySelectorAll('.hstat-num[data-target]').forEach(el => {
             const target = parseFloat(el.dataset.target);
             const isDecimal = el.hasAttribute('data-decimal');
-            const duration = 2000;
-            const start = performance.now();
-            (function update(now) {
-                const p = Math.min((now - start) / duration, 1);
-                const ease = 1 - Math.pow(1 - p, 3);
-                el.textContent = isDecimal ? (ease * target).toFixed(1) : Math.floor(ease * target);
-                if (p < 1) requestAnimationFrame(update);
-            })(start);
+            const duration = 1500;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const ease = 1 - Math.pow(1 - progress, 3); // Cubic Easing
+                
+                el.textContent = isDecimal 
+                    ? (ease * target).toFixed(1) 
+                    : Math.floor(ease * target);
+
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
         });
     }
-    const heroObs = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { animateCounters(); heroObs.unobserve(e.target); } });
-    }, { threshold: 0.5 });
-    heroObs.observe(document.querySelector('.hero'));
 
-    // Mobile nav
-    function toggleNav() {
-        const ul = document.querySelector('.nav-links');
-        const open = ul.style.display === 'flex';
-        ul.style.cssText = open ? '' : `
-            display:flex; flex-direction:column; position:absolute;
-            top:100%; left:0; right:0; background:rgba(8,12,20,0.97);
-            padding:1.5rem 2rem; gap:1rem; border-bottom:1px solid var(--border);
-            backdrop-filter:blur(24px);
-        `;
-    }
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-            const t = document.querySelector(a.getAttribute('href'));
-            if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    const heroObserver = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                triggerCounters();
+                heroObserver.unobserve(e.target);
+            }
         });
-    });
+    }, { threshold: 0.2 });
+    
+    heroObserver.observe(document.querySelector('.hero-section'));
 </script>
 </body>
 </html>
