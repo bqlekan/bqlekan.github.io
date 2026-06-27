@@ -7,7 +7,8 @@ const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const lowDeviceMemory = typeof navigator.deviceMemory === 'number' && navigator.deviceMemory <= 2;
 const lowCpuCores = typeof navigator.hardwareConcurrency === 'number' && navigator.hardwareConcurrency <= 4;
-window.__lowEndDevice = Boolean(lowDeviceMemory || lowCpuCores);
+const compactViewport = window.innerWidth < 1024;
+window.__lowEndDevice = Boolean(lowDeviceMemory || lowCpuCores || compactViewport);
 
 const syncHeaderOffset = () => {
   if (!siteHeader) return;
@@ -205,15 +206,16 @@ if (methodologyCriteria.length && methodologyDetail) {
 }
 
 window.initLenis = function initLenis() {
-  if (!window.Lenis || prefersReducedMotion || window.__lenisInitialized || window.__lowEndDevice) return;
+  const longDocument = document.documentElement.scrollHeight > window.innerHeight * 6;
+  if (!window.Lenis || prefersReducedMotion || window.__lenisInitialized || window.__lowEndDevice || longDocument) return;
 
   const lenis = new Lenis({
-    duration: 1.2,
+    duration: 0.8,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smooth: true,
     direction: 'vertical',
     gestureDirection: 'vertical',
-    wheelMultiplier: 0.85,
+    wheelMultiplier: 0.95,
     infinite: false
   });
 
@@ -231,16 +233,23 @@ window.initLenis();
 
 if (!prefersReducedMotion && !window.__lowEndDevice && canHover && window.gsap) {
   document.querySelectorAll('.button, .form-submit-btn, .back-to-top').forEach((el) => {
+    let moveFrame = null;
+
     const onMove = (event) => {
-      const rect = el.getBoundingClientRect();
-      const x = (event.clientX - rect.left - rect.width / 2) / rect.width;
-      const y = (event.clientY - rect.top - rect.height / 2) / rect.height;
-      gsap.to(el, {
-        x: x * 7,
-        y: y * 7,
-        duration: 0.25,
-        ease: 'power2.out',
-        overwrite: 'auto'
+      if (moveFrame) return;
+
+      moveFrame = requestAnimationFrame(() => {
+        moveFrame = null;
+        const rect = el.getBoundingClientRect();
+        const x = (event.clientX - rect.left - rect.width / 2) / rect.width;
+        const y = (event.clientY - rect.top - rect.height / 2) / rect.height;
+        gsap.to(el, {
+          x: x * 7,
+          y: y * 7,
+          duration: 0.25,
+          ease: 'power2.out',
+          overwrite: 'auto'
+        });
       });
     };
 

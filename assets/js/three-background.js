@@ -18,15 +18,15 @@ const createThreeBackground = () => {
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true,
-    antialias: true,
-    powerPreference: 'high-performance'
+    antialias: false,
+    powerPreference: 'low-power'
   });
   const isCompactViewport = window.innerWidth < 768;
   renderer.setPixelRatio(Math.min(isCompactViewport ? 1 : 1.25, window.devicePixelRatio));
   renderer.setSize(background.clientWidth, background.clientHeight);
   renderer.setClearColor(0x050816, 0);
 
-  const pointCount = isCompactViewport ? 52 : 78;
+  const pointCount = isCompactViewport ? 36 : 56;
   const positions = new Float32Array(pointCount * 3);
   const colors = new Float32Array(pointCount * 3);
 
@@ -96,12 +96,16 @@ const createThreeBackground = () => {
 
   let heroVisible = true;
   let pageVisible = !document.hidden;
+  let animationFrameId = null;
 
   if (hero && 'IntersectionObserver' in window) {
     const visibilityObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           heroVisible = entry.isIntersecting;
+          if (heroVisible && pageVisible && animationFrameId === null) {
+            animationFrameId = requestAnimationFrame(animate);
+          }
         });
       },
       { threshold: 0.08 }
@@ -111,20 +115,24 @@ const createThreeBackground = () => {
 
   document.addEventListener('visibilitychange', () => {
     pageVisible = !document.hidden;
+    if (pageVisible && heroVisible && animationFrameId === null) {
+      animationFrameId = requestAnimationFrame(animate);
+    }
   });
 
-  const fpsCap = isCompactViewport ? 30 : 45;
+  const fpsCap = isCompactViewport ? 24 : 36;
   const frameInterval = 1000 / fpsCap;
   let lastFrameTime = 0;
 
   function animate(now = 0) {
+    animationFrameId = null;
+
     if (!pageVisible || !heroVisible) {
-      requestAnimationFrame(animate);
       return;
     }
 
     if (now - lastFrameTime < frameInterval) {
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
       return;
     }
 
@@ -141,12 +149,12 @@ const createThreeBackground = () => {
     points.rotation.x = Math.sin(time * 0.65) * 0.06;
     ring.rotation.z = time * 0.12;
     renderer.render(scene, camera);
-    requestAnimationFrame(animate);
+    animationFrameId = requestAnimationFrame(animate);
   }
 
   window.addEventListener('resize', resize);
   resize();
-  animate();
+  animationFrameId = requestAnimationFrame(animate);
 };
 
 createThreeBackground();
