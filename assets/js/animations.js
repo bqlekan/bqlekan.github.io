@@ -1,7 +1,8 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const lowEndDevice = Boolean(window.__lowEndDevice);
+const performanceLite = Boolean(window.__performanceLite);
+const lowEndDevice = Boolean(window.__lowEndDevice || performanceLite);
 const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-const richScrollEffects = !lowEndDevice && canHover && window.innerWidth >= 1200;
+const richScrollEffects = !performanceLite && canHover && window.innerWidth >= 1200;
 
 const formatCounterValue = (value, decimals, suffix) => {
   const rounded = decimals > 0 ? Number(value).toFixed(decimals) : String(Math.round(value));
@@ -36,7 +37,7 @@ const revealTargets = [
   '.site-footer'
 ];
 
-if (!prefersReducedMotion && !lowEndDevice && window.gsap && window.ScrollTrigger) {
+if (!prefersReducedMotion && !performanceLite && window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
 
   const revealBatch = (selector, options = {}) => {

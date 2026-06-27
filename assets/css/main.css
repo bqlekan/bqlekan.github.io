@@ -176,6 +176,42 @@ a {
   contain: layout paint;
 }
 
+.performance-lite .site-header,
+.performance-lite .site-header.is-scrolled {
+  backdrop-filter: none;
+  box-shadow: none;
+  background: rgba(5, 8, 22, 0.94);
+}
+
+.performance-lite .hero-background {
+  display: none;
+}
+
+.performance-lite .hero-panel-inner,
+.performance-lite .about-panel-inner,
+.performance-lite .domain-panel,
+.performance-lite .expertise-panel,
+.performance-lite .metric-card,
+.performance-lite .metrics-panel,
+.performance-lite .featured-project,
+.performance-lite .project-card,
+.performance-lite .dashboard-panel,
+.performance-lite .contact-form-wrap,
+.performance-lite .availability-card,
+.performance-lite .social-panel,
+.performance-lite .collab-card,
+.performance-lite .metrics-callout,
+.performance-lite .project-highlight-card,
+.performance-lite .mini-case-card,
+.performance-lite .timeline-card,
+.performance-lite .tool-card,
+.performance-lite .certificate-card,
+.performance-lite .focus-card,
+.performance-lite .roadmap-card {
+  backdrop-filter: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
 .metrics-callout,
 .project-highlight-card,
 .mini-case-card,

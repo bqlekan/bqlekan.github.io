@@ -2,8 +2,8 @@ const createThreeBackground = () => {
   const background = document.querySelector('.hero-background');
   const hero = document.getElementById('hero');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const lowEndDevice = Boolean(window.__lowEndDevice);
-  if (!background || !window.THREE || reducedMotion || lowEndDevice) {
+  const performanceLite = Boolean(window.__performanceLite || window.__lowEndDevice);
+  if (!background || !window.THREE || reducedMotion || performanceLite) {
     return;
   }
 

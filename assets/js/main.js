@@ -10,6 +10,15 @@ const lowCpuCores = typeof navigator.hardwareConcurrency === 'number' && navigat
 const compactViewport = window.innerWidth < 1024;
 window.__lowEndDevice = Boolean(lowDeviceMemory || lowCpuCores || compactViewport);
 
+const isLongDocument = () => document.documentElement.scrollHeight > window.innerHeight * 6;
+
+const syncPerformanceMode = () => {
+  const performanceLite = Boolean(window.__lowEndDevice || isLongDocument());
+  window.__performanceLite = performanceLite;
+  document.documentElement.classList.toggle('performance-lite', performanceLite);
+  document.body.classList.toggle('performance-lite', performanceLite);
+};
+
 const syncHeaderOffset = () => {
   if (!siteHeader) return;
   const offset = Math.round(siteHeader.getBoundingClientRect().height);
@@ -19,10 +28,15 @@ const syncHeaderOffset = () => {
 let headerResizeTimer;
 window.addEventListener('resize', () => {
   window.clearTimeout(headerResizeTimer);
-  headerResizeTimer = window.setTimeout(syncHeaderOffset, 140);
+  headerResizeTimer = window.setTimeout(() => {
+    syncHeaderOffset();
+    syncPerformanceMode();
+  }, 140);
 });
 window.addEventListener('load', syncHeaderOffset);
 syncHeaderOffset();
+syncPerformanceMode();
+window.addEventListener('load', syncPerformanceMode);
 
 if (navToggle && siteNav) {
   const closeNav = () => {
@@ -206,8 +220,8 @@ if (methodologyCriteria.length && methodologyDetail) {
 }
 
 window.initLenis = function initLenis() {
-  const longDocument = document.documentElement.scrollHeight > window.innerHeight * 6;
-  if (!window.Lenis || prefersReducedMotion || window.__lenisInitialized || window.__lowEndDevice || longDocument) return;
+  syncPerformanceMode();
+  if (!window.Lenis || prefersReducedMotion || window.__lenisInitialized || window.__performanceLite) return;
 
   const lenis = new Lenis({
     duration: 0.8,
@@ -231,7 +245,7 @@ window.initLenis = function initLenis() {
 
 window.initLenis();
 
-if (!prefersReducedMotion && !window.__lowEndDevice && canHover && window.gsap) {
+if (!prefersReducedMotion && !window.__performanceLite && canHover && window.gsap) {
   document.querySelectorAll('.button, .form-submit-btn, .back-to-top').forEach((el) => {
     let moveFrame = null;
 
