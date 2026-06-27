@@ -1,0 +1,6 @@
+.lighthouse-tmp/
+lighthouse-desktop.json
+lighthouse-mobile.json
+lighthouse-report.json
+Thumbs.db
+.DS_Store

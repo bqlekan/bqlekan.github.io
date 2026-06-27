@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Quadri Busari portfolio preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050816" />
+      <stop offset="100%" stop-color="#0b1226" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5aa9ff" />
+      <stop offset="100%" stop-color="#69f0ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="920" cy="130" r="180" fill="#5aa9ff" opacity="0.08" />
+  <circle cx="1020" cy="530" r="220" fill="#69f0ff" opacity="0.06" />
+  <circle cx="180" cy="100" r="150" fill="#5aa9ff" opacity="0.05" />
+  <rect x="78" y="76" width="1044" height="478" rx="36" fill="rgba(17,25,54,0.72)" stroke="rgba(255,255,255,0.12)" />
+  <text x="120" y="180" fill="#5aa9ff" font-family="Inter, Arial, sans-serif" font-size="28" letter-spacing="6">AI EVALUATION SPECIALIST</text>
+  <text x="120" y="276" fill="#ffffff" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="72" font-weight="700">Quadri Busari</text>
+  <text x="120" y="360" fill="#d6e4ff" font-family="Inter, Arial, sans-serif" font-size="34">RLHF ranking, multimodal evaluation,</text>
+  <text x="120" y="406" fill="#d6e4ff" font-family="Inter, Arial, sans-serif" font-size="34">annotation QA, and evidence-based AI review.</text>
+  <g transform="translate(120 466)">
+    <rect width="230" height="56" rx="28" fill="url(#accent)" />
+    <text x="30" y="36" fill="#050816" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">99.4% accuracy</text>
+  </g>
+  <g transform="translate(372 466)">
+    <rect width="280" height="56" rx="28" fill="#121a33" stroke="rgba(255,255,255,0.12)" />
+    <text x="28" y="36" fill="#d6e4ff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">97%+ agreement</text>
+  </g>
+  <g transform="translate(676 466)">
+    <rect width="246" height="56" rx="28" fill="#121a33" stroke="rgba(255,255,255,0.12)" />
+    <text x="28" y="36" fill="#d6e4ff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">Top 5% performer</text>
+  </g>
+</svg>
