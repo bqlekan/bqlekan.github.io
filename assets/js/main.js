@@ -148,12 +148,35 @@ if (navLinkMap.length && 'IntersectionObserver' in window && !window.__performan
   navLinkMap.forEach(({ section }) => observer.observe(section));
 }
 
+const getToggleTarget = (button) => {
+  const targetId = button.getAttribute('aria-controls');
+  if (targetId) {
+    return document.getElementById(targetId);
+  }
+
+  const localScope = button.closest('.footer-item, .project-card');
+  return localScope ? localScope.querySelector('.evidence-text') : null;
+};
+
+const syncToggleState = (button, expanded) => {
+  button.setAttribute('aria-expanded', String(expanded));
+  const collapsedLabel = button.getAttribute('data-collapsed-label') || 'Show details';
+  const expandedLabel = button.getAttribute('data-expanded-label') || 'Hide details';
+  button.textContent = expanded ? expandedLabel : collapsedLabel;
+
+  const target = getToggleTarget(button);
+  if (target) {
+    target.hidden = !expanded;
+  }
+};
+
 document.querySelectorAll('.toggle-details').forEach((button) => {
+  const isExpanded = button.getAttribute('aria-expanded') === 'true';
+  syncToggleState(button, isExpanded);
+
   button.addEventListener('click', () => {
     const expanded = button.getAttribute('aria-expanded') === 'true';
-    const nextExpanded = !expanded;
-    button.setAttribute('aria-expanded', String(nextExpanded));
-    button.textContent = nextExpanded ? 'Hide rationale' : 'Show rationale';
+    syncToggleState(button, !expanded);
   });
 });
 
@@ -228,8 +251,7 @@ if (comparisonCardsInteractive.length && livePreference && liveComparisonConfide
 
     const rationaleToggle = document.querySelector('.comparison-footer .toggle-details');
     if (rationaleToggle) {
-      rationaleToggle.setAttribute('aria-expanded', 'true');
-      rationaleToggle.textContent = 'Hide rationale';
+      syncToggleState(rationaleToggle, true);
     }
 
     activatePressableGroup(comparisonCardsInteractive, card);
