@@ -400,9 +400,9 @@
             <article class="dashboard-panel dashboard-primary dashboard-card" aria-labelledby="overall-eval-title">
               <div class="panel-header">
                 <span class="panel-label">Overall evaluation</span>
-                <div class="live-pill" aria-label="Live status indicator">
+                <div class="live-pill" aria-label="Live status indicator" aria-live="polite">
                   <span class="status-dot"></span>
-                  <span>Calibrated / live review</span>
+                  <span class="live-pill-text">Calibrated / live review</span>
                 </div>
               </div>
 
@@ -414,19 +414,19 @@
                 <div class="overall-details">
                   <div class="detail-block">
                     <h3 id="overall-eval-title">Overall score</h3>
-                    <p>99.4% annotation accuracy</p>
+                    <p data-live-score-copy>99.4% annotation accuracy</p>
                   </div>
                   <div class="detail-block">
                     <h3>Confidence</h3>
-                    <p>High</p>
+                    <p data-live-confidence>High</p>
                   </div>
                   <div class="detail-block">
                     <h3>Evaluation status</h3>
-                    <p>Calibrated</p>
+                    <p data-live-status>Calibrated</p>
                   </div>
                   <div class="detail-block">
                     <h3>Calibration score</h3>
-                    <p>97%+</p>
+                    <p data-live-calibration>97%+</p>
                   </div>
                 </div>
               </div>
@@ -439,47 +439,47 @@
               </div>
 
               <div class="dimension-list">
-                <div class="dimension-row">
+                <div class="dimension-row is-active" role="button" tabindex="0" aria-pressed="true" data-live-dimension="Instruction Following" data-live-score="95" data-live-score-copy="95% instruction following" data-live-confidence="High" data-live-status="Calibrated" data-live-calibration="97%+" data-live-pill="Calibrated / instruction review">
                   <div class="dimension-meta"><span>Instruction Following</span><strong>95%</strong></div>
                   <div class="meter"><span data-meter="95%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Factual Accuracy" data-live-score="94" data-live-score-copy="94% factual accuracy" data-live-confidence="High" data-live-status="Evidence checked" data-live-calibration="96%" data-live-pill="Live review / factual accuracy">
                   <div class="dimension-meta"><span>Factual Accuracy</span><strong>94%</strong></div>
                   <div class="meter"><span data-meter="94%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Groundedness" data-live-score="92" data-live-score-copy="92% groundedness" data-live-confidence="High" data-live-status="Grounded evidence" data-live-calibration="95%" data-live-pill="Live review / groundedness">
                   <div class="dimension-meta"><span>Groundedness</span><strong>92%</strong></div>
                   <div class="meter"><span data-meter="92%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Reasoning Quality" data-live-score="93" data-live-score-copy="93% reasoning quality" data-live-confidence="High" data-live-status="Reasoning calibrated" data-live-calibration="96%" data-live-pill="Live review / reasoning quality">
                   <div class="dimension-meta"><span>Reasoning Quality</span><strong>93%</strong></div>
                   <div class="meter"><span data-meter="93%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Completeness" data-live-score="91" data-live-score-copy="91% completeness" data-live-confidence="Medium" data-live-status="Needs final pass" data-live-calibration="94%" data-live-pill="Live review / completeness">
                   <div class="dimension-meta"><span>Completeness</span><strong>91%</strong></div>
                   <div class="meter"><span data-meter="91%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Helpfulness" data-live-score="95" data-live-score-copy="95% helpfulness" data-live-confidence="High" data-live-status="Helpful and clear" data-live-calibration="97%" data-live-pill="Live review / helpfulness">
                   <div class="dimension-meta"><span>Helpfulness</span><strong>95%</strong></div>
                   <div class="meter"><span data-meter="95%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Harmlessness / Safety" data-live-score="97" data-live-score-copy="97% safety compliance" data-live-confidence="High" data-live-status="Safe to ship" data-live-calibration="98%" data-live-pill="Calibrated / safety review">
                   <div class="dimension-meta"><span>Harmlessness / Safety</span><strong>97%</strong></div>
                   <div class="meter"><span data-meter="97%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Prompt Adherence" data-live-score="96" data-live-score-copy="96% prompt adherence" data-live-confidence="High" data-live-status="Prompt aligned" data-live-calibration="97%" data-live-pill="Live review / prompt adherence">
                   <div class="dimension-meta"><span>Prompt Adherence</span><strong>96%</strong></div>
                   <div class="meter"><span data-meter="96%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Visual Fidelity" data-live-score="90" data-live-score-copy="90% visual fidelity" data-live-confidence="Medium" data-live-status="Requires visual pass" data-live-calibration="93%" data-live-pill="Live review / visual fidelity">
                   <div class="dimension-meta"><span>Visual Fidelity</span><strong>90%</strong></div>
                   <div class="meter"><span data-meter="90%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Temporal Consistency (video)" data-live-score="89" data-live-score-copy="89% temporal consistency" data-live-confidence="Medium" data-live-status="Pending calibration" data-live-calibration="92%" data-live-pill="Live review / temporal consistency">
                   <div class="dimension-meta"><span>Temporal Consistency (video)</span><strong>89%</strong></div>
                   <div class="meter"><span data-meter="89%"></span></div>
                 </div>
-                <div class="dimension-row">
+                <div class="dimension-row" role="button" tabindex="0" aria-pressed="false" data-live-dimension="Audio Naturalness" data-live-score="91" data-live-score-copy="91% audio naturalness" data-live-confidence="Medium" data-live-status="Audio pass stable" data-live-calibration="94%" data-live-pill="Live review / audio naturalness">
                   <div class="dimension-meta"><span>Audio Naturalness</span><strong>91%</strong></div>
                   <div class="meter"><span data-meter="91%"></span></div>
                 </div>
@@ -493,7 +493,7 @@
               </div>
 
               <div class="comparison-grid">
-                <div class="comparison-card">
+                <div class="comparison-card" role="button" tabindex="0" aria-pressed="false" data-response-label="Response A" data-final-preference="Response A selected for direct instruction compliance." data-confidence="High" data-rationale="Response A is the stronger choice when the task rewards brevity, direct instruction following, and clear formatting with minimal detours." data-live-pill="Live review / Response A selected">
                   <span class="chip">Response A</span>
                   <p>More concise and clearly structured, but slightly less context-aware under ambiguous prompts.</p>
                   <div class="comparison-section">
@@ -513,7 +513,7 @@
                   </div>
                 </div>
 
-                <div class="comparison-card">
+                <div class="comparison-card is-active" role="button" tabindex="0" aria-pressed="true" data-response-label="Response B" data-final-preference="Response B selected for evidence depth and grounded reasoning." data-confidence="High" data-rationale="Response B is the stronger choice when the task rewards grounded evidence, calibration, and richer justification despite the added verbosity." data-live-pill="Calibrated / Response B selected">
                   <span class="chip">Response B</span>
                   <p>More detailed and evidential, though slightly more verbose and less direct.</p>
                   <div class="comparison-section">
@@ -537,16 +537,16 @@
               <div class="comparison-footer">
                 <div class="footer-item">
                   <h4>Final preference</h4>
-                  <p>Response A for clarity, Response B for evidence depth.</p>
+                  <p data-live-preference>Response B selected for evidence depth and grounded reasoning.</p>
                 </div>
                 <div class="footer-item">
                   <h4>Confidence level</h4>
-                  <p>High</p>
+                  <p data-live-comparison-confidence>High</p>
                 </div>
                 <div class="footer-item footer-item-wide">
                   <h4>Evidence summary</h4>
                   <button class="toggle-details" type="button" aria-expanded="false">Show rationale</button>
-                  <p class="evidence-text">The stronger choice depends on the use case: Response A is better for direct instruction compliance, while Response B is stronger when grounded reasoning and rich evidence matter most.</p>
+                  <p class="evidence-text" data-live-rationale>The stronger choice depends on the use case: Response A is better for direct instruction compliance, while Response B is stronger when grounded reasoning and rich evidence matter most.</p>
                 </div>
               </div>
             </article>

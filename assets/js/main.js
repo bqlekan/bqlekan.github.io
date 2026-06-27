@@ -151,9 +151,92 @@ if (navLinkMap.length && 'IntersectionObserver' in window && !window.__performan
 document.querySelectorAll('.toggle-details').forEach((button) => {
   button.addEventListener('click', () => {
     const expanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', String(!expanded));
+    const nextExpanded = !expanded;
+    button.setAttribute('aria-expanded', String(nextExpanded));
+    button.textContent = nextExpanded ? 'Hide rationale' : 'Show rationale';
   });
 });
+
+const livePillText = document.querySelector('.live-pill-text');
+const scoreRing = document.querySelector('.score-ring');
+const scoreValue = scoreRing?.querySelector('.score-value');
+const liveScoreCopy = document.querySelector('[data-live-score-copy]');
+const liveConfidence = document.querySelector('[data-live-confidence]');
+const liveStatus = document.querySelector('[data-live-status]');
+const liveCalibration = document.querySelector('[data-live-calibration]');
+const livePreference = document.querySelector('[data-live-preference]');
+const liveComparisonConfidence = document.querySelector('[data-live-comparison-confidence]');
+const liveRationale = document.querySelector('[data-live-rationale]');
+
+const activatePressableGroup = (items, activeItem) => {
+  items.forEach((item) => {
+    const isActive = item === activeItem;
+    item.classList.toggle('is-active', isActive);
+    item.setAttribute('aria-pressed', String(isActive));
+  });
+};
+
+const bindPressable = (items, handler) => {
+  items.forEach((item) => {
+    item.addEventListener('click', () => handler(item));
+    item.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      handler(item);
+    });
+  });
+};
+
+const dimensionRowsInteractive = document.querySelectorAll('.dimension-row[role="button"]');
+
+if (dimensionRowsInteractive.length && scoreRing && scoreValue && liveScoreCopy && liveConfidence && liveStatus && liveCalibration) {
+  const updateLiveDimension = (row) => {
+    const score = Number.parseFloat(row.getAttribute('data-live-score') || '0');
+    const scoreCopy = row.getAttribute('data-live-score-copy') || `${score}% review score`;
+    const confidence = row.getAttribute('data-live-confidence') || 'High';
+    const status = row.getAttribute('data-live-status') || 'Calibrated';
+    const calibration = row.getAttribute('data-live-calibration') || '97%+';
+    const pill = row.getAttribute('data-live-pill');
+
+    scoreRing.style.setProperty('--progress', String(score));
+    scoreValue.textContent = `${score.toFixed(score % 1 ? 1 : 0)}%`;
+    liveScoreCopy.textContent = scoreCopy;
+    liveConfidence.textContent = confidence;
+    liveStatus.textContent = status;
+    liveCalibration.textContent = calibration;
+    if (livePillText && pill) livePillText.textContent = pill;
+
+    activatePressableGroup(dimensionRowsInteractive, row);
+  };
+
+  bindPressable(dimensionRowsInteractive, updateLiveDimension);
+}
+
+const comparisonCardsInteractive = document.querySelectorAll('.comparison-card[role="button"]');
+
+if (comparisonCardsInteractive.length && livePreference && liveComparisonConfidence && liveRationale) {
+  const updateComparisonSelection = (card) => {
+    const preference = card.getAttribute('data-final-preference') || 'No preference selected.';
+    const confidence = card.getAttribute('data-confidence') || 'High';
+    const rationale = card.getAttribute('data-rationale') || 'No rationale available.';
+    const pill = card.getAttribute('data-live-pill');
+
+    livePreference.textContent = preference;
+    liveComparisonConfidence.textContent = confidence;
+    liveRationale.textContent = rationale;
+    if (livePillText && pill) livePillText.textContent = pill;
+
+    const rationaleToggle = document.querySelector('.comparison-footer .toggle-details');
+    if (rationaleToggle) {
+      rationaleToggle.setAttribute('aria-expanded', 'true');
+      rationaleToggle.textContent = 'Hide rationale';
+    }
+
+    activatePressableGroup(comparisonCardsInteractive, card);
+  };
+
+  bindPressable(comparisonCardsInteractive, updateComparisonSelection);
+}
 
 const decisionRows = document.querySelectorAll('.decision-row');
 const decisionSummary = document.querySelector('.decision-summary');
