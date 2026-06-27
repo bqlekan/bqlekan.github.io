@@ -24,6 +24,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html.performance-lite {
+  scroll-behavior: auto;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -178,6 +182,7 @@ a {
 
 .performance-lite .site-header,
 .performance-lite .site-header.is-scrolled {
+  position: static;
   backdrop-filter: none;
   box-shadow: none;
   background: rgba(5, 8, 22, 0.94);
@@ -207,9 +212,52 @@ a {
 .performance-lite .tool-card,
 .performance-lite .certificate-card,
 .performance-lite .focus-card,
-.performance-lite .roadmap-card {
+.performance-lite .roadmap-card,
+.performance-lite .stat-card,
+.performance-lite .strength-card,
+.performance-lite .workflow-step,
+.performance-lite .principle-card,
+.performance-lite .dashboard-card,
+.performance-lite .walkthrough-step,
+.performance-lite .decision-row,
+.performance-lite .decision-summary,
+.performance-lite .evidence-card,
+.performance-lite .lesson-card,
+.performance-lite .case-study-stat,
+.performance-lite .philosophy-card,
+.performance-lite .lifecycle-step,
+.performance-lite .framework-criterion,
+.performance-lite .framework-detail,
+.performance-lite .calibration-step,
+.performance-lite .justification-block,
+.performance-lite .qa-step,
+.performance-lite .growth-panel,
+.performance-lite .tool-card,
+.performance-lite .certificate-card,
+.performance-lite .pathway-step,
+.performance-lite .focus-card,
+.performance-lite .roadmap-card,
+.performance-lite .cta-inner {
+  transition: none;
+  transform: none;
   backdrop-filter: none;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
+}
+
+.performance-lite .button,
+.performance-lite .form-submit-btn,
+.performance-lite .back-to-top,
+.performance-lite .social-link,
+.performance-lite .nav-list a,
+.performance-lite .metric-card:hover,
+.performance-lite .project-card:hover,
+.performance-lite .tool-card:hover,
+.performance-lite .certificate-card:hover,
+.performance-lite .focus-card:hover,
+.performance-lite .roadmap-card:hover,
+.performance-lite .collab-card:hover {
+  transition: none;
+  transform: none;
 }
 
 .metrics-callout,

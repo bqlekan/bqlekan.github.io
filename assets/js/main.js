@@ -95,8 +95,12 @@ if (siteHeader) {
     siteHeader.classList.toggle('is-scrolled', window.scrollY > 16);
   };
 
-  syncHeaderState();
-  window.addEventListener('scroll', syncHeaderState, { passive: true });
+  if (window.__performanceLite) {
+    siteHeader.classList.add('is-scrolled');
+  } else {
+    syncHeaderState();
+    window.addEventListener('scroll', syncHeaderState, { passive: true });
+  }
 }
 
 const navLinkMap = Array.from(navLinks)
@@ -109,7 +113,7 @@ const navLinkMap = Array.from(navLinks)
   })
   .filter(Boolean);
 
-if (navLinkMap.length && 'IntersectionObserver' in window) {
+if (navLinkMap.length && 'IntersectionObserver' in window && !window.__performanceLite) {
   const setActiveLink = (activeLink) => {
     navLinkMap.forEach(({ link }) => {
       const isActive = link === activeLink;
