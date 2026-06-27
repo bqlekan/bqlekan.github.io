@@ -1279,6 +1279,42 @@ h1 {
   text-transform: uppercase;
 }
 
+.project-samples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.9rem;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.project-samples strong {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-samples a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid rgba(90, 169, 255, 0.22);
+  background: rgba(90, 169, 255, 0.1);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.76rem;
+  line-height: 1.2;
+}
+
+.project-samples a:hover,
+.project-samples a:focus-visible {
+  background: rgba(90, 169, 255, 0.18);
+  border-color: rgba(90, 169, 255, 0.32);
+}
+
 .project-footer {
   display: flex;
   flex-wrap: wrap;
