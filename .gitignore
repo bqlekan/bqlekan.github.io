@@ -2,5 +2,7 @@
 lighthouse-desktop.json
 lighthouse-mobile.json
 lighthouse-report.json
+lighthouse-report.html
+cv_extracted.txt
 Thumbs.db
 .DS_Store
