@@ -1,0 +1,81 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+6 0 obj
+<< /Length 3689 >>
+stream
+BT /F3 26 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 779 Tm (Annotation QA review) Tj ET
+BT /F1 9 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 753 Tm (BUSARI QUADRI OYELEKAN  |  WORK SAMPLE) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 725 Tm (A review sequence for checking annotations and recording corrections.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 692 Tm (1. Check the task requirements) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 670 Tm (Confirm the label set, boundary rules, required fields and review procedure. Use the) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 655 Tm (project's sampling and acceptance rules.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 622 Tm (2. Review the items) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 600 Tm (Start with missing labels, wrong targets, duplicate records and empty fields. Then compare) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 585 Tm (the annotation with the source and the relevant guide rule.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 560 Tm (For images, check the object and boundary. For text, check the span and class. For) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 545 Tm (transcripts, compare the words with the audio.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 512 Tm (3. Record a correction) Tj ET
+0.94 0.95 0.92 rg 48 477 499 24 re f
+BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 490 Tm (Field) Tj ET
+BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 490 Tm (Sample review note) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 477 m 547 477 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 463 Tm (Item) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 463 Tm (Organization example) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 450 m 547 450 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 436 Tm (Source) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 436 Tm (Acme Ltd signed the agreement.) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 423 m 547 423 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 409 Tm (Original span) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 409 Tm (Acme) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 396 m 547 396 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 382 Tm (Corrected span) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 382 Tm (Acme Ltd) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 369 m 547 369 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 355 Tm (Reason) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 355 Tm (The sample guide includes the company suffix in the) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 340 Tm (organization name.) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 327 m 547 327 l S
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 295 Tm (4. Look for repeated errors) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 273 Tm (Group similar corrections by the rule involved. Check whether the error comes from a missed) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 258 Tm (instruction or a case the guide has not covered.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 233 Tm (Keep questions about the guide separate from corrections that have a clear answer.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 200 Tm (5. Write useful feedback) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 178 Tm (Point to the item and the rule. Explain what should change and what was already correct.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 163 Tm (Keep the note specific enough for another reviewer to check.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 138 Tm (If a quality result is reported later, include the reviewed sample, period, error) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 123 Tm (definition and calculation method.) Tj ET
+BT /F1 9 Tf 0.4 0.42 0.38 rg 1 0 0 1 52 40 Tm (Quadri Busari  |  1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000000332 00000 n 
+0000004073 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4219
+%%EOF

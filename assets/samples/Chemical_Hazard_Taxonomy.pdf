@@ -1,0 +1,95 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+6 0 obj
+<< /Length 4296 >>
+stream
+BT /F3 26 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 779 Tm (Chemical hazard annotation) Tj ET
+BT /F1 9 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 753 Tm (BUSARI QUADRI OYELEKAN  |  WORK SAMPLE) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 725 Tm (A sample schema for extracting hazard information from a supplied safety data sheet or) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 710 Tm (source passage.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 677 Tm (Fields) Tj ET
+0.94 0.95 0.92 rg 48 642 499 24 re f
+BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 655 Tm (Field) Tj ET
+BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 655 Tm (Source requirement) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 642 m 547 642 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 628 Tm (Substance name) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 628 Tm (Copy the name as written.) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 615 m 547 615 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 601 Tm (Identifier) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 601 Tm (Record a CAS number or other identifier only when supplied.) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 588 m 547 588 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 574 Tm (Hazard phrase) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 574 Tm (Select the words that describe the hazard.) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 561 m 547 561 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 547 Tm (Hazard code) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 547 Tm (Record an explicit code. Leave it unspecified when absent.) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 534 m 547 534 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 520 Tm (Precaution phrase) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 520 Tm (Select the handling or storage instruction.) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 507 m 547 507 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 493 Tm (Evidence location) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 493 Tm (Record the section or passage supporting the label.) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 480 m 547 480 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 466 Tm (Review note) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 466 Tm (Describe missing information or conflicting entries.) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 453 m 547 453 l S
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 421 Tm (Sample source) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 399 Tm ('Example Solvent. Hazard statement: Highly flammable liquid and vapour. Keep away from) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 384 Tm (heat.') Tj ET
+0.94 0.95 0.92 rg 48 346 499 24 re f
+BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 359 Tm (Field) Tj ET
+BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 359 Tm (Annotation) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 346 m 547 346 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 332 Tm (Substance name) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 332 Tm (Example Solvent) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 319 m 547 319 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 305 Tm (Hazard phrase) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 305 Tm (Highly flammable liquid and vapour) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 292 m 547 292 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 278 Tm (Precaution phrase) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 278 Tm (Keep away from heat) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 265 m 547 265 l S
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 251 Tm (Hazard code) Tj ET
+BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 251 Tm (Not supplied) Tj ET
+0.83 0.85 0.81 RG 0.4 w 48 238 m 547 238 l S
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 206 Tm (Review checks) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 184 Tm (Keep hazard statements separate from precautions when the schema uses separate fields.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 169 Tm (Check that each span matches the source.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 144 Tm (The sample source gives no hazard code, signal word or pictogram. Leave those fields) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 129 Tm (unspecified. Use the supplied safety data sheet for classification; this extraction schema) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 114 Tm (does not establish a regulatory classification.) Tj ET
+BT /F1 9 Tf 0.4 0.42 0.38 rg 1 0 0 1 52 40 Tm (Quadri Busari  |  1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000000332 00000 n 
+0000004680 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4826
+%%EOF

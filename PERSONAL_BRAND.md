@@ -70,16 +70,16 @@ Inspired by:
 -   Stripe
 -   Framer
 
-Use:
+Current direction, requested by the portfolio owner:
 
--   Glassmorphism
--   Minimalism
--   Smooth GSAP animations
--   Three.js background
--   Lenis smooth scrolling
--   Elegant typography
--   Premium spacing
--   Refined micro-interactions
+-   Warm paper backgrounds, dark text, and muted green accents
+-   Serif display typography and readable body text
+-   A sideways work gallery with real sample excerpts
+-   Simple rules, generous spacing, and restrained motion
+-   Clear PDF and Word download links
+-   Native scrolling with keyboard and touch support
+
+Avoid glass panels, glow effects, decorative dashboards, excessive cards, and formulaic marketing copy. Use ordinary punctuation; avoid embedded long dashes in prose and documents.
 
 ------------------------------------------------------------------------
 

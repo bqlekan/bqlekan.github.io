@@ -1,0 +1,66 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+6 0 obj
+<< /Length 3067 >>
+stream
+BT /F3 26 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 779 Tm (Industrial equipment annotation) Tj ET
+BT /F1 9 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 753 Tm (BUSARI QUADRI OYELEKAN  |  WORK SAMPLE) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 725 Tm (Working guidance for equipment labels, visible boundaries and uncertain image details.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 692 Tm (Choose the label) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 670 Tm (Compare the visible equipment with the class definitions and reference images. Use the) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 655 Tm (permitted unknown label when the image does not support a specific class.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 630 Tm (Check the task's visibility and size rules before drawing. A partly hidden object may need) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 615 Tm (a label, a flag or no annotation, depending on the guide.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 582 Tm (Draw the boundary) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 560 Tm (Use the requested geometry. For a visible outline, follow the equipment silhouette and stop) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 545 Tm (at an obstruction. Add shadows or hidden parts only when the guide asks for them.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 520 Tm (Check that the boundary belongs to the intended instance and that separate objects have) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 505 Tm (separate identifiers.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 472 Tm (Record visible conditions) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 450 Tm (Use only the condition labels defined by the task. Record blur, glare or occlusion when) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 435 Tm (these affect the decision.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 410 Tm (A photograph alone may not establish structural integrity or operational safety. Keep the) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 395 Tm (label within what the image and guide support.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 362 Tm (Sample decision) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 340 Tm (Scenario: a pump is partly hidden behind a pipe rack. The sample guide requires polygons) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 325 Tm (around visible equipment.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 300 Tm (Decision: trace the visible pump outline, stop the polygon at the rack and set the) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 285 Tm (occlusion field. Leave the hidden shape unestimated.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 252 Tm (Final check) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 230 Tm (Review the class, instance identifier, boundary and required attributes. Check the export) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 215 Tm (against the task schema. Attach a note to any item that needs a second review.) Tj ET
+BT /F1 9 Tf 0.4 0.42 0.38 rg 1 0 0 1 52 40 Tm (Quadri Busari  |  1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000000332 00000 n 
+0000003451 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3597
+%%EOF

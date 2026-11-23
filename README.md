@@ -1,15 +1,28 @@
 # Quadri Busari AI Evaluation Portfolio
 
-Production-ready single-page portfolio built with semantic HTML, modular CSS, and vanilla JavaScript.
+Single-page portfolio built with semantic HTML, modular CSS, and vanilla JavaScript.
+
+## Content accuracy
+
+The portfolio states two years of AI evaluation experience. The response comparison includes a sample prompt, source text, and the reason for the preference. Downloadable work samples describe annotation methods and example decisions.
+
+Publish performance figures and credentials only with supporting records. Keep sample scenarios clearly identified as examples.
 
 ## Stack
 
 - HTML5
 - CSS3
 - Vanilla JavaScript (ES6+)
-- GSAP + ScrollTrigger
-- Lenis
-- Three.js
+- System fonts and CSS motion
+- Native scrolling and a keyboard-accessible work gallery
+
+The current page has no external font or animation dependencies. The earlier Three.js background source is retained but is not loaded by the page.
+
+## Work sample downloads
+
+The work section links to five one-page PDFs and five editable Word documents. The combined archive at `assets/samples/Quadri_Busari_Annotation_Samples.zip` includes all ten files. The CV remains a separate download.
+
+Sample sources and scenarios are clearly identified as examples. The documents use plain wording and ordinary punctuation, without unsupported performance claims.
 
 ## Local Development
 
@@ -74,7 +87,7 @@ form-action 'self';
 
 ## Browser Support
 
-Verified target behavior:
+Browser support targets (verify on each platform before claiming support):
 
 - Chrome, Edge, Firefox, Safari
 - iOS Safari, Android Chrome

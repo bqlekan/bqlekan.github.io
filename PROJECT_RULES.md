@@ -13,7 +13,9 @@ Before making any changes, always read:
 1.  `Quadri_Busari_ATS_Optimized_CV.docx`
 2.  `PERSONAL_BRAND.md`
 
-The CV is the factual source of truth.
+The CV provides background information. The portfolio owner's corrections take precedence: use two years of AI evaluation experience and omit unsupported performance figures.
+
+Performance metrics, platform rankings, adoption claims, and certifications require supporting records before publication. Repeating a claim in the CV or a work sample does not verify it.
 
 The PERSONAL_BRAND file defines creative direction.
 

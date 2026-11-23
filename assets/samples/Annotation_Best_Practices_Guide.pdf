@@ -1,0 +1,66 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+6 0 obj
+<< /Length 3022 >>
+stream
+BT /F3 26 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 779 Tm (Annotation practice guide) Tj ET
+BT /F1 9 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 753 Tm (BUSARI QUADRI OYELEKAN  |  WORK SAMPLE) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 725 Tm (Working notes for checking labels, text spans and transcripts against a task guide.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 692 Tm (Before starting) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 670 Tm (Read the task guide from beginning to end. Check the label set, output format and any) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 655 Tm (exceptions. Keep the reference examples open while you work.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 630 Tm (If two rules appear to conflict, write down the case and ask which rule applies before) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 615 Tm (submitting the label.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 582 Tm (Image labels) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 560 Tm (Use the annotation shape the task asks for. A box and a polygon serve different purposes;) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 545 Tm (the guide determines which one to draw.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 520 Tm (Follow the visible outline when the task requires a visible boundary. Leave hidden parts) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 505 Tm (unestimated. Record occlusion in the field provided.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 472 Tm (Text spans) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 450 Tm (Include the words required by the entity definition. Check suffixes, units and punctuation.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 435 Tm (Use the same rule for repeated names.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 410 Tm (Sample text: 'Acme Ltd signed the agreement.' A guide that includes company suffixes) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 395 Tm (requires the organization span 'Acme Ltd', rather than 'Acme'.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 362 Tm (Audio transcripts) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 340 Tm (Listen again to unclear words. Keep the speaker's wording and follow the task rules for) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 325 Tm (fillers, dialect, speaker turns and background sounds.) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 300 Tm (Use the specified marker for an inaudible word. Leave a short note when the audio does not) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 285 Tm (support a confident transcription.) Tj ET
+BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 252 Tm (Before submitting) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 230 Tm (Check the label, boundary and required fields. Compare uncertain items with the reference) Tj ET
+BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 215 Tm (examples. Make sure any question or correction is attached to the right item.) Tj ET
+BT /F1 9 Tf 0.4 0.42 0.38 rg 1 0 0 1 52 40 Tm (Quadri Busari  |  1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000000332 00000 n 
+0000003406 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3552
+%%EOF
