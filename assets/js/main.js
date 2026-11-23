@@ -13,7 +13,16 @@
   const position=document.querySelector('.gallery-position');
   let current=0,frame=0;
   const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-  const syncGallery=()=>{if(!gallery||!cards.length)return;const inset=parseFloat(getComputedStyle(gallery).paddingLeft)||0;const left=gallery.getBoundingClientRect().left+inset;current=cards.reduce((best,card,index)=>Math.abs(card.getBoundingClientRect().left-left)<Math.abs(cards[best].getBoundingClientRect().left-left)?index:best,0);previous.disabled=current===0;next.disabled=current===cards.length-1||gallery.scrollLeft>=gallery.scrollWidth-gallery.clientWidth-2;position.textContent=String(current+1).padStart(2,'0')+' / '+String(cards.length).padStart(2,'0');};
+  const syncGallery=()=>{
+    if(!gallery||!cards.length)return;
+    const inset=parseFloat(getComputedStyle(gallery).paddingLeft)||0;
+    const left=gallery.getBoundingClientRect().left+inset;
+    const atEnd=gallery.scrollWidth>gallery.clientWidth+2&&gallery.scrollLeft>=gallery.scrollWidth-gallery.clientWidth-2;
+    current=atEnd?cards.length-1:cards.reduce((best,card,index)=>Math.abs(card.getBoundingClientRect().left-left)<Math.abs(cards[best].getBoundingClientRect().left-left)?index:best,0);
+    previous.disabled=current===0;
+    next.disabled=current===cards.length-1||atEnd;
+    position.textContent=String(current+1).padStart(2,'0')+' / '+String(cards.length).padStart(2,'0');
+  };
   const moveGallery=direction=>{if(!gallery||!cards.length)return;const target=cards[Math.max(0,Math.min(cards.length-1,current+direction))];const inset=parseFloat(getComputedStyle(gallery).paddingLeft)||0;const delta=target.getBoundingClientRect().left-gallery.getBoundingClientRect().left-inset;gallery.scrollBy({left:delta,behavior:reducedMotion.matches?'instant':'smooth'});};
   previous?.addEventListener('click',()=>moveGallery(-1));next?.addEventListener('click',()=>moveGallery(1));
   gallery?.addEventListener('scroll',()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(syncGallery);},{passive:true});

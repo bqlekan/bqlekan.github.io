@@ -1,0 +1,1392 @@
+{
+  "Annotation_Best_Practices_Guide": {
+    "title": "Annotation Best Practices Guide",
+    "subtitle": "Text, image and audio annotation",
+    "intro": "Use this guide to check label choices, boundaries and review notes. The task brief supplies the label set, output format and exceptions for each assignment.",
+    "sections": [
+      {
+        "heading": "1. Before starting a batch",
+        "bullets": [
+          "Read the full task guide, including the examples and exceptions. Confirm which version applies to the batch.",
+          "Check the required fields, allowed labels and procedure for uncertain items. Do not add a new class without agreement.",
+          "Complete a small set of items and compare the decisions with the reference examples. Record disagreements by item and rule.",
+          "Resolve conflicting instructions before submitting affected items. Keep a short record of any clarification so later items follow the same rule."
+        ]
+      },
+      {
+        "heading": "2. Image annotation",
+        "text": [
+          "Choose the geometry specified by the task. Object shape alone does not determine whether to use a box, polygon or mask."
+        ],
+        "table": {
+          "headers": [
+            "Task",
+            "Boundary rule",
+            "Review check"
+          ],
+          "widths": [
+            0.23,
+            0.43,
+            0.34
+          ],
+          "rows": [
+            [
+              "Visible-object detection",
+              "Fit a box to the outermost visible parts of the target instance.",
+              "Exclude unrelated objects, shadows and reflections."
+            ],
+            [
+              "Visible segmentation",
+              "Trace the visible silhouette. Follow the task rule for disconnected visible regions.",
+              "Leave hidden pixels outside the mask."
+            ],
+            [
+              "Amodal annotation",
+              "Estimate hidden extent only when the task explicitly requests it and provides a convention.",
+              "Record uncertainty; do not apply this rule to visible segmentation."
+            ],
+            [
+              "Defect annotation",
+              "Select the visible defect region, linked to the affected object.",
+              "Keep the surrounding equipment separate from the defect mask."
+            ]
+          ]
+        },
+        "textAfter": [
+          "Mark occlusion when another object hides the target. Mark truncation when the target crosses the image edge. These describe different conditions.",
+          "Use the project's minimum size and visibility rules. If no threshold is supplied, ask for one instead of introducing a percentage."
+        ]
+      },
+      {
+        "heading": "3. Text spans and entity labels",
+        "newPage": true,
+        "bullets": [
+          "Keep the source wording and offsets. Store normalized names, dates or amounts in separate fields when requested.",
+          "Include a company suffix when the organization definition requires it. Exclude surrounding articles and punctuation unless they belong to the entity name.",
+          "Apply the stated policy for possessives, date qualifiers and nested entities. Do not assume these have the same boundary rule in every project.",
+          "Review repeated mentions for consistent interpretation. A mention's label must still follow its context and the task definition."
+        ],
+        "text": [
+          "Worked example. Source: 'Acme Ltd issued an invoice for USD 250 on 15 May 2024.' The example schema includes company suffixes, the currency with the amount, and the complete date expression."
+        ],
+        "table": {
+          "headers": [
+            "Source span",
+            "Label",
+            "Boundary check"
+          ],
+          "widths": [
+            0.29,
+            0.27,
+            0.44
+          ],
+          "rows": [
+            [
+              "Acme Ltd",
+              "ORGANIZATION",
+              "Include Ltd; exclude the following verb."
+            ],
+            [
+              "invoice",
+              "DOCUMENT_TYPE",
+              "Select the named document type."
+            ],
+            [
+              "USD 250",
+              "AMOUNT",
+              "Include the currency and value."
+            ],
+            [
+              "15 May 2024",
+              "DATE",
+              "Exclude the preceding word 'on' and the full stop."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "4. Audio transcription",
+        "text": [
+          "Keep the speaker's words and language variety. For example, the Nigerian Pidgin utterance 'I go do am' stays as spoken unless the assignment specifically requests translation.",
+          "Check speaker changes against the audio. Use the task's overlap convention; do not silently remove a quieter speaker. Include fillers when the task calls for verbatim transcription."
+        ],
+        "table": {
+          "headers": [
+            "Example marker",
+            "Use"
+          ],
+          "widths": [
+            0.25,
+            0.75
+          ],
+          "rows": [
+            [
+              "[inaudible]",
+              "Speech is present, but the words cannot be recovered reliably."
+            ],
+            [
+              "[crosstalk]",
+              "Overlapping speakers cannot be transcribed separately under the task convention."
+            ],
+            [
+              "[noise]",
+              "A relevant non-speech sound interrupts the recording."
+            ]
+          ]
+        },
+        "textAfter": [
+          "These markers illustrate a convention. Use the exact tags and timestamp format required by the task, and replay unclear segments before flagging them."
+        ]
+      },
+      {
+        "heading": "5. Handling uncertainty",
+        "newPage": true,
+        "table": {
+          "headers": [
+            "Situation",
+            "Action"
+          ],
+          "widths": [
+            0.34,
+            0.66
+          ],
+          "rows": [
+            [
+              "Two labels seem plausible",
+              "Compare the definitions and reference examples. Flag the item if the distinction remains unresolved."
+            ],
+            [
+              "An object is too blurred to identify",
+              "Record the image-quality issue. Use the permitted unknown or review status."
+            ],
+            [
+              "A text span could contain nested entities",
+              "Follow the overlap policy. Ask for clarification if the guide has no example."
+            ],
+            [
+              "A dialect word is unfamiliar",
+              "Keep a timestamped query for language review. Do not replace it with a guessed standard-English word."
+            ],
+            [
+              "A required field has no supporting evidence",
+              "Use the specified missing-value convention and explain what the source lacks."
+            ]
+          ]
+        },
+        "textAfter": [
+          "A useful note identifies the item, the evidence, the relevant rule and the unresolved question. Keep it specific enough for another reviewer to reproduce the decision."
+        ]
+      },
+      {
+        "heading": "6. Before submission",
+        "bullets": [
+          "Confirm that every label points to the intended object, span or audio segment.",
+          "Check boundaries, speaker identifiers, timestamps and repeated mentions.",
+          "Check required attributes, missing values and links between related records.",
+          "Remove duplicate annotations and verify the export format.",
+          "Attach unresolved questions to the correct items. Keep them separate from corrections that have a clear answer.",
+          "Review a portion of the latest work before ending a session. Pause when fatigue makes decisions inconsistent."
+        ]
+      },
+      {
+        "heading": "Example review note",
+        "text": [
+          "Item: organization span in the worked example. Original: 'Acme'. Correction: 'Acme Ltd'. Reason: the example schema includes the legal suffix. No change to the source text or the other entities is needed."
+        ]
+      }
+    ]
+  },
+  "Chemical_Hazard_Taxonomy": {
+    "title": "Chemical Hazard Classification Taxonomy",
+    "subtitle": "23 labels for safety data sheet annotation",
+    "intro": "This schema records hazard information from supplied safety data sheets (SDS). It includes selected hazard families, combination tags and review flags. It is a project label set rather than a complete list of GHS hazard classes.",
+    "sections": [
+      {
+        "heading": "1. Source and record requirements",
+        "text": [
+          "Use the SDS for the stated product, formulation and jurisdiction. Record its revision and source location when available. Section 2 normally supplies classification and label information; supporting sections may explain an ambiguous entry."
+        ],
+        "table": {
+          "headers": [
+            "Field",
+            "Recording rule"
+          ],
+          "widths": [
+            0.3,
+            0.7
+          ],
+          "rows": [
+            [
+              "Product and identifier",
+              "Copy the supplied name and identifier. Do not infer a CAS number from a trade name."
+            ],
+            [
+              "Hazard labels",
+              "Record every supported hazard family; multiple labels may apply."
+            ],
+            [
+              "Hazard statement and code",
+              "Keep the exact statement. Capture an H-code only when it is supplied."
+            ],
+            [
+              "Signal word",
+              "Copy the source signal word. Do not derive it from a broad family label."
+            ],
+            [
+              "Pictograms",
+              "Record the supplied pictogram names or identifiers separately from hazard statements."
+            ],
+            [
+              "Precautions",
+              "Keep precautionary statements separate from hazard statements."
+            ],
+            [
+              "Evidence location",
+              "Record the source section, page or text span for each decision."
+            ],
+            [
+              "Review status",
+              "Explain missing, illegible or conflicting source information."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "2. Physical hazard families",
+        "newPage": true,
+        "text": [
+          "Division A contains seven project labels. The source classification controls the assignment. A familiar substance name, flash point alone or pictogram alone is insufficient to establish every classification detail."
+        ],
+        "table": {
+          "headers": [
+            "Code",
+            "Label",
+            "Source evidence"
+          ],
+          "widths": [
+            0.1,
+            0.3,
+            0.6
+          ],
+          "rows": [
+            [
+              "A1",
+              "Flammable liquids",
+              "An explicit flammable-liquid classification or hazard statement."
+            ],
+            [
+              "A2",
+              "Flammable solids",
+              "An explicit flammable-solid classification or statement."
+            ],
+            [
+              "A3",
+              "Self-reactive substances",
+              "The source identifies a self-reactive substance or mixture; retain the stated type if available."
+            ],
+            [
+              "A4",
+              "Pyrophoric substances",
+              "The source identifies pyrophoric liquid or solid behaviour."
+            ],
+            [
+              "A5",
+              "Oxidising agents",
+              "An explicit oxidising gas, liquid or solid classification; record the subtype separately."
+            ],
+            [
+              "A6",
+              "Gases under pressure",
+              "The stated compressed, liquefied, refrigerated liquefied or dissolved-gas classification."
+            ],
+            [
+              "A7",
+              "Explosives",
+              "The source identifies an explosive hazard; retain the stated division or category."
+            ]
+          ]
+        },
+        "textAfter": [
+          "The pictogram and signal word can vary with hazard category and other hazards on the label. Record what the source supplies rather than assigning one fixed pictogram or signal word to each row."
+        ]
+      },
+      {
+        "heading": "3. Health hazard families",
+        "newPage": true,
+        "text": [
+          "Division B contains eight labels. Preserve the stated route, category and wording. Exposure through the respiratory tract is not, by itself, evidence of respiratory sensitisation."
+        ],
+        "table": {
+          "headers": [
+            "Code",
+            "Label",
+            "Source evidence"
+          ],
+          "widths": [
+            0.1,
+            0.3,
+            0.6
+          ],
+          "rows": [
+            [
+              "B1",
+              "Acute toxicity: oral",
+              "An acute-toxicity classification or statement for swallowing."
+            ],
+            [
+              "B2",
+              "Acute toxicity: dermal",
+              "An acute-toxicity classification or statement for skin contact."
+            ],
+            [
+              "B3",
+              "Acute toxicity: inhalation",
+              "An acute-toxicity classification or statement for inhalation."
+            ],
+            [
+              "B4",
+              "Skin corrosion or irritation",
+              "Record whether the source states corrosion or irritation; do not merge the two in the output."
+            ],
+            [
+              "B5",
+              "Serious eye damage or irritation",
+              "Record the source distinction between serious damage and irritation."
+            ],
+            [
+              "B6",
+              "Respiratory sensitisation",
+              "A stated respiratory-sensitisation classification or relevant hazard statement."
+            ],
+            [
+              "B7",
+              "Carcinogenicity",
+              "The source's stated classification. Keep an IARC assessment separate from a GHS category."
+            ],
+            [
+              "B8",
+              "Reproductive toxicity",
+              "The stated reproductive or developmental effect and category, where supplied."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "4. Environmental hazard families",
+        "table": {
+          "headers": [
+            "Code",
+            "Label",
+            "Source evidence"
+          ],
+          "widths": [
+            0.1,
+            0.3,
+            0.6
+          ],
+          "rows": [
+            [
+              "C1",
+              "Acute aquatic hazard",
+              "The source explicitly gives an acute aquatic classification or statement."
+            ],
+            [
+              "C2",
+              "Chronic aquatic hazard",
+              "The source explicitly gives a chronic aquatic classification or statement."
+            ],
+            [
+              "C3",
+              "Hazard to the ozone layer",
+              "A stated ozone-layer hazard classification or relevant regulatory source."
+            ]
+          ]
+        },
+        "textAfter": [
+          "Acute and chronic aquatic hazards may both apply. Do not use degradability alone to choose between them, or calculate a classification from a single test value without an approved classification procedure."
+        ]
+      },
+      {
+        "heading": "5. Combination and review tags",
+        "newPage": true,
+        "text": [
+          "Division D contains three combination tags. These summarize supported component labels and do not replace them or create a new GHS class."
+        ],
+        "table": {
+          "headers": [
+            "Code",
+            "Tag",
+            "Rule"
+          ],
+          "widths": [
+            0.1,
+            0.3,
+            0.6
+          ],
+          "rows": [
+            [
+              "D1",
+              "Flammable and toxic",
+              "Add when the source supports both a flammable label and an acute-toxicity label. Keep both component entries."
+            ],
+            [
+              "D2",
+              "Corrosive and oxidising",
+              "Add when both properties are explicitly supported. Do not assign it from an acid name alone."
+            ],
+            [
+              "D3",
+              "Sensitiser and carcinogen",
+              "Add when the source supports B6 and B7. Keep both entries and the respiratory-sensitisation route."
+            ]
+          ]
+        },
+        "textAfter": [
+          "Division E contains two status tags. Neither is a substitute for a supported hazard label."
+        ],
+        "secondTable": {
+          "headers": [
+            "Code",
+            "Tag",
+            "Rule"
+          ],
+          "widths": [
+            0.1,
+            0.3,
+            0.6
+          ],
+          "rows": [
+            [
+              "E1",
+              "SVHC status",
+              "Record an explicit Substance of Very High Concern listing or source statement with its reference. Candidate List status and REACH Annex XIV authorisation-list status are separate fields."
+            ],
+            [
+              "E2",
+              "Unresolved hazard information",
+              "Use when information needed for the requested decision is missing or conflicting. State what is unresolved; retain other supported labels."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "6. Decision rules",
+        "bullets": [
+          "Use multiple hazard labels when the SDS supports them. The order in Section 2 does not establish a universal primary-hazard ranking.",
+          "For a hazard outside this label set, retain its source statement and request a schema extension. Do not force a skin sensitiser into the respiratory-sensitisation label.",
+          "Preserve source categories and routes as separate attributes. Do not infer them from a family label.",
+          "Treat missing information as a review issue, even when only one required field is absent. A missing classification is not evidence of no hazard.",
+          "Keep statements, codes, pictograms, signal words and precautions in their own fields.",
+          "Attach a source location to every label. Use E2 for unresolved parts of the record rather than discarding the supported parts."
+        ]
+      },
+      {
+        "heading": "7. Worked extraction examples",
+        "newPage": true,
+        "text": [
+          "Example A. Supplied passage: 'Example Solvent. Hazard statement: Highly flammable liquid and vapour. Keep away from heat.'"
+        ],
+        "table": {
+          "headers": [
+            "Field",
+            "Annotation"
+          ],
+          "widths": [
+            0.3,
+            0.7
+          ],
+          "rows": [
+            [
+              "Product",
+              "Example Solvent"
+            ],
+            [
+              "Hazard label",
+              "A1: Flammable liquids"
+            ],
+            [
+              "Hazard statement",
+              "Highly flammable liquid and vapour"
+            ],
+            [
+              "Precaution",
+              "Keep away from heat"
+            ],
+            [
+              "Code, signal word, pictogram",
+              "Not supplied in this passage; do not infer them."
+            ],
+            [
+              "Evidence",
+              "The supplied passage; no SDS page or revision was provided."
+            ]
+          ]
+        },
+        "textAfter": [
+          "Example B. Supplied passage: 'Example Mixture. Section 2: Highly flammable liquid and vapour. Toxic if swallowed. Signal word: Danger.'"
+        ],
+        "secondTable": {
+          "headers": [
+            "Field",
+            "Annotation"
+          ],
+          "widths": [
+            0.3,
+            0.7
+          ],
+          "rows": [
+            [
+              "Hazard labels",
+              "A1 and B1, each linked to its supporting statement."
+            ],
+            [
+              "Combination tag",
+              "D1, with the A1 and B1 entries retained."
+            ],
+            [
+              "Signal word",
+              "Danger, copied from the source."
+            ],
+            [
+              "Review note",
+              "Hazard codes and pictograms were not supplied; complete those fields only from additional source material."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "8. Final review",
+        "text": [
+          "Check the product identity, source revision, all supported hazards and each evidence location. Confirm that combination tags retain their component labels, and that missing fields have a clear review note. Keep any later agreement or accuracy report separate from the taxonomy, with its sample size and calculation method.",
+          "Reference convention: the UN Globally Harmonized System of Classification and Labelling of Chemicals (GHS), together with the SDS and regulatory references supplied for the task. The example passages above are illustrative source text."
+        ]
+      }
+    ]
+  },
+  "Industrial_Equipment_ML_Annotation_Guidelines": {
+    "title": "Industrial Equipment Annotation Guidelines",
+    "subtitle": "Equipment labels, geometry and visible conditions",
+    "intro": "This guide covers equipment images, point clouds and visible-condition annotation. Record only what the supplied data and task definitions support. The label set below contains 13 equipment classes in three groups.",
+    "sections": [
+      {
+        "heading": "1. Read the task brief",
+        "bullets": [
+          "Confirm the image or sensor modality, label definitions, required geometry and export format.",
+          "Check the rules for object parts, occlusion, truncation, minimum size and uncertain classes.",
+          "For point clouds, confirm the coordinate frame, axis convention, units and cuboid orientation.",
+          "Agree any condition or severity rubric before applying it. Equipment appearance alone does not establish operating pressure or structural integrity."
+        ]
+      },
+      {
+        "heading": "2. Equipment class taxonomy: rotating machinery",
+        "table": {
+          "headers": [
+            "Code",
+            "Class",
+            "Identification and boundary note"
+          ],
+          "widths": [
+            0.16,
+            0.29,
+            0.55
+          ],
+          "rows": [
+            [
+              "ROT-001",
+              "Centrifugal pump",
+              "Use the housing and connection layout with reference images. Separate coupled equipment according to the task's part policy."
+            ],
+            [
+              "ROT-002",
+              "Axial compressor",
+              "Use visible stage or blade arrangement when available. Do not infer compressor type from a closed housing alone."
+            ],
+            [
+              "ROT-003",
+              "Electric motor",
+              "Label the motor body and included attachments. Keep the coupled load as a separate instance when required."
+            ],
+            [
+              "ROT-004",
+              "Gearbox or reducer",
+              "Label the visible housing. Include internal gears only if visible and requested."
+            ],
+            [
+              "ROT-005",
+              "Fan or blower",
+              "Use the visible impeller, housing or source metadata. Do not infer operating pressure from a photograph."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "3. Static vessels",
+        "newPage": true,
+        "table": {
+          "headers": [
+            "Code",
+            "Class",
+            "Identification and boundary note"
+          ],
+          "widths": [
+            0.16,
+            0.29,
+            0.55
+          ],
+          "rows": [
+            [
+              "VES-001",
+              "Pressure vessel",
+              "Use the permitted metadata and reference examples. A closed container's shape alone does not establish its pressure rating."
+            ],
+            [
+              "VES-002",
+              "Storage tank",
+              "Label the visible tank envelope. Record a roof subtype only when the view supports it."
+            ],
+            [
+              "VES-003",
+              "Heat exchanger",
+              "Use the visible shell, heads, plates or tube arrangement. Follow the task's policy for separate parts."
+            ],
+            [
+              "VES-004",
+              "Distillation column",
+              "Use visible features and permitted metadata. Label a separate condenser as its own instance when required."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "4. Piping and valves",
+        "table": {
+          "headers": [
+            "Code",
+            "Class",
+            "Identification and boundary note"
+          ],
+          "widths": [
+            0.16,
+            0.29,
+            0.55
+          ],
+          "rows": [
+            [
+              "PIPE-001",
+              "Straight pipe run",
+              "For centreline tasks, draw a polyline over the visible run and stop at the specified fitting or obstruction."
+            ],
+            [
+              "PIPE-002",
+              "Gate valve",
+              "Compare body, bonnet and stem features with the task examples. Flag an unclear valve type."
+            ],
+            [
+              "PIPE-003",
+              "Control valve",
+              "Include the body and actuator together only when the instance definition requires it."
+            ],
+            [
+              "PIPE-004",
+              "Safety relief valve",
+              "Use distinctive visible features or permitted source metadata. Do not treat a rupture disc as the same device without a separate task rule."
+            ]
+          ]
+        },
+        "textAfter": [
+          "If a class cannot be established, use the task's unknown or review status and describe the missing evidence. A novel object needs review; do not silently force it into the closest class."
+        ]
+      },
+      {
+        "heading": "5. Geometry and visibility",
+        "newPage": true,
+        "table": {
+          "headers": [
+            "Method",
+            "How to annotate"
+          ],
+          "widths": [
+            0.28,
+            0.72
+          ],
+          "rows": [
+            [
+              "Bounding box",
+              "Fit the box to the visible target extent. Keep separate instances separate. Exclude shadows and unrelated background."
+            ],
+            [
+              "Polygon or mask",
+              "Trace the visible silhouette. Use enough detail to follow the contour without self-intersections or unsupported vertices."
+            ],
+            [
+              "Polyline",
+              "Follow the requested pipe centreline. Keep endpoints and branches consistent with the task convention."
+            ],
+            [
+              "3D cuboid",
+              "Check top, side and front views. Cover supported object points, align with the requested orientation convention, and exclude isolated noise returns."
+            ],
+            [
+              "Occlusion",
+              "Record the occlusion flag and follow the visible-boundary policy. Estimate hidden extent only for an explicitly defined amodal task."
+            ],
+            [
+              "Truncation",
+              "Keep 2D annotations inside the image frame and flag the clipped object."
+            ],
+            [
+              "Poor or sparse data",
+              "Flag blur, glare, insufficient resolution or sparse returns when these prevent a reliable class or boundary decision."
+            ]
+          ]
+        },
+        "textAfter": [
+          "Minimum object size, visible fraction, vertex tolerance and point density belong in the task brief. They should not be chosen from a general guide or applied as universal thresholds."
+        ]
+      },
+      {
+        "heading": "6. Visible-condition records",
+        "text": [
+          "Link each condition region to an equipment instance. Use approved condition labels such as surface discolouration or corrosion where the source and rubric support them. A rust-coloured area does not establish corrosion depth, wall strength or immediate danger."
+        ],
+        "secondTable": {
+          "headers": [
+            "Field",
+            "Rule"
+          ],
+          "widths": [
+            0.28,
+            0.72
+          ],
+          "rows": [
+            [
+              "parent_id",
+              "Point to an existing equipment instance."
+            ],
+            [
+              "condition label",
+              "Describe the visible condition using the task's label set."
+            ],
+            [
+              "region",
+              "Select the supported area; keep it separate from the equipment boundary."
+            ],
+            [
+              "severity",
+              "Use the approved grading criteria. Leave unassessed when the data cannot establish a grade."
+            ],
+            [
+              "coverage",
+              "Record only when required and measured under a defined method; do not present a visual guess as a precise measurement."
+            ],
+            [
+              "review note",
+              "Describe hidden surfaces, uncertainty and any need for specialist review."
+            ]
+          ]
+        },
+        "textAfter": [
+          "Multiple condition regions may coexist. The number of overlapping masks does not determine severity. An image with no visible defect supports only 'none observed in this view', rather than a conclusion about the whole machine."
+        ]
+      },
+      {
+        "heading": "7. Worked annotation decisions",
+        "newPage": true,
+        "text": [
+          "Example A: partially occluded pump. The supplied scenario shows an identifiable centrifugal pump behind a pipe rack. The task requests polygons around visible equipment."
+        ],
+        "table": {
+          "headers": [
+            "Field",
+            "Decision"
+          ],
+          "widths": [
+            0.28,
+            0.72
+          ],
+          "rows": [
+            [
+              "Equipment class",
+              "ROT-001: Centrifugal pump"
+            ],
+            [
+              "Geometry",
+              "Trace the visible outline and stop at the rack. Do not estimate the hidden housing."
+            ],
+            [
+              "Attributes",
+              "occluded=true; keep the instance identifier consistent across linked records."
+            ],
+            [
+              "Review note",
+              "The rack hides part of the pump. The visible area supports the class; the hidden area is not assessed."
+            ]
+          ]
+        },
+        "textAfter": [
+          "Example B: surface discolouration. The scenario describes an identifiable pump casing with orange-brown patches. No depth measurement or operating inspection is supplied."
+        ],
+        "secondTable": {
+          "headers": [
+            "Field",
+            "Decision"
+          ],
+          "widths": [
+            0.28,
+            0.72
+          ],
+          "rows": [
+            [
+              "Equipment class",
+              "ROT-001, if supported by the visible features and references."
+            ],
+            [
+              "Condition region",
+              "Select the visible patches and link them to the pump instance."
+            ],
+            [
+              "Condition and severity",
+              "Apply the permitted surface-condition label. Severity remains unassessed without the necessary criteria and evidence."
+            ],
+            [
+              "Review note",
+              "Discolouration is visible. The image does not establish corrosion depth or structural condition."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "8. Export and quality review",
+        "newPage": true,
+        "table": {
+          "headers": [
+            "Format",
+            "Review checks"
+          ],
+          "widths": [
+            0.25,
+            0.75
+          ],
+          "rows": [
+            [
+              "COCO JSON",
+              "Check image, category and annotation identifiers, box conventions, image dimensions and segmentation representation."
+            ],
+            [
+              "Pascal VOC XML",
+              "Check image filenames, class names and the project's pixel-coordinate convention."
+            ],
+            [
+              "YOLO labels",
+              "Check the format variant, class mapping and normalized coordinates. Preserve extra attributes separately when the format cannot carry them."
+            ],
+            [
+              "Point cloud export",
+              "Check coordinate frame, units, object identifiers, cuboid dimensions and orientation against the project specification."
+            ]
+          ]
+        },
+        "bullets": [
+          "Check each class against the source and the approved reference examples.",
+          "Remove duplicate instances and confirm every condition record has a valid parent.",
+          "Check geometry bounds, polygon validity and required flags.",
+          "Keep uncertain classifications and poor-quality items in the review queue.",
+          "Use the project's agreed sample size, reference labels and acceptance criteria for a human audit. Record the method before reporting IoU, agreement or accuracy."
+        ],
+        "textAfter": [
+          "The worked decisions are illustrative scenarios. Tools such as CVAT, Labelbox and V7 Darwin may be used when their task configuration and export support match the brief."
+        ]
+      }
+    ]
+  },
+  "Astronomical_Annotation_Guidelines": {
+    "title": "Astronomical Object Annotation Guidelines",
+    "subtitle": "27 spectral, luminosity, morphology and quality labels",
+    "intro": "This guide separates stellar spectral type, luminosity class, extended-object morphology and data-quality flags. These are four distinct annotation fields, not one mutually exclusive list. Assign a label only when the supplied spectrum, image or permitted catalogue record supports it.",
+    "sections": [
+      {
+        "heading": "1. Source record",
+        "text": [
+          "Record the source identifier, observation or image reference, instrument information and relevant processing state. Keep pixel coordinates separate from celestial coordinates, and record the units and reference frame."
+        ],
+        "bullets": [
+          "For images, confirm the filter or band, pixel scale, orientation and available world-coordinate information.",
+          "For spectra, confirm wavelength units, air or vacuum convention, resolution and whether a radial-velocity correction has been applied.",
+          "Use the task's reference spectra and classification criteria. Missing information should remain unspecified rather than estimated from the object name or display colour."
+        ]
+      },
+      {
+        "heading": "2. Stellar spectral types: seven labels",
+        "text": [
+          "The temperature ranges are approximate reference context for the Morgan-Keenan sequence. They are not independent thresholds for assigning a type to an uncalibrated observation."
+        ],
+        "table": {
+          "headers": [
+            "Code",
+            "Type",
+            "Approximate temperature",
+            "Features to compare"
+          ],
+          "widths": [
+            0.12,
+            0.12,
+            0.31,
+            0.45
+          ],
+          "rows": [
+            [
+              "S-01",
+              "O",
+              "30,000 K and above",
+              "He II and other ionised-species features in the reference spectra."
+            ],
+            [
+              "S-02",
+              "B",
+              "10,000 to 30,000 K",
+              "He I and hydrogen-line behaviour."
+            ],
+            [
+              "S-03",
+              "A",
+              "7,500 to 10,000 K",
+              "Strong hydrogen Balmer absorption."
+            ],
+            [
+              "S-04",
+              "F",
+              "6,000 to 7,500 K",
+              "Increasing Ca II K and metal-line strength."
+            ],
+            [
+              "S-05",
+              "G",
+              "5,200 to 6,000 K",
+              "Ca II and multiple metal-line features."
+            ],
+            [
+              "S-06",
+              "K",
+              "3,700 to 5,200 K",
+              "Neutral metal lines and molecular features."
+            ],
+            [
+              "S-07",
+              "M",
+              "Below about 3,700 K",
+              "Prominent TiO bands in suitable optical spectra."
+            ]
+          ]
+        },
+        "textAfter": [
+          "Compare several supported features rather than classifying from one line. Flag peculiar, composite or emission-dominated spectra when the seven-type sequence does not describe them adequately."
+        ]
+      },
+      {
+        "heading": "3. Luminosity classes: five labels",
+        "newPage": true,
+        "text": [
+          "Record luminosity class separately from spectral type. Use spectral diagnostics and the reference grid. Apparent brightness alone does not establish luminosity class."
+        ],
+        "table": {
+          "headers": [
+            "Code",
+            "Class",
+            "Recording note"
+          ],
+          "widths": [
+            0.13,
+            0.3,
+            0.57
+          ],
+          "rows": [
+            [
+              "L-01",
+              "Supergiant: Ia or Ib",
+              "Keep the Ia or Ib subtype when the source supports it."
+            ],
+            [
+              "L-02",
+              "Bright giant: II",
+              "Use the relevant spectral comparison; do not infer it from image brightness."
+            ],
+            [
+              "L-03",
+              "Giant: III",
+              "Apply the reference criteria appropriate to the spectral type."
+            ],
+            [
+              "L-04",
+              "Subgiant: IV",
+              "Flag an unresolved IV/V boundary in low-quality spectra."
+            ],
+            [
+              "L-05",
+              "Main sequence: V",
+              "Record V only when supported; leave the field unspecified otherwise."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "4. Extended-object morphology: nine labels",
+        "table": {
+          "headers": [
+            "Code",
+            "Object type",
+            "Evidence and qualification"
+          ],
+          "widths": [
+            0.13,
+            0.3,
+            0.57
+          ],
+          "rows": [
+            [
+              "M-01",
+              "Spiral galaxy",
+              "Resolved disc and spiral structure, or permitted catalogue classification."
+            ],
+            [
+              "M-02",
+              "Elliptical galaxy",
+              "A smooth elliptical light profile; flag uncertain unresolved structure."
+            ],
+            [
+              "M-03",
+              "Lenticular galaxy",
+              "A supported disc without resolved spiral structure; review an ambiguous edge-on view."
+            ],
+            [
+              "M-04",
+              "Irregular galaxy",
+              "Irregular structure supported by the image or source classification."
+            ],
+            [
+              "M-05",
+              "Emission nebula",
+              "Use supplied spectral, filter or catalogue evidence; colour alone is insufficient."
+            ],
+            [
+              "M-06",
+              "Reflection nebula",
+              "Use supported scattering or source-classification evidence."
+            ],
+            [
+              "M-07",
+              "Planetary nebula",
+              "Use a supported classification. Shell-like appearance alone may be ambiguous."
+            ],
+            [
+              "M-08",
+              "Supernova remnant",
+              "Use permitted spectral or catalogue evidence; do not infer thermal properties from morphology alone."
+            ],
+            [
+              "M-09",
+              "Star cluster",
+              "Record the supported open or globular subtype separately when available."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "5. Data-quality flags: six labels",
+        "newPage": true,
+        "text": [
+          "Quality flags may accompany a supported object classification. A flag does not automatically exclude the complete image or spectrum from every task."
+        ],
+        "table": {
+          "headers": [
+            "Code",
+            "Flag",
+            "Check and record"
+          ],
+          "widths": [
+            0.13,
+            0.3,
+            0.57
+          ],
+          "rows": [
+            [
+              "Q-01",
+              "Cosmic-ray candidate",
+              "Record the sharp anomalous feature and coordinates. Use other exposures or detector information to confirm it when available."
+            ],
+            [
+              "Q-02",
+              "Saturation or bleeding",
+              "Mark affected pixels or regions. Assess neighbouring sources separately."
+            ],
+            [
+              "Q-03",
+              "Diffraction spike",
+              "Record the affected extent under the task's region convention; do not treat the spike as a separate astronomical object."
+            ],
+            [
+              "Q-04",
+              "Image degradation",
+              "Describe blur, elongation or smearing. Do not assume the atmosphere is the cause without supporting information."
+            ],
+            [
+              "Q-05",
+              "Wavelength-calibration concern",
+              "Record the observed mismatch. Check calibration and radial-velocity conventions before attributing a shift to instrument error."
+            ],
+            [
+              "Q-06",
+              "Frame-edge truncation",
+              "Mark the clipped source. Identify which morphology or measurement fields remain usable."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "6. Position, boundary and spectral-line records",
+        "bullets": [
+          "Trace an extended source at the task's stated boundary convention. An intensity threshold or manual contour should be documented and applied consistently.",
+          "Use the supplied plate scale to relate angular size to pixels. Angular scale is not a universal polygon-vertex spacing rule.",
+          "For stellar positions, use the requested centroid method and report only the precision that the image and method support.",
+          "For each spectral-line record, keep observed wavelength, reference rest wavelength, species and wavelength convention separate.",
+          "Record equivalent width only when it is measured under a defined continuum and integration method. Include units and uncertainty when available.",
+          "For celestial coordinates, retain the coordinate system, epoch or equinox where applicable, and the conversion source."
+        ],
+        "textAfter": [
+          "The NIST Atomic Spectra Database can supply atomic line references. It does not by itself determine a stellar type or identify every molecular feature."
+        ]
+      },
+      {
+        "heading": "7. Worked classification notes",
+        "newPage": true,
+        "text": [
+          "Example A: optical spectrum. The illustrative source description has prominent TiO bands and a reference comparison supporting an M-type spectrum. No luminosity diagnostic is supplied."
+        ],
+        "table": {
+          "headers": [
+            "Field",
+            "Decision"
+          ],
+          "widths": [
+            0.3,
+            0.7
+          ],
+          "rows": [
+            [
+              "Spectral type",
+              "S-07: M, supported by the supplied reference comparison."
+            ],
+            [
+              "Luminosity class",
+              "Not supplied; do not infer V or III from spectral type."
+            ],
+            [
+              "Temperature",
+              "No measured value supplied. The table range remains reference context only."
+            ],
+            [
+              "Review note",
+              "Retain the spectrum reference and features used in the decision."
+            ]
+          ]
+        },
+        "textAfter": [
+          "Example B: edge-on galaxy image. The description shows a disc and dust lane, but the spiral structure is not resolved. No catalogue classification is supplied."
+        ],
+        "secondTable": {
+          "headers": [
+            "Field",
+            "Decision"
+          ],
+          "widths": [
+            0.3,
+            0.7
+          ],
+          "rows": [
+            [
+              "Morphology",
+              "Unresolved between spiral and lenticular under the available evidence."
+            ],
+            [
+              "Review status",
+              "Request another view or permitted catalogue evidence."
+            ],
+            [
+              "Reason",
+              "A dust lane alone does not settle the distinction."
+            ],
+            [
+              "Boundary",
+              "A visible-source contour may still be recorded if required, independently of the unresolved class."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "8. Edge cases and final review",
+        "text": [
+          "Carbon-star features and Wolf-Rayet emission require the task's peculiarity or out-of-schema procedure. Do not force every unusual spectrum into K, M or O. Keep unresolved class boundaries in the review queue.",
+          "Before export, check the four classification fields separately, source references, coordinate and wavelength units, quality flags and missing-value conventions. Measurement precision must follow the method, and every class should have a reproducible evidence note.",
+          "Reference conventions: the Morgan-Keenan spectral classification sequence, the task's reference images and spectra, and supplied instrument or catalogue documentation. The worked examples are illustrative source descriptions."
+        ]
+      }
+    ]
+  },
+  "Business_Document_Taxonomy": {
+    "title": "Business document annotation",
+    "subtitle": "Annotation rules and review examples",
+    "intro": "A sample label set for names, dates, amounts and document types in business text.",
+    "sections": [
+      {
+        "heading": "Label definitions",
+        "table": {
+          "headers": [
+            "Label",
+            "What to select"
+          ],
+          "rows": [
+            [
+              "PERSON",
+              "A person's name in the text."
+            ],
+            [
+              "ORGANIZATION",
+              "The organization name, including a suffix when the guide requires it."
+            ],
+            [
+              "DATE",
+              "The date expression as written."
+            ],
+            [
+              "AMOUNT",
+              "The amount and currency, following the guide's boundary rule."
+            ],
+            [
+              "DOCUMENT_TYPE",
+              "A document type named in the text or supplied in permitted metadata."
+            ]
+          ],
+          "widths": [
+            0.32,
+            0.68
+          ]
+        }
+      },
+      {
+        "heading": "Sample text",
+        "text": [
+          "'Acme Ltd issued an invoice for USD 250 on 15 May 2024.'"
+        ],
+        "table": {
+          "headers": [
+            "Source span",
+            "Label"
+          ],
+          "rows": [
+            [
+              "Acme Ltd",
+              "ORGANIZATION"
+            ],
+            [
+              "invoice",
+              "DOCUMENT_TYPE"
+            ],
+            [
+              "USD 250",
+              "AMOUNT"
+            ],
+            [
+              "15 May 2024",
+              "DATE"
+            ]
+          ],
+          "widths": [
+            0.32,
+            0.68
+          ]
+        }
+      },
+      {
+        "heading": "Boundary checks",
+        "text": [
+          "Keep the original text span. Store a normalized date or amount separately if the task asks for one.",
+          "Apply the same boundary rule to repeated mentions. Record a question when the guide does not cover a name, abbreviation or nested entity."
+        ]
+      },
+      {
+        "heading": "Review note",
+        "text": [
+          "The sample says an invoice was issued. It does not say the invoice was paid. A payment status should remain unspecified unless another source passage provides it."
+        ]
+      }
+    ]
+  },
+  "QA_Auditing_Framework": {
+    "title": "Annotation QA review",
+    "subtitle": "Annotation rules and review examples",
+    "intro": "A review sequence for checking annotations and recording corrections.",
+    "sections": [
+      {
+        "heading": "1. Check the task requirements",
+        "text": [
+          "Confirm the label set, boundary rules, required fields and review procedure. Use the project's sampling and acceptance rules."
+        ]
+      },
+      {
+        "heading": "2. Review the items",
+        "text": [
+          "Start with missing labels, wrong targets, duplicate records and empty fields. Then compare the annotation with the source and the relevant guide rule.",
+          "For images, check the object and boundary. For text, check the span and class. For transcripts, compare the words with the audio."
+        ]
+      },
+      {
+        "heading": "3. Record a correction",
+        "table": {
+          "headers": [
+            "Field",
+            "Sample review note"
+          ],
+          "rows": [
+            [
+              "Item",
+              "Organization example"
+            ],
+            [
+              "Source",
+              "Acme Ltd signed the agreement."
+            ],
+            [
+              "Original span",
+              "Acme"
+            ],
+            [
+              "Corrected span",
+              "Acme Ltd"
+            ],
+            [
+              "Reason",
+              "The sample guide includes the company suffix in the organization name."
+            ]
+          ],
+          "widths": [
+            0.32,
+            0.68
+          ]
+        }
+      },
+      {
+        "heading": "4. Look for repeated errors",
+        "text": [
+          "Group similar corrections by the rule involved. Check whether the error comes from a missed instruction or a case the guide has not covered.",
+          "Keep questions about the guide separate from corrections that have a clear answer."
+        ]
+      },
+      {
+        "heading": "5. Write useful feedback",
+        "text": [
+          "Point to the item and the rule. Explain what should change and what was already correct. Keep the note specific enough for another reviewer to check.",
+          "If a quality result is reported later, include the reviewed sample, period, error definition and calculation method."
+        ]
+      }
+    ]
+  }
+}

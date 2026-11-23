@@ -1,95 +1,162 @@
 %PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 8 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/BaseFont /Times-Roman /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman >>
+<<
+/Contents 14 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 6 0 obj
-<< /Length 4296 >>
-stream
-BT /F3 26 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 779 Tm (Chemical hazard annotation) Tj ET
-BT /F1 9 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 753 Tm (BUSARI QUADRI OYELEKAN  |  WORK SAMPLE) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 725 Tm (A sample schema for extracting hazard information from a supplied safety data sheet or) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 710 Tm (source passage.) Tj ET
-BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 677 Tm (Fields) Tj ET
-0.94 0.95 0.92 rg 48 642 499 24 re f
-BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 655 Tm (Field) Tj ET
-BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 655 Tm (Source requirement) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 642 m 547 642 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 628 Tm (Substance name) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 628 Tm (Copy the name as written.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 615 m 547 615 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 601 Tm (Identifier) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 601 Tm (Record a CAS number or other identifier only when supplied.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 588 m 547 588 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 574 Tm (Hazard phrase) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 574 Tm (Select the words that describe the hazard.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 561 m 547 561 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 547 Tm (Hazard code) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 547 Tm (Record an explicit code. Leave it unspecified when absent.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 534 m 547 534 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 520 Tm (Precaution phrase) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 520 Tm (Select the handling or storage instruction.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 507 m 547 507 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 493 Tm (Evidence location) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 493 Tm (Record the section or passage supporting the label.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 480 m 547 480 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 466 Tm (Review note) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 466 Tm (Describe missing information or conflicting entries.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 453 m 547 453 l S
-BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 421 Tm (Sample source) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 399 Tm ('Example Solvent. Hazard statement: Highly flammable liquid and vapour. Keep away from) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 384 Tm (heat.') Tj ET
-0.94 0.95 0.92 rg 48 346 499 24 re f
-BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 359 Tm (Field) Tj ET
-BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 359 Tm (Annotation) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 346 m 547 346 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 332 Tm (Substance name) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 332 Tm (Example Solvent) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 319 m 547 319 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 305 Tm (Hazard phrase) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 305 Tm (Highly flammable liquid and vapour) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 292 m 547 292 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 278 Tm (Precaution phrase) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 278 Tm (Keep away from heat) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 265 m 547 265 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 251 Tm (Hazard code) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 251 Tm (Not supplied) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 238 m 547 238 l S
-BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 206 Tm (Review checks) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 184 Tm (Keep hazard statements separate from precautions when the schema uses separate fields.) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 169 Tm (Check that each span matches the source.) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 144 Tm (The sample source gives no hazard code, signal word or pictogram. Leave those fields) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 129 Tm (unspecified. Use the supplied safety data sheet for classification; this extraction schema) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 114 Tm (does not establish a regulatory classification.) Tj ET
-BT /F1 9 Tf 0.4 0.42 0.38 rg 1 0 0 1 52 40 Tm (Quadri Busari  |  1) Tj ET
-endstream
+<<
+/Contents 15 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 7 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+<<
+/Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+8 0 obj
+<<
+/BaseFont /ZapfDingbats /Name /F4 /Subtype /Type1 /Type /Font
+>>
+endobj
+9 0 obj
+<<
+/Contents 17 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+10 0 obj
+<<
+/Contents 18 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+11 0 obj
+<<
+/PageMode /UseNone /Pages 13 0 R /Type /Catalog
+>>
+endobj
+12 0 obj
+<<
+/Author (Quadri Busari) /CreationDate (D:20261123161248+01'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261123161248+01'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (23 labels for safety data sheet annotation) /Title (Chemical Hazard Classification Taxonomy) /Trapped /False
+>>
+endobj
+13 0 obj
+<<
+/Count 5 /Kids [ 5 0 R 6 0 R 7 0 R 9 0 R 10 0 R ] /Type /Pages
+>>
+endobj
+14 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1642
+>>
+stream
+Gatm<9lo&I&A@C2]VCX0&-Dd$S/Nbhg?-aMlL^5I9L9@sn07pH>Fkcg%KK?JENI5;oYEn6akaFE*u6A)7#4,,s/H+V0(Jc?"_Cf=5SK;gq$HMVZYqWt,^GW?+@Vlt'VpO`<[RV4l\qXLT=%2s,SU^9,UY-=1Ug7ab]YTHkHQ;cc68$;7ai>&E>KM4[9gH]![-cUZ3&2Ro?RNB[D^h9E%UT%rpKDC0YHY8G_+s.Q7nf\UK>otOb2]Jk^X^;p3H@KG'FLB>*,I,$WN*YPbqTG`?7"`P+5udT-B2T34H(U0X0''`_)TNr-BS+=`K.Vr*QUB>Us]N>fhk-fsOrQLT^$5m0T0KiPbOHS;W2\&-k0/V(Wk\BJ*f^0`oLX&[75U8I?)C8KMFcDFGWL+DH?;K1>:_$-8lL0bhA7b$`b6(qpW+Mjdi[ZOt'+[r#b@5Nb:CBh>UC="3"t66gNFl;nRSatei&QM6b"2q#K@)prV<;0BH.fRsm[G1Gh(e8M1q#%m(G,t7bl'n`^]`Oj+@(BhKUaL4u6/I[S7U9^NMGoX/L>\"'aO-:d\0NPiK8d]WnWbZK_)kpNM2W/E]/afFEa%Gm0#pB^:HJRD7ap+#;KSAQ3,;ebA\)>P3YCmWedTCTAr;(F',:N0+M,bC5[L@/'>_^G/Z.gf!fN<M;QrAT*2s<m#Ec\<LMf46tU(OLbkA[4c9Tf_D0`T<%fT!]+h88L->oUsmfm;K)6Y3IVrFSm"-k>k9TV\W!j_bWW#oQ9LI%edZPR0p]/i8,6X82]`[,?.5.Xn,q_*WB:?tc+hPhM-q1T4(GLiXNXIAG.Irp``ffreb81P:GN]?OSCoSQ<93d>]jf0_J6Lt:kYdkso.`,SK'Ja5(7Iir<#7LZ*bS3*`T6sp<G$qXTV6f8\P#_Nmp]pq*4dB4ag"G^%>c^6Ft%`XZE2BOtPXE9fSXfLn<bWeXll6ip5Bh%ZF9c>bM^_K-GB,YUs>*e6[!Zo8-7q)E+.eVMW[:l[I8YLX*3A#974V%]j8c09]l`T-"bqlfMQ8deb<!;YN[%6NF/"se!rQ>90d+emIH7Xj%]\\i2G<VVLBF^KM,ajV6h;KALXU>u92#+55Lc_:t"6fC9m!q;D[VsM$b0"%InRue7(;0+dR@Tk#`[,%lZfIUOldrkj<HkCq)9+!,nqRdiQ^i<YPs#*k\E:IFZr8&1^2hTI[;$*,H)3_h8!T[BNM_nJ?-%03(%/]OiHp<V#m2:CAN5^o!Q]^Kej@PAiL&;8_Ah>$;0,$;kBJJO.GL8lCq&!.\R5O%`KVBZ[fK9N=?iPMh9;P@8);B`GWj[6$FL>eSPE8X]cteH<]O&:MG/44Ll)^l"Sb!,P=G8XZ/:?"Y)D]=h_TE!'/&;mFsGa@.,WpmqYaeQH^^d&iua1q[irZ-G(lNkKbKgg%i2&*Xe/)eY;W=Jjlad-1h@>0oKP9>FbU9'1gT&6]/d9]`lN=O"f[_gb8]PgWOd8LgsGH.gq_an'`91jI\0KmT)42'peM_=(bO)SVH:6Kh_:RW(6i@M`c,F+:32SgR/N#Xfo=?+Aq+</Nli#F<:3I@3t:N-UG42mKDP7SoV;/#2JtYrULQsXDsomNN&1CRS*l#X`\I>G0<s1*h>KD04N$N8BUY8;~>endstream
+endobj
+15 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1470
+>>
+stream
+Gau0DgQ(#H&:O:SSB#K.AOMBdThe7L"=O=.(B]*J8sI:o+ruj?Y)@aV6-?KEB@lGQe9tGT*,4PSc<SSeL_,,ls&BTB>N3m4$6!F-J25!Gr.Ogf`K(0O=<=:b8<L6CJeUcpQOI4c/kClsK`Wd?.!h[?-ZP_iIb!E3@^!*,)G?7\'p>AOBpsZ.s,^YoS!F"]!(=NG\A5Djc'JmCNPrGgj[S6:r2%ZqYe4=eiYO/\A,48_SU?m3QkXP3N=+[c?Xj6HRZO6lpTGn,pmpV")Jrl-,MWbdG9"%+_LX56*HtD^M7tX$+,cn"j>e4p<kW]^SAdK]6'@2g;$Q#]o^&4_QoG'-6SeL%39hh;ptY;=XE]Mds2.QjLA/!;_OfCE8!%7,3[152<b)LBbqkYaN9bNj[.*^4'GNAJ-S]T3]A-"/[DH-I=ue4#Kb[gcYVu?iW8-6J"Nsi]lA_bGWfC:6)d*?*Kb'12/6j^`,qILRjTs`2:W:S'WZ/R\Z];(Y5k/0n7alA3@]cJIi13mMg0cK_VcSWIq^lM*Q/+9VXJAZ&:.&.(mlG/eLoiACF%E]X>^#1"BDSPZ;N`&k=XO+YUh"$NK9X3OhNnQ]@MTU]<gH)[gr>;k0ETM"L"@..I6Mm8pbtBIfP!$1*'S^@oH]*MnPf9SYLjN`#rfW`>!*fU)(>[9=\XA9Omo0k36FceUNg+7hhHq#>?M>64al<0E>6);0+M%I:KHB$.pP02]al.PH[aQQFRmIAf(KG(cZrb!nZ_Fl-(RiQ!Qsd0jZKlV)(V"qgkh-V(KdAV8rEFp`m=63YJh_B<d.UW1\6GFV']SqKUM-S8L_dD".3=ZafH8mM6=BHJlb]b"V)"')JYFuYST4DPU'$*R<1i(SXaMlYi)aH"7u`ho"f1%p_Ce-.-3PQYr-juC:N)'5W7P)/j%DQ74r;#W3nF#afaQB<f<So7^$$5AG%]%B*IfbO6\$tI3nLl()$(2[!XCs`a#78V"=,>50qE2k5Kai[Bri6^fNk5/,72DQ^59WGr;^LqLE.rmH^C33%]\FXX\2Qe$RiaKp8lPbmelkgKe8?ATQGBm!7H"2>E;<@Bi\;0N]9&mDatFfaC#^kH0V/.B@P4:l'F*:,LB`)UTD4&tY'Y\.=##-.L@Hh/,T/]AiOCjGW-(R'R^n=&d't%DI<oGM:4,2&.hBhqQeFKE9Eu(Z2T8N>1")rGf\\`LU+Fo4X`oZ(Ul@C$NLNe0.-u>h^>R?,MC=4a8\5fi71%#>nNbi^=VA%cS`WVr*5gK/b>Vm1()130-jXL\3&hZ;]"V4URs`,RW<'&^,F6S/sS)pijIM49f2=G.>)SMc`06;9Ua<=LM[b+]gQ!"eU"KpQ`2H$<qCk\<j?=D['\OKX\@)`HZ%"cpRGYT`W'^Tj6Kag`<+:"P43FG-bNPR0X338mKQiI_al'JfbFYnj1b=I(hC1i;#qFY?DckIiaSOr!,.fXJ5~>endstream
+endobj
+16 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1812
+>>
+stream
+GauHM968iG&AII3m&b0F7L6`]Se<Dbg?-c7Rct\:=!A7a:]O=L1B$_`J0OZj,uYI&5'TJsYhsIc?sfW>5QK=40,FVlVss6t"WG7""uIY]9L$>Il/^$@jDbq\"ctj)'+-"GP-Bc$mZ.ZG?p,)5k7CQo5S@]Tb`^I>2/ke5Wm%TbJtuV),Uu-LA3aW$+bfnuc0^82+DQ%R3D:6.os&(nipaP09QBh<rfub)BXV#$pa]$&_=WH3]!jPR6^!4-g+.uNr`YgZ:*Yqb7JF2DJqcErUL>JaBJr5aJVk<L\jeNlKTLp+0#aErO-;5\*A1k?m1biolaSVXZT%suV/[9H5jT.IHI2_%$ifd'eGJ)_l7+"I*a)ufW7a,,.[[IED`I"aoOIeI-,C(`->B&@5\QJ')28(cfDq@EEi]]aBL!&&^ssC<igNL@YG%2t0J51)T@[]@/HYr#e>QCRVFJpe)6?*Ff&/EMbhua+%5:Yq>,mI<3J"YHQVt<8DG[X0f61[(<`]Y$Ot1/2/u)N_J85_E>f4G`\C&sQXoVV:6;\rJ)=2:g-o<kf4.=5^:Y>i>;A/F\<CHNk8.cY(#c)D\Z]5Y05a\DoKt&PBdsVnL,QrfTHSMf%JuqC%pGqDj_r^,+1C3$2`"sGQLsZ-7'_\;%Ct\Ua=1>KPdg%$BKsT8Zj9J?P8^&kZ8Oe?Z0BTra<J^h6-da^U*@VdFqZ3$I_L5-K37f\?X0OSg7XjGF2k/\i.Q5<"IVfY3X;Nt1),N4bCHgdT]22nqU:oFl'W-eOCXt=_D/])-DM#YG1Z8UO4Q7CQ;P@9Q@`G;TQh0d9M_88$jr?0691\K3S*5-8r$!2g_aVh=a#WufL-/[\0h4<0cSC_]P58Z:*l3q>`;AsJ.OA@4@Gb9<DT6]2'gj_o>Ke?<3b?MUQ;U_eY0kat\pC3r0TI'"b0]%>P-tRG"fhC$<3c>F=ooL8Q#+^N4b):$i\O.P,KTM7G`Ra*<Wd4N.^i`+]U2O!p2'Q[j0@UtE)F1cpOHk8-pV^QhHF_gd@JDBkUNMqY0uLDnd'G`W[<1dTe*r8.\=7lYD.d>B@4tT78LinKak2P0\alc\8Ob44@`Qfqi$lpo<`cH]Oe,(6I&H<,k=''ETf2D:5>>2MscupjG1P.LeD+Wrd8j4$VY?cg>t/N9;\*0Ku]UE$XiJEqtm&t4<#8]T<U*m&K?-"hVhASW\"[hNUX@\Gb2Y!1O&e/gG;;KW,RHM>[!Ru"#ucYC$-Aa^rs.1M/#PODO8P$A+^OCIn_>=3]@b1h,#MMd%/G#Y&WkFlt"1oScAH'DP7lqiaAs<*(4L,ncPRi(rT9nLtaKiih/9Lm1t"f(*;aacb2#)%lLu^?5W$%!k5f_OS'iOrKhX7p,a?<O)a/)*/5-IU+kDq>C=bM.44ObXLOF&HSEGLRd=jna@S@3HpU1m_XAP<cli1q_\8)],=a+&&]YDW0$j:Tdas;cM-%Kq!G#P@ApAT#0DMVgcBtiZR=JY2N=Gg1#3L;eg87Gb@,[NNn>@!Y[j+?jIK=41"YVO+kss8^:[eMKOc>EX\uZ83>$KdBRB-)cI,?4O,J1\`RhQ,;gS"DB"jPCU3!4&g!I]thdkiJC[uG/[G*G#@^T3_NZMj,qA3[S1k]5g7Ol@-Oe-f\k%,(DXPQq$XJqm]dD?:FbJb@K64To.s90RXE2([Aa*i,cd/XO_:^mf5+dV=FBkDE:+JN%a[`Ys3LN.eL&;WH-=Ri3*p4a2HEPmU.7Pa5shQhTu+C`<o0`OnJjW"#h1ditm(WF]j<?YbU`X%2Od/<qckC=T*.!gEWb>jDJ:~>endstream
+endobj
+17 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2117
+>>
+stream
+Gau`U=``=U&:W67fLND\,9dF8RQ`_qR^SVZ'<,\Q@<*Zf+TV`H/\BIRhc]HU'?bRDUj:%;fC!+On(VsbF-o>Qs3E3Gf.2)g)*ebMC(12V**.":@Q"$>@i8)*nH)gYni-W87<,iqnG^HGMd\hK^bamL<"SYcKk[((<=-iO.l&?+$^S.$=gSHe3!I=d7fqMSg!Bt`5lo(91K[XroWAs`Omorj_FXG,rm9dP=AeHXr!lbW_<QB13r1\q+j7_ZklgK/^W&(NJr"!kU3S>LTG1I0>$,PB<ij^)66Vj!]1$faPgW;dWRXPr]@j+8TGQ$5BE[H43A+"BPfLS6KW"DE(gR=>%QXhil<dgdSaX7eNa`3*]"4'IWs#+'0R,0h%o-s-*>@i[&LD6W(_O\XQ:/N?1uW-Kh=Z1HJrCmAL'/(3fpsrZ3g\IHOr<GECZU4K(>RI`69_];$tHNqU.);/<='oMVI-s+2@^+@GGc0*f/]90<G54_Fltb?\1:".i3la=2NSjl%RGW^4oG(e$$du$AIkB)B+Q^U98<$k,5MO\_&)\SfY[N:Nj%Z!-t41k@aQIh8]Y$?#%@K/N9&5f2`4A#/d_EdkZ"Dj">L:V(%[4b?.9\_P6@)qhnmd/0(@ih->_WmSQ+]CC`_(Cc4cKJo5Ilmn*<'cHWObcMr8m&gM7-[drZWnm`Z!f?'_4b`)VXX\XgHsq;\VP1\TU=NEPn8$)^2mq^j:t+gAO9H!c4?Y-cr8J9>e-01Bf\kSr9=aD6PYhKnF(Rs,_IK",S!%$cdo)2SS*152+%A@c`7O,%dSKkK*VD<5mR:jjPrBr-,B^$q-RY7O\%s..P!1esbK@1_p?=&Pj:gS*@W3;8sYKXGiq5Ror#D0,qJJ]MC'8lQ(je-Z`*0Za+ET-/m9'DgIJ$C@]mFOHoR6-P&)V:$;^O%1r#7WnMfnYWupa(<g;=49dMID\0&BQql1Vp4UcD9pcuYgKlU@N^/l"n:+e.`X];RmSl:YRmf8':TrZkNHn(Z>BHg?[!$UK^nS"J)*8XO.XYpm?Tt[0K`D$DpUT74sr=0(A@fYs%s]=nCcTP5lX^HF"sCQHO\O4=50&4r//p>d=ASH^t)T<8QS"G9N$fdcrU&r9[WR_6QCj$I*COZEu6!lQZAH7"2>G!R82Y'fZSC%*hb2Xnm!_1d't^"5[Gd;\GYjYXA/)cJT,&?ieLLJa'9Qm+[)@3Ot'&%*'pde".EG=,<&gddjdk_TTn#![@o=KBr?B3U_@-)r+%J:(8S9EE/b'%NXX3d.V(hT`ER%^=38s&hd;nF]n'+Yn>;QFk>*0be8D<]gLO+&nQ,q2i_C='\!C,3#J&3WY]fO>/i9QEhj$L.bNkjc8[[-HqKsdlg0"3``<Jt*#(T#kYjbAR+P,JK)D/AQ!qW:E9+.#l`8<hL5/Oj2lVcl09+7,N3j@KK7rR#XM15MXeGV]1:-\CCAsRiWk%=-#qm(GJ5^aKg^At4&a$&/3IhXHR5kL5!7`+)r$\YKP4Li=cZD\$!(;++>eSUGgaOYc_&j[?j^Wh%Ha[beAQ!W!H+eLE,P.PHVg7;'?<d!ZfY/EC)^^b1"H+k8s+K[j*)?mJsLf>d)@dZ$7KL2I,ZlZ=_=/E9.&:GbS8m\9tU4f)"Pq]ZpXZduZ8':7P*p3jis+A?^C+&TIV.X*$d<4iX/81_&D*.)fFN7ZE'/Xf9]EaF.g#fmOdC4L]PlSI:7('Gf-ECRHde('Mqb\j,pp^j)dqpIYLp'%["=Yn\^]^8AQ67;_]HAaM[F5]Oh[E[FfDXos$\o\WcSp;nYorB5VntG=YNU-obY#94hq]erVH?rY8sZq^E+G?4s$oQsX.:ZR=0rY.JS^9qK'&,;9e<EKnJLa6<RYWg.W7VR"rO0[Ua3\6LR'HKatYmCU^l$JlW1Q^H)!X5c0&7Gf^^eogJU-"rIjp7nSaf7A$sd]Z(K>=<ah%4f*0l<fZDq5N=hF=#$SNm')(#n9lf\2k+X15>&*5<Mpd.4X%+$PGqR>?9*9EYhM-[:M=UAi3K_eaZ0_OfDR7K"8lO1l)@8/P6;QYH!X:_Pkc!*M9D-bc&Y=umX\_hbRgW/RZe',!HD]g.*;4M/r9<:u$tfM@>!KDm~>endstream
+endobj
+18 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1831
+>>
+stream
+GauHL9lo&I&A@C2]N`pHM@f]_HV0efR5W;HOZL2J!g>,@%7qrJA6G?"p^TPd+-%p7%9jo:!ggjn4tPPSJ0R;Zmf/U_n7%,b<ua?@C^qMm(pg\r2&gr^Yrp<`U]ATE38n7jP_;Ja&$JJS_.M1@c4P+S8E,S^=d$?nNTk+8AaX.]=Lsu`77G:]$nQQd;Y4J4E$'0&EAqNtA(G&cIP!$$nR??gQM;DK./a`I1om(Za6YJ'IW2V7I@A(tbJPmu-V3ZT/^BLMLuip0]bX)9`AQ0MF/<<`SEq#VYQAE.A0KZ-=^e.AO61dRqD:8.7@*I]_Qn0sKkZpn$!<G3=ce6G&\jNCJCqD^Fqs]&H_A@ro9iJ[]!Y_+c8"P6kA<s<\/Rf"ZJZ8r:XV@b^j)0b)+Qp*)[+LC!kC9MGed(S@/R$GMrtMtokIK"Wj!,UL]q)B]A>SKoaS<piJmU`F9Q0.V1r0#JN%VSXLFSKU1qPg9rR0O[B(M)$9)Fjesc7\NIN*T6#=ITF0-?38Qb]BK*fRYOsF])+lOVcIpb]M"<gn+'6j8\mXqlS1#eqk$MDFnAg'!>rklh%([Q,*;",<TqgHi'beOn;_QR/'M",qZ$hr+Elp-#XnWfo]H8%RTUb'^,JUK_s^Qsp$BAd4lFZ$OMaM2]hRo\(NZqj565c8f5o3A:]aR[1Fmcr]9aV-ENeG"$5JZClels[KHOL]d(E8pbSs*4+P\porUc2`tdZ5]t%W>+[)qeH_YTT8IacSIRONp)7=IAn]b^rSqpC2B-;-<SC<WeD55j!Y<Saua0CqF2c8fVLEQ_tj\)6E;YJ4!tKLUkYFkBXm>TFX&DO96qS9iI&q:F9#b\5cZSe3Q4TA#YIJ5NAOC9CkTVs.i2i@+!s453;trd#@fCl"7S9Y+dtcjm2e5]kfk880nt'o.T2QSg\eQ?Ag'g.NIKY%j.+*/7R-=#^<I`;rO=cja-OM*h?hqC0,t5_+1QOOIjr'o\C`<o];@8A<e`uAZ57.RfrsttXu.q-WRHsfPN3Qml;j44o=Zb4)c>4%6P[N2YfSQf;R?h[k9X;r'i100;8g=iQY8MW^BN>1*hO_(MVp^^/EZJ-#PJ%cqnd]r-Ql8=;9RN2H`Vh+`m^:&<jmp=XuK),l%"ZN;Dm(3od^%n(/LUk+hbYO'5XIM\gE+o8taaM8HtWbOR<!Gh4kR;",`#3D>uR.K6lrFAqEp_*6WVEj$5>6X\1\[!7(o"'d)X/d`/8AiO_'F=S0]&/6,-Y=2A3F)/Mj-f/%iIrs>NBb\mf2W=35'prbq1Nq0U3Mm9Oc.d9Q0e2nf##YS?YqV/T2:n2XOT\-a-4?dWNIbYmki3^2pEGpfadm!-=:[6lPSK,]1+$@odUF^YgK1Bp/gr$kfDC9),Oq)X_]kDKT2CH_$IrUqkB20[6TGoMM<.=JoB@WQqiIn1qG!"sSTU1<FLq<"'QmsY8+a,a,\XI]9(:>VT9eotRFtU2WT80bn\3)(cT"J;B;Yu&G/[]cRJ0s-(RfJF)`c;$]LmR+U+AgW73oR[)NXXacVqpcHeuk;^(7KWsE(X2rj][R_$V`5s(g74t/0,#8MHeW2B"K9ohgda.A`RLp@?mQ>fC_^Z*]IVrl3n9:KadR&+TS;$_.EO0F4)-,;RPqA6`Tjs-h7'q]WTemW9Z%l#i2F[I\mJ$Xg-A@c#HkoA)pm<9BNR,l[Z/Zda#S&7[E&,"F^b]:rI@t1#$+6kP4_>l(?j/@+BkqP4YG@\T<Io:=I'gUpS$c(MD@C]hEQ-X<$*Y,D/(Slu"_.!G`g\e]j[s"7K<)Jun:GZ!(7Te'gN4h0pLR0_u#KnX.T~>endstream
 endobj
 xref
-0 8
+0 19
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000185 00000 n 
-0000000260 00000 n 
-0000000332 00000 n 
-0000004680 00000 n 
+0000000061 00000 n 
+0000000122 00000 n 
+0000000229 00000 n 
+0000000338 00000 n 
+0000000450 00000 n 
+0000000655 00000 n 
+0000000860 00000 n 
+0000001065 00000 n 
+0000001148 00000 n 
+0000001353 00000 n 
+0000001559 00000 n 
+0000001629 00000 n 
+0000001963 00000 n 
+0000002048 00000 n 
+0000003782 00000 n 
+0000005344 00000 n 
+0000007248 00000 n 
+0000009457 00000 n 
 trailer
-<< /Size 8 /Root 1 0 R >>
+<<
+/ID 
+[<35e4f6a268561f6d12ef1165c938ae75><35e4f6a268561f6d12ef1165c938ae75>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 12 0 R
+/Root 11 0 R
+/Size 19
+>>
 startxref
-4826
+11380
 %%EOF

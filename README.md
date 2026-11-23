@@ -20,11 +20,13 @@ The current page has no external font or animation dependencies. The earlier Thr
 
 ## Work sample downloads
 
-The work section links to five one-page PDFs and five editable Word documents. The combined archive at `assets/samples/Quadri_Busari_Annotation_Samples.zip` includes all ten files. The CV remains a separate download.
+The work section links to six PDF samples and six editable Word documents. These cover annotation practice, chemical hazards, industrial equipment, astronomical objects, business documents and annotation QA. The combined archive at `assets/samples/Quadri_Busari_Annotation_Samples.zip` includes all twelve files. The CV remains a separate download.
 
 CV links point to `assets/cv/Busari_Quadri_CV.pdf`. The experience section follows the owner's selected CV. Python and its libraries are omitted, and Micro1 is the only listed certification. The contact address is `bqlekan@gmail.com`.
 
 Sample sources and scenarios are clearly identified as examples. The documents use plain wording and ordinary punctuation, without unsupported performance claims.
+
+Reviewed document text is stored in `content/work-samples.json`. To rebuild the PDF, Word and ZIP downloads, install `python-docx` and `reportlab`, then run `python tools/build_work_samples.py`. These packages are only needed to rebuild documents; the site has no additional runtime dependencies.
 
 ## Local Development
 

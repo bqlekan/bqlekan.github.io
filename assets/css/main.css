@@ -403,6 +403,9 @@ h2 em {
 .visual-guide {
   background:#d5dfcc
 }
+.visual-astronomy {
+  background:#d9e1e4
+}
 .annotated-sentence {
   font-family:var(--serif);
   font-size:clamp(21px,2.1vw,27px);

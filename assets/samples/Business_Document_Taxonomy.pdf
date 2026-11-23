@@ -1,91 +1,80 @@
 %PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/BaseFont /Times-Roman /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman >>
+<<
+/Contents 9 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 8 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 6 0 obj
-<< /Length 3909 >>
-stream
-BT /F3 26 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 779 Tm (Business document annotation) Tj ET
-BT /F1 9 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 753 Tm (BUSARI QUADRI OYELEKAN  |  WORK SAMPLE) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 725 Tm (A sample label set for names, dates, amounts and document types in business text.) Tj ET
-BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 692 Tm (Label definitions) Tj ET
-0.94 0.95 0.92 rg 48 657 499 24 re f
-BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 670 Tm (Label) Tj ET
-BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 670 Tm (What to select) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 657 m 547 657 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 643 Tm (PERSON) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 643 Tm (A person's name in the text.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 630 m 547 630 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 616 Tm (ORGANIZATION) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 616 Tm (The organization name, including a suffix when the guide) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 601 Tm (requires it.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 588 m 547 588 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 574 Tm (DATE) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 574 Tm (The date expression as written.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 561 m 547 561 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 547 Tm (AMOUNT) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 547 Tm (The amount and currency, following the guide's boundary rule.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 534 m 547 534 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 520 Tm (DOCUMENT_TYPE) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 520 Tm (A document type named in the text or supplied in permitted) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 505 Tm (metadata.) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 492 m 547 492 l S
-BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 460 Tm (Sample text) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 438 Tm ('Acme Ltd issued an invoice for USD 250 on 15 May 2024.') Tj ET
-0.94 0.95 0.92 rg 48 400 499 24 re f
-BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 413 Tm (Source span) Tj ET
-BT /F2 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 413 Tm (Label) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 400 m 547 400 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 386 Tm (Acme Ltd) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 386 Tm (ORGANIZATION) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 373 m 547 373 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 359 Tm (invoice) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 359 Tm (DOCUMENT_TYPE) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 346 m 547 346 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 332 Tm (USD 250) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 332 Tm (AMOUNT) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 319 m 547 319 l S
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 54 305 Tm (15 May 2024) Tj ET
-BT /F1 10 Tf 0.16 0.17 0.15 rg 1 0 0 1 226 305 Tm (DATE) Tj ET
-0.83 0.85 0.81 RG 0.4 w 48 292 m 547 292 l S
-BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 260 Tm (Boundary checks) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 238 Tm (Keep the original text span. Store a normalized date or amount separately if the task asks) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 223 Tm (for one.) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 198 Tm (Apply the same boundary rule to repeated mentions. Record a question when the guide does) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 183 Tm (not cover a name, abbreviation or nested entity.) Tj ET
-BT /F2 12 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 150 Tm (Review note) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 128 Tm (The sample says an invoice was issued. It does not say the invoice was paid. A payment) Tj ET
-BT /F1 11 Tf 0.16 0.17 0.15 rg 1 0 0 1 52 113 Tm (status should remain unspecified unless another source passage provides it.) Tj ET
-BT /F1 9 Tf 0.4 0.42 0.38 rg 1 0 0 1 52 40 Tm (Quadri Busari  |  1) Tj ET
-endstream
+<<
+/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+>>
 endobj
 7 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+<<
+/Author (Quadri Busari) /CreationDate (D:20261123161249+01'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261123161249+01'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (Annotation rules and review examples) /Title (Business document annotation) /Trapped /False
+>>
+endobj
+8 0 obj
+<<
+/Count 1 /Kids [ 5 0 R ] /Type /Pages
+>>
+endobj
+9 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1605
+>>
+stream
+Gb!#\>uTN:'RekGESd@V<3bNQa/'rIZjA"^R8!M+&[n!Jn4H0UJ^*8rG9j@.o4=6I1?DrL/6hl(X6Y+m/qjN@eGWuP?uLcYmjKU%C^qAF!4.a=T2!TY,RIp59L4h$#Ur=(LF`mRoR9+n>YZPr"9HIS@1X(fLQNUB31d4<9^IWcM:N%I5@l[15luBFTc<;rqa([Hg,3#bfb1o()P66rH]@!q^e]>Vq@&*3X&AkIfltYHfi<C&L&iM*Mkb.jg3`20jEu"H*9&Xq8WkFAQI\nO7S2Znco;AAMJdeTR>8R1qrSn$$a"1q[@ZdR25ZJP)!!/^Q9s0\;Q?2;Kp"A+grA9mI10=Ka+N8YTLdmf0aD.!:u+Q*=W[[&=<)u:IMB_,"Camn/cZNm&:@=#?JDQ$.&IrmTpnpsE1'(OMaCZ8>WFWQ#YpU0,^B0_&CuPgHK7O2mnVJ#5flei#pX3/Q%n?m@9t2A[Je.4Wf_F^G-cnqWY,Mi`(@GM[CE6Y+T.&giGTOWF\;JcpZF`+h2`%`0'7j=CcidL>EBu7DI;-mIJX84#-#X.;AVN4=5"IBO>$fOg4$6?1)iA.0RksblZm8nD(r.,ba!h+A.6W?-`.=>ge@+3?.SFCkNRWUd3p2YPcukoITu:[[=T!eaQa")a.OIu:X$e;=aJ-TkP_19_h0O'*S'EhQ-`"B*TN=>-?Qp4O5t>?3$H[_(_2V`:CfYe24]0J`rAn1cP?RST5n*4B^:fj_J9i@/"=25Vr08RHsU(:EZs/`S2NegTZ)1TBNkKAitU361D\WPe(O`\nJTlQNK:2n&6G,4`n1iBK1fM"[?*bIqmP"7QDL2`^E1T?pO-#9f(ZWF]?6a'=ppb#?=U.\;I/#Cf]9r1_22o;cLo=WgJDG#bMK^`^O?'fIk^bHp?1Tj11NGae!iJ`^7)]A4.nE(;cRDVhQMT=g6B^a'K+3^c0pS;mh:TI6`Mn\WmUu\<`O$>aptPTZr:[,P5^sjGEXa+;1I#R]?)0=6%@=B]1L%q]h(0N-GBD;kAII,E(?jTYjR6ok0%%e&:/Fce[ME-3:+!HF4A*IX*O&$%I'-#o`'mT*fsSfdqgK&Z-H2`dteuKU6$1kaFr#J?]X)rKcZH]%Io:Y^cWBoSKW.9Z_3A"=PY\-Hu7?mhe-_aA(Bd:^f4Q&NVWTa>r=CTGME,6m(Sah(n%2Ol28C\]c@cFbf]7Ton@,U&M5[`^\2Eh9=!jc3cAeWr81B0rG6lmrV8;*eFHgB/4lJjMR];Xp,]%9/OXb?fPt<HfH#`3KW(D7;S"h>,VNB8A/TpU\5ld`6Roe1Aar.KXnl)0;kc`\>k;-`.hqSUDK0_%DU+2N:aH@RVfg(Y,^Qa`e5kZ9HRMloXrJ-c:QRMWYWYKl;$l)O5O!J/"@jY73X<]N,E+^.h)\m(8f1*!,?#CFK6Js8[c]GqEamcmm?,ZeCP8qsm/$BifRGR@qu<0C3bfU8;UpC_1`G1@>WP3imE&np[k`>B)cI[jFihm3>7l7]YN';@]1)\].UM0=;cJ/+UqE[Ph&)N5C<?ucmqT,gKg[.[-*gut"aqUgg[O3#eI/'Z=qO\QA,*#gV:A"shg73"j<#>b1ID~>endstream
 endobj
 xref
-0 8
+0 10
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000185 00000 n 
-0000000260 00000 n 
-0000000332 00000 n 
-0000004293 00000 n 
+0000000061 00000 n 
+0000000112 00000 n 
+0000000219 00000 n 
+0000000328 00000 n 
+0000000440 00000 n 
+0000000643 00000 n 
+0000000711 00000 n 
+0000001027 00000 n 
+0000001086 00000 n 
 trailer
-<< /Size 8 /Root 1 0 R >>
+<<
+/ID 
+[<413acf47c7b88e46bb443edd6b46d176><413acf47c7b88e46bb443edd6b46d176>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 7 0 R
+/Root 6 0 R
+/Size 10
+>>
 startxref
-4439
+2782
 %%EOF
