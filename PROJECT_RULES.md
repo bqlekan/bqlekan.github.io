@@ -10,10 +10,12 @@ These rules apply to every milestone and every code change.
 
 Before making any changes, always read:
 
-1.  `Quadri_Busari_ATS_Optimized_CV.docx`
+1.  `assets/cv/Busari_Quadri_CV.pdf` (the current site CV)
 2.  `PERSONAL_BRAND.md`
 
 The CV provides background information. The portfolio owner's corrections take precedence: use two years of AI evaluation experience and omit unsupported performance figures.
+
+Use bqlekan@gmail.com for contact. The current CV is based on the owner's selected `Busari Quadri.pdf`. Omit Python and its libraries, and retain only the Micro1 certification, as explicitly requested by the owner. The Word CV mirrors the current PDF's content.
 
 Performance metrics, platform rankings, adoption claims, and certifications require supporting records before publication. Repeating a claim in the CV or a work sample does not verify it.
 

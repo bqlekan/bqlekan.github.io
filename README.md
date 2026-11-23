@@ -22,6 +22,8 @@ The current page has no external font or animation dependencies. The earlier Thr
 
 The work section links to five one-page PDFs and five editable Word documents. The combined archive at `assets/samples/Quadri_Busari_Annotation_Samples.zip` includes all ten files. The CV remains a separate download.
 
+CV links point to `assets/cv/Busari_Quadri_CV.pdf`. The experience section follows the owner's selected CV. Python and its libraries are omitted, and Micro1 is the only listed certification. The contact address is `bqlekan@gmail.com`.
+
 Sample sources and scenarios are clearly identified as examples. The documents use plain wording and ordinary punctuation, without unsupported performance claims.
 
 ## Local Development

@@ -4,6 +4,8 @@
 
 **Name:** Quadri Busari
 
+**Contact email:** bqlekan@gmail.com
+
 **Professional Brand:** AI Evaluation Specialist
 
 My portfolio must position me as a specialist in evaluating AI systems
@@ -115,8 +117,9 @@ Do not exaggerate.
 Do not invent employers, certifications, projects, clients, dates, or
 metrics.
 
-Use `Quadri_Busari_ATS_Optimized_CV.docx` as the factual source of
-truth.
+Use `assets/cv/Busari_Quadri_CV.pdf` for the current experience history.
+The owner selected this CV and requested removal of Python and all
+certifications except Micro1. Use bqlekan@gmail.com for contact.
 
 If information is missing, ask before generating content.
 
